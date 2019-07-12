@@ -1,0 +1,48 @@
+footer {
+    padding: 2rem 0;
+    .newsletter {
+        input,
+        button {
+            padding: 1rem;
+            border: 2px solid $black;
+            background: transparent;
+            color: $black;
+            font-weight: bold;
+            text-transform: uppercase;
+            outline: none;
+            &::placeholder {
+                color: $black;
+            }
+        }
+        button {
+            margin-left: -0.3rem;
+        }
+        @media screen and (min-width: 768px) {
+            input,
+            button {
+                font-size: 1.4rem;
+            }
+            input {
+                width: 40%;
+            }
+            button {
+                width: 10%;
+            }
+        }
+    }
+    .footer_logo {
+        width: 5%;
+        margin: auto;
+        @media screen and (min-width: 768px) {
+            width: 3%;
+        }
+    }
+    .copyright {
+        p {
+            font-weight: 600;
+            span {
+                font-weight: 900;
+            }
+        }
+    }
+}

@@ -1,0 +1,219 @@
+@import url("https://fonts.googleapis.com/css?family=IM+Fell+Double+Pica:400i|Source+Sans+Pro:400,700,900&display=swap");
+:root {
+  font-size: 62.5%; }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Source Sans Pro", sans-serif; }
+
+p {
+  font-size: 1.6rem; }
+  @media screen and (max-width: 320px) {
+    p {
+      font-size: 1.2rem; } }
+
+h2 {
+  font-size: 2.5rem;
+  font-weight: bold; }
+  @media screen and (min-width: 768px) {
+    h2 {
+      font-size: 3.5rem; } }
+
+.full_nav {
+  position: fixed;
+  left: -100%;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  background-color: #fff;
+  padding: 2rem 0;
+  overflow: hidden; }
+  .full_nav .close_icon {
+    cursor: pointer; }
+    .full_nav .close_icon ion-icon {
+      color: #000; }
+    @media screen and (min-width: 1024px) {
+      .full_nav .close_icon {
+        position: absolute;
+        top: 50%;
+        left: 4.5rem;
+        transform: translate(-50%, 0); } }
+  .full_nav h2 {
+    text-transform: uppercase;
+    display: none; }
+    @media screen and (min-width: 768px) {
+      .full_nav h2 {
+        display: block; } }
+  @media screen and (min-width: 768px) {
+    .full_nav .links {
+      display: flex;
+      justify-content: space-around; } }
+  .full_nav .links a {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #000;
+    display: block;
+    margin-bottom: 2rem;
+    font-size: 2.2rem;
+    font-family: serif; }
+    .full_nav .links a:last-of-type {
+      margin-bottom: 0; }
+    .full_nav .links a:hover {
+      color: #1a1a1a; }
+    @media screen and (max-width: 320px) {
+      .full_nav .links a {
+        font-size: 1.5rem; } }
+  .full_nav .contact .address {
+    font-family: "IM Fell Double Pica", serif;
+    font-weight: 500;
+    width: 50%;
+    margin: auto; }
+    @media screen and (min-width: 768px) {
+      .full_nav .contact .address {
+        width: auto; } }
+  .full_nav .contact .phone,
+  .full_nav .contact .mail {
+    font-weight: 700;
+    font-size: 1.3rem;
+    line-height: 1rem; }
+    @media screen and (min-width: 768px) {
+      .full_nav .contact .phone,
+      .full_nav .contact .mail {
+        font-size: 1.6rem; } }
+  .full_nav .logo {
+    width: 10%; }
+    @media screen and (min-width: 1024px) {
+      .full_nav .logo {
+        width: 3%; } }
+    .full_nav .logo img {
+      width: 100%; }
+
+.nav_trigger {
+  position: fixed;
+  top: 2rem;
+  left: 50%;
+  z-index: 5;
+  display: flex;
+  transform: rotate(180deg) translate(50%, 0);
+  cursor: pointer; }
+  @media screen and (min-width: 768px) {
+    .nav_trigger {
+      top: 50%;
+      left: 2rem;
+      transform: rotate(90deg) translate(0, -50%); } }
+  .nav_trigger span {
+    background-color: #fff;
+    display: block;
+    width: 0.2rem;
+    margin-left: 0.5rem; }
+  .nav_trigger .one {
+    height: 1.5rem; }
+    @media screen and (min-width: 768px) {
+      .nav_trigger .one {
+        height: 2rem; } }
+  .nav_trigger .two {
+    height: 2rem; }
+    @media screen and (min-width: 768px) {
+      .nav_trigger .two {
+        height: 2.5rem; } }
+  .nav_trigger .three {
+    height: 1rem; }
+    @media screen and (min-width: 768px) {
+      .nav_trigger .three {
+        height: 1.5rem; } }
+
+.home .header {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../assets/intro-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 0; }
+  .home .header .logo {
+    width: 20%;
+    align-self: center;
+    margin: auto 0 0; }
+    @media screen and (min-width: 768px) {
+      .home .header .logo {
+        width: 10%; } }
+  .home .header .go_down {
+    text-align: center;
+    font-size: 4rem;
+    color: #fff;
+    align-self: center;
+    margin-top: auto;
+    width: 1rem; }
+    @media screen and (min-width: 768px) {
+      .home .header .go_down {
+        width: 1.5rem; } }
+    .home .header .go_down img {
+      width: 100%; }
+
+.journals h2 {
+  text-transform: uppercase;
+  display: none; }
+  @media screen and (min-width: 768px) {
+    .journals h2 {
+      display: block; } }
+.journals .filters {
+  display: none; }
+  @media screen and (min-width: 768px) {
+    .journals .filters {
+      display: block;
+      position: sticky;
+      top: 2rem;
+      z-index: 5;
+      mix-blend-mode: darken; } }
+  .journals .filters span {
+    margin-right: 1.2rem;
+    font-size: 1.6rem;
+    text-transform: uppercase; }
+    .journals .filters span:last-of-type {
+      margin-right: 0; }
+  .journals .filters .filter {
+    cursor: pointer; }
+.journals .post .post_title {
+  font-family: "IM Fell Double Pica", serif;
+  font-size: 2rem; }
+
+footer {
+  padding: 2rem 0; }
+  footer .newsletter input,
+  footer .newsletter button {
+    padding: 1rem;
+    border: 2px solid #000;
+    background: transparent;
+    color: #000;
+    font-weight: bold;
+    text-transform: uppercase;
+    outline: none; }
+    footer .newsletter input::placeholder,
+    footer .newsletter button::placeholder {
+      color: #000; }
+  footer .newsletter button {
+    margin-left: -0.3rem; }
+  @media screen and (min-width: 768px) {
+    footer .newsletter input,
+    footer .newsletter button {
+      font-size: 1.4rem; }
+    footer .newsletter input {
+      width: 40%; }
+    footer .newsletter button {
+      width: 10%; } }
+  footer .footer_logo {
+    width: 5%;
+    margin: auto; }
+    @media screen and (min-width: 768px) {
+      footer .footer_logo {
+        width: 3%; } }
+  footer .copyright p {
+    font-weight: 600; }
+    footer .copyright p span {
+      font-weight: 900; }
+
+/*# sourceMappingURL=main.css.map */

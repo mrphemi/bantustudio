@@ -1,0 +1,31 @@
+@import url("https://fonts.googleapis.com/css?family=IM+Fell+Double+Pica:400i|Source+Sans+Pro:400,700,900&display=swap");
+@import "variables";
+:root {
+    font-size: 62.5%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $font-sans;
+}
+
+p {
+    font-size: 1.6rem;
+    @media screen and (max-width: 320px) {
+        font-size: 1.2rem;
+    }
+}
+
+h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    @media screen and (min-width: 768px) {
+        font-size: 3.5rem;
+    }
+}
+
+@import "nav";
+@import "home";
+@import "footer";
