@@ -43,12 +43,15 @@
     }
     .filters {
         display: none;
-        @media screen and (min-width: 768px) {
+        @media screen and (min-width: 1024px) {
             display: block;
-            position: sticky;
-            top: 2rem;
-            z-index: 5;
-            mix-blend-mode: darken;
+            &.fixed {
+                position: sticky;
+                top: 0;
+                z-index: 5;
+                background: $white;
+                transition: background 0.5s ease-in;
+            }
         }
         span {
             margin-right: 1.2rem;

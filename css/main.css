@@ -5,8 +5,22 @@
 * {
   margin: 0;
   padding: 0;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   font-family: "Source Sans Pro", sans-serif; }
+
+html,
+body {
+  scroll-behavior: smooth; }
+
+html,
+body {
+  -ms-scroll-snap-type: y mandatory;
+  scroll-snap-type: y mandatory; }
+
+section,
+footer {
+  scroll-snap-align: start; }
 
 p {
   font-size: 1.6rem; }
@@ -73,7 +87,8 @@ h2 {
     margin: auto; }
     @media screen and (min-width: 768px) {
       .full_nav .contact .address {
-        width: auto; } }
+        width: auto;
+        font-size: 2.5rem; } }
   .full_nav .contact .phone,
   .full_nav .contact .mail {
     font-weight: 700;
@@ -99,7 +114,11 @@ h2 {
   display: flex;
   transform: rotate(180deg) translate(50%, 0);
   cursor: pointer; }
-  @media screen and (min-width: 768px) {
+  .nav_trigger.dark span {
+    background-color: #000;
+    transition: background-color 3s ease;
+    mix-blend-mode: difference; }
+  @media screen and (min-width: 1024px) {
     .nav_trigger {
       top: 50%;
       left: 2rem;
@@ -162,13 +181,15 @@ h2 {
       display: block; } }
 .journals .filters {
   display: none; }
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 1024px) {
     .journals .filters {
-      display: block;
-      position: sticky;
-      top: 2rem;
-      z-index: 5;
-      mix-blend-mode: darken; } }
+      display: block; }
+      .journals .filters.fixed {
+        position: sticky;
+        top: 0;
+        z-index: 5;
+        background: #fff;
+        transition: background 0.5s ease-in; } }
   .journals .filters span {
     margin-right: 1.2rem;
     font-size: 1.6rem;
@@ -182,7 +203,7 @@ h2 {
   font-size: 2rem; }
 
 footer {
-  padding: 2rem 0; }
+  padding: 4rem 0; }
   footer .newsletter input,
   footer .newsletter button {
     padding: 1rem;
@@ -190,13 +211,18 @@ footer {
     background: transparent;
     color: #000;
     font-weight: bold;
-    text-transform: uppercase;
     outline: none; }
     footer .newsletter input::placeholder,
     footer .newsletter button::placeholder {
+      text-transform: uppercase;
       color: #000; }
   footer .newsletter button {
-    margin-left: -0.3rem; }
+    margin-left: -0.3rem;
+    text-transform: uppercase; }
+    footer .newsletter button:hover {
+      background: #000;
+      color: #fff;
+      transition: background 0.5s ease-in; }
   @media screen and (min-width: 768px) {
     footer .newsletter input,
     footer .newsletter button {
@@ -204,7 +230,7 @@ footer {
     footer .newsletter input {
       width: 40%; }
     footer .newsletter button {
-      width: 10%; } }
+      width: 15%; } }
   footer .footer_logo {
     width: 5%;
     margin: auto; }

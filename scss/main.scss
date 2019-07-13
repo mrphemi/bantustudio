@@ -7,8 +7,25 @@
 * {
     margin: 0;
     padding: 0;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     font-family: $font-sans;
+}
+
+html,
+body {
+    scroll-behavior: smooth;
+}
+
+html,
+body {
+    -ms-scroll-snap-type: y mandatory;
+    scroll-snap-type: y mandatory;
+}
+
+section,
+footer {
+    scroll-snap-align: start;
 }
 
 p {

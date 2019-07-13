@@ -1,5 +1,5 @@
 footer {
-    padding: 2rem 0;
+    padding: 4rem 0;
     .newsletter {
         input,
         button {
@@ -8,14 +8,20 @@ footer {
             background: transparent;
             color: $black;
             font-weight: bold;
-            text-transform: uppercase;
             outline: none;
             &::placeholder {
+                text-transform: uppercase;
                 color: $black;
             }
         }
         button {
             margin-left: -0.3rem;
+            text-transform: uppercase;
+            &:hover {
+                background: $black;
+                color: $white;
+                transition: background 0.5s ease-in;
+            }
         }
         @media screen and (min-width: 768px) {
             input,
@@ -26,7 +32,7 @@ footer {
                 width: 40%;
             }
             button {
-                width: 10%;
+                width: 15%;
             }
         }
     }
