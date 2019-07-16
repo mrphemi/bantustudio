@@ -1,3 +1,5 @@
+import Bricks from "/node_modules/bricks.js/dist/bricks.module.js";
+
 $(document).ready(function() {
     function openNavigation() {
         TweenMax.to(".full_nav", 0.5, {

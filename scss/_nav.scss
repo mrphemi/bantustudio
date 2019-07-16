@@ -32,6 +32,9 @@
             display: flex;
             justify-content: space-around;
         }
+        @media screen and (min-width: 768px) {
+            padding-top: 13rem;
+        }
         a {
             text-transform: uppercase;
             text-decoration: none;

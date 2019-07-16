@@ -1,0 +1,23 @@
+{
+  "name": "bantustudio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/naitrons/bantustudio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/naitrons/bantustudio/issues"
+  },
+  "homepage": "https://github.com/naitrons/bantustudio#readme",
+  "dependencies": {
+    "bricks.js": "^1.8.0"
+  }
+}

@@ -65,6 +65,9 @@ h2 {
     .full_nav .links {
       display: flex;
       justify-content: space-around; } }
+  @media screen and (min-width: 768px) {
+    .full_nav .links {
+      padding-top: 13rem; } }
   .full_nav .links a {
     text-transform: uppercase;
     text-decoration: none;
@@ -173,34 +176,51 @@ h2 {
     .home .header .go_down img {
       width: 100%; }
 
-.journals h2 {
-  text-transform: uppercase;
-  display: none; }
-  @media screen and (min-width: 768px) {
-    .journals h2 {
-      display: block; } }
-.journals .filters {
-  display: none; }
-  @media screen and (min-width: 1024px) {
-    .journals .filters {
-      display: block; }
-      .journals .filters.fixed {
-        position: sticky;
-        top: 0;
-        z-index: 5;
-        background: #fff;
-        transition: background 0.5s ease-in; } }
-  .journals .filters span {
-    margin-right: 1.2rem;
-    font-size: 1.6rem;
-    text-transform: uppercase; }
-    .journals .filters span:last-of-type {
-      margin-right: 0; }
-  .journals .filters .filter {
-    cursor: pointer; }
-.journals .post .post_title {
-  font-family: "IM Fell Double Pica", serif;
-  font-size: 2rem; }
+.journals {
+  background-color: #fff; }
+  .journals h2 {
+    text-transform: uppercase;
+    display: none; }
+    @media screen and (min-width: 768px) {
+      .journals h2 {
+        display: block; } }
+  .journals .filters {
+    display: none; }
+    @media screen and (min-width: 1024px) {
+      .journals .filters {
+        display: block; }
+        .journals .filters.fixed {
+          position: sticky;
+          top: 0;
+          z-index: 5;
+          background: #fff;
+          transition: background 0.5s ease-in; } }
+    .journals .filters span {
+      margin-right: 1.2rem;
+      font-size: 1.6rem;
+      text-transform: uppercase; }
+      .journals .filters span:last-of-type {
+        margin-right: 0; }
+    .journals .filters .filter {
+      cursor: pointer; }
+  .journals .posts-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, minmax(200px, auto));
+    grid-gap: 1.5rem; }
+    .journals .posts-grid .two {
+      grid-row: 1/ 3;
+      grid-column: 2 / 3; }
+      .journals .posts-grid .two img {
+        height: 90%; }
+    .journals .posts-grid .last {
+      grid-row: 2/ 4;
+      grid-column: 3 / 4; }
+      .journals .posts-grid .last img {
+        height: 100%; }
+  .journals .post .post_title {
+    font-family: "IM Fell Double Pica", serif;
+    font-size: 2rem; }
 
 footer {
   padding: 4rem 0; }
