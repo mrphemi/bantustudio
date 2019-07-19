@@ -36,27 +36,20 @@ $(document).ready(function() {
         );
     }
 
-    $(".nav_trigger").on("click", openNavigation);
-    $(".close_icon").on("click", closeNavigation);
-
-    // Stick journals filter to top
-    $(window).scroll(function() {
-        var top = $(window).scrollTop(),
-            elementOffset = $(".filters").offset().top,
-            distance = elementOffset - top;
-
-        if (distance < 40) {
-            $(".filters").addClass("fixed");
-        } else {
-            $(".filters").removeClass("fixed");
-        }
-    });
-
-    $(window).scroll(function() {
+    function switchNavColor() {
         if (isOnScreen(jQuery(".darknav"))) {
             $(".nav_trigger").addClass("dark");
         } else {
             $(".nav_trigger").removeClass("dark");
         }
+    }
+
+    $(".nav_trigger").on("click", openNavigation);
+    $(".close_icon").on("click", closeNavigation);
+
+    $(window).scroll(function() {
+        switchNavColor();
     });
+
+    switchNavColor();
 });

@@ -43,13 +43,6 @@
 
 .journals {
     background-color: $white;
-    h2 {
-        text-transform: uppercase;
-        display: none;
-        @media screen and (min-width: 768px) {
-            display: block;
-        }
-    }
     .filters {
         display: none;
         @media screen and (min-width: 1024px) {
@@ -79,7 +72,7 @@
     .posts-grid {
         display: grid;
         grid-template-columns: 1fr;
-        grid-gap: 1.5rem;
+        grid-gap: 2rem;
         @media screen and (min-width: 768px) {
             grid-template-columns: repeat(2, 1fr);
         }

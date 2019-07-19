@@ -11,43 +11,47 @@
 </head>
 
 <body>
-    <section class="home lightnav">
-        <nav class="full_nav">
-            <div class="container d-flex flex-column h-100">
-                <div class="close_icon text-center">
-                    <ion-icon name="close" size="large"></ion-icon>
-                </div>
-
-                <h2 class="text-center mt-md-auto">bantu collection</h2>
-
-                <div class="links text-center mt-auto">
-                    <a href="#">journal</a>
-                    <a href="#">creatives</a>
-                    <a href="#">alt</a>
-                    <a href="#">profile</a>
-                    <a href="#">contact</a>
-                </div>
-
-                <div class="contact text-center mt-auto">
-                    <p class="address">
-                        +14 fez street, off kumasi cresent, Abuja.
-                    </p>
-                    <p class="phone">+234 (0) 810 138 4973</p>
-                    <p class="mail">hello@bantustudio.com</p>
-                </div>
-
-                <div class="logo mt-auto align-self-center">
-                    <img src="./assets/mobile-logo.jpg" alt="bantu logo" />
-                </div>
+    <!-- Navigation  -->
+    <!-- TODO: to be extracted as a partial -->
+    <nav class="full_nav">
+        <div class="container d-flex flex-column h-100">
+            <div class="close_icon text-center">
+                <ion-icon name="close" size="large"></ion-icon>
             </div>
-        </nav>
 
-        <div class="nav_trigger">
-            <span class="one"></span>
-            <span class="two"></span>
-            <span class="three"></span>
+            <h2 class="text-center mt-md-auto">bantu collection</h2>
+
+            <div class="links text-center mt-auto">
+                <a href="#">journal</a>
+                <a href="#">creatives</a>
+                <a href="#">alt</a>
+                <a href="#">profile</a>
+                <a href="contact.html">contact</a>
+            </div>
+
+            <div class="contact text-center mt-auto">
+                <p class="address">
+                    +14 fez street, off kumasi cresent, Abuja.
+                </p>
+                <p class="phone">+234 (0) 810 138 4973</p>
+                <p class="mail">hello@bantustudio.com</p>
+            </div>
+
+            <div class="logo mt-auto align-self-center">
+                <img src="./assets/mobile-logo.jpg" alt="bantu logo" />
+            </div>
         </div>
+    </nav>
 
+    <!-- Nav trigger -->
+    <!-- TODO: to be extracted as a partial -->
+    <div class="nav_trigger">
+        <span class="one"></span>
+        <span class="two"></span>
+        <span class="three"></span>
+    </div>
+
+    <section class="home lightnav">
         <div class="header">
             <img class="logo" src="./assets/bantu-logo.png" alt="Bantu Logo" />
             <a class="go_down scroll" href="#journals">
@@ -125,20 +129,34 @@
             <p>All Rights Reserved. <span>Privacy Policy, Terms and Conditons.</span></p>
         </div>
     </footer>
+
+    <!-- Ionic Icons -->
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+
+    <!-- Tweenmax -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js" integrity="sha256-lPE3wjN2a7ABWHbGz7+MKBJaykyzqCbU96BJWjio86U=" crossorigin="anonymous"></script>
+
+    <!-- jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+    <!-- tinycolor -->
+    <!-- <script src="tinycolor.js"></script> -->
+
+    <script type="module" src="main.js"></script>
+    <script>
+        // Stick journals filter to top
+        $(window).scroll(function() {
+            var top = $(window).scrollTop(),
+                elementOffset = $(".filters").offset().top,
+                distance = elementOffset - top;
+
+            if (distance < 40) {
+                $(".filters").addClass("fixed");
+            } else {
+                $(".filters").removeClass("fixed");
+            }
+        });
+    </script>
 </body>
-
-<!-- Ionic Icons -->
-<script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
-
-<!-- Tweenmax -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js" integrity="sha256-lPE3wjN2a7ABWHbGz7+MKBJaykyzqCbU96BJWjio86U=" crossorigin="anonymous"></script>
-
-<!-- jquery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-
-<!-- tinycolor -->
-<!-- <script src="tinycolor.js"></script> -->
-
-<script type="module" src="main.js"></script>
 
 </html>
