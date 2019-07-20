@@ -149,6 +149,18 @@ h2 {
       .nav_trigger .three {
         height: 1.5rem; } }
 
+.fixed_social_icons {
+  display: none;
+  position: fixed;
+  right: 2rem;
+  top: 50%;
+  transform: translate(0, -50%); }
+  @media screen and (min-width: 1024px) {
+    .fixed_social_icons {
+      display: block; } }
+  .fixed_social_icons ion-icon {
+    font-size: 1.5rem; }
+
 footer {
   padding: 4rem 0; }
   footer .newsletter input,
@@ -274,6 +286,54 @@ footer {
     font-family: "IM Fell Double Pica", serif;
     font-size: 2rem; }
 
+.profile {
+  height: 100vh; }
+  .profile .logo {
+    margin-top: 4rem;
+    width: 6%; }
+    @media screen and (min-width: 768px) {
+      .profile .logo {
+        width: 4%;
+        margin-top: 6rem; } }
+  .profile .summary .heading {
+    display: none; }
+    .profile .summary .heading h3 {
+      font-family: "IM Fell Double Pica", serif;
+      text-transform: capitalize;
+      font-weight: bold;
+      font-size: 3rem; }
+    .profile .summary .heading .sub_heading {
+      text-transform: capitalize; }
+    @media screen and (min-width: 768px) {
+      .profile .summary .heading {
+        display: block; } }
+  @media screen and (min-width: 768px) {
+    .profile .summary p {
+      width: 80%;
+      margin: auto; } }
+  .profile .typer h3 {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 2rem; }
+    .profile .typer h3 span {
+      color: #b50f0f; }
+    @media screen and (min-width: 1024px) {
+      .profile .typer h3 {
+        font-size: 2.5rem; } }
+  .profile .scroll_down {
+    width: 1rem;
+    position: absolute;
+    bottom: 2rem;
+    left: 2rem; }
+    @media screen and (min-width: 768px) {
+      .profile .scroll_down {
+        width: 1.5rem;
+        left: 50%;
+        transform: translate(-50%, 0); } }
+
+.team {
+  height: 100vh; }
+
 .contact_page {
   height: 120vh;
   overflow-y: hidden;
@@ -366,7 +426,5 @@ footer {
         bottom: 2rem;
         left: 50%;
         transform: translate(-50%, 0); } }
-    .contact_page .logo img {
-      width: 100%; }
 
 /*# sourceMappingURL=main.css.map */

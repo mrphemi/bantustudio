@@ -1,0 +1,62 @@
+.profile {
+    height: 100vh;
+    .logo {
+        margin-top: 4rem;
+        width: 6%;
+        @media screen and (min-width: 768px) {
+            width: 4%;
+            margin-top: 6rem;
+        }
+    }
+    .summary {
+        .heading {
+            display: none;
+            h3 {
+                font-family: $font-fell;
+                text-transform: capitalize;
+                font-weight: bold;
+                font-size: 3rem;
+            }
+            .sub_heading {
+                text-transform: capitalize;
+            }
+            @media screen and (min-width: 768px) {
+                display: block;
+            }
+        }
+        p {
+            @media screen and (min-width: 768px) {
+                width: 80%;
+                margin: auto;
+            }
+        }
+    }
+    .typer {
+        h3 {
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 2rem;
+            span {
+                color: #b50f0f;
+            }
+            @media screen and (min-width: 1024px) {
+                font-size: 2.5rem;
+            }
+        }
+    }
+    .scroll_down {
+        width: 1rem;
+        position: absolute;
+        bottom: 2rem;
+        left: 2rem;
+        @media screen and (min-width: 768px) {
+            width: 1.5rem;
+            left: 50%;
+            transform: translate(-50%, 0);
+        }
+    }
+}
+
+.team {
+    height: 100vh;
+}

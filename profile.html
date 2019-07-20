@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Contact Us</title>
+    <title>Profile</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha256-YLGeXaapI0/5IgZopewRJcFXomhRMlYYjugPLSyNjTY=" crossorigin="anonymous" />
     <link rel="stylesheet" href="./css/main.css" />
 </head>
@@ -51,61 +51,47 @@
         <span class="three"></span>
     </div>
 
-    <div class="contact_page darknav text-center">
-        <h2>Contact</h2>
-        <div class="container d-flex flex-column py-5 py-lg-3">
-            <div class="location mt-auto">
-                <p class="address mx-auto">+14 fez street, off kumasi cresent, Abuja.</p>
-                <p class="phone">
-                    <strong>+234 (0) 810 138 4973 </strong>
-                </p>
-            </div>
-
-            <div class="marker mt-auto">
-                <ion-icon name="pin" size="large"></ion-icon>
-                <p>Pin It!</p>
-            </div>
-
-            <div class="mail mt-auto">
-                <p>
-                    For all commercial sales send us an email at <br />
-                    <a href="mailto:hello@bantustudio.com">
-                        <strong>Naij sales</strong>
-                    </a>
-                </p>
-                <p>
-                    For all job applications, creative/director reels and general enquiries, email us at
-                    <br />
-
-                    <a href="mailto:hello@bantustudio.com">
-                        <strong>HOLLA!</strong>
-                    </a>
-                </p>
-            </div>
-
-            <div class="newsletter mt-auto">
-                <button class="mobile">sign up for our newsletter</button>
-                <form>
-                    <input type="email" placeholder="your email address" />
-                    <button>sign up</button>
-                </form>
-            </div>
-
-            <div class="social mt-auto">
-                <ion-icon name="logo-facebook"></ion-icon>
-                <ion-icon name="logo-instagram"></ion-icon>
-                <ion-icon name="logo-twitter"></ion-icon>
-            </div>
-
-            <div class="copyright mt-auto">
-                <p>(c) Copyright 2016 BANTU MEDIA</p>
-                <p>All Rights Reserved. <strong>Privacy Policy, Terms and Conditons.</strong></p>
-            </div>
-            <div class="logo mt-auto align-self-center">
-                <img src="./assets/footer-logo.png" alt="logo" class="w-100" />
-            </div>
-        </div>
+    <!-- Fixed social iconstrigger -->
+    <!-- TODO: to be extracted as a partial -->
+    <div class="fixed_social_icons d-flex flex-column">
+        <ion-icon name="logo-facebook"></ion-icon>
+        <ion-icon name="logo-instagram" class="mt-3"></ion-icon>
+        <ion-icon name="logo-twitter" class="mt-3"></ion-icon>
     </div>
+
+    <section class="profile darknav container py-5 text-center d-flex flex-column">
+        <h2>profile</h2>
+        <div class="logo mx-auto">
+            <img src="./assets/footer-logo.png" alt="logo" class="w-100" />
+        </div>
+        <div class="summary my-auto">
+            <div class="heading mb-5">
+                <h3>a full-service creative agency</h3>
+                <p class="sub_heading">
+                    brand strategy, art + design + editorial direction, technology + development
+                </p>
+            </div>
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam, consequuntur culpa officia qui voluptatibus corrupti sequi inventore ad magni odit sapiente, adipisci quibusdam minima repellendus sint illum veniam, mollitia rerum.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, nulla vitae saepe sapiente deserunt repudiandae earum exercitationem nobis fuga nam excepturi maiores, at ratione suscipit? Eius voluptatum, ea obcaecati impedit repudiandae pariatur nemo
+                et qui dolor? Recusandae sint accusamus tempora deserunt quasi eos cum quia at accusantium, voluptate esse modi!
+            </p>
+        </div>
+
+        <div class="typer mb-auto">
+            <h3>we are <span>bantu</span></h3>
+        </div>
+
+        <a href="#team" class="scroll_down">
+            <img src="./assets/down-arrow-black.png" alt="scroll down button" class="w-100" />
+        </a>
+    </section>
+
+    <section id="team" class="team darknav container py-5 text-center">
+        <h2>team</h2>
+    </section>
 
     <!-- Ionic Icons -->
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
