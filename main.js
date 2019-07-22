@@ -47,9 +47,9 @@ $(document).ready(function() {
     $(".nav_trigger").on("click", openNavigation);
     $(".close_icon").on("click", closeNavigation);
 
+    switchNavColor();
+
     $(window).scroll(function() {
         switchNavColor();
     });
-
-    switchNavColor();
 });

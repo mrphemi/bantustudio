@@ -19,19 +19,21 @@
             }
             .sub_heading {
                 text-transform: capitalize;
+                font-weight: normal;
             }
             @media screen and (min-width: 768px) {
                 display: block;
             }
         }
         p {
+            font-weight: bold;
             @media screen and (min-width: 768px) {
                 width: 80%;
                 margin: auto;
             }
         }
     }
-    .typer {
+    .type_effect {
         h3 {
             text-transform: uppercase;
             font-weight: bold;
@@ -50,7 +52,7 @@
         bottom: 2rem;
         left: 2rem;
         @media screen and (min-width: 768px) {
-            width: 1.5rem;
+            width: 1.2rem;
             left: 50%;
             transform: translate(-50%, 0);
         }
@@ -58,5 +60,127 @@
 }
 
 .team {
-    height: 100vh;
+    min-height: 100vh;
+    h2 {
+        display: block;
+        margin-bottom: 2rem;
+        @media screen and (min-width: 768px) {
+            margin-top: 6rem;
+        }
+    }
+    p {
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+    .members {
+        .grid {
+            @media screen and (min-width: 768px) {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-gap: 4rem;
+            }
+            @media screen and (min-width: 1200px) {
+                grid-template-columns: repeat(5, 1fr);
+            }
+        }
+        .member {
+            position: relative;
+            overflow: hidden;
+            &:hover {
+                .details {
+                    left: 0;
+                    transition: left 0.5s ease-in;
+                }
+            }
+            img {
+                display: none;
+                @media screen and (min-width: 768px) {
+                    display: block;
+                }
+            }
+            .details {
+                a {
+                    color: inherit;
+                    text-decoration: none;
+                    @media screen and (min-width: 768px) {
+                        color: $white;
+                    }
+                }
+                .role {
+                    color: lightgray;
+                    font-size: 1.3rem;
+                }
+                .name {
+                    @media screen and (min-width: 768px) {
+                        font-size: 2rem;
+                    }
+                }
+                @media screen and (min-width: 768px) {
+                    @include center-with-flex(column);
+                    text-align: left;
+                    position: absolute;
+                    top: 0;
+                    left: -100%;
+                    width: 100%;
+                    height: 100%;
+                    background: rgba(0, 0, 0, 0.8);
+                    padding: 0 2rem;
+                }
+            }
+        }
+    }
+    .collaborators {
+        .grid {
+            @media screen and (min-width: 1200px) {
+                width: 80%;
+                margin: 0 auto;
+            }
+        }
+        p {
+            margin-top: 2rem;
+            a {
+                color: inherit;
+                text-decoration: none;
+            }
+            @media screen and (min-width: 768px) {
+                display: inline-block;
+                margin-right: 2rem;
+                margin-top: 0;
+            }
+        }
+    }
+    .representatives {
+        .grid {
+            @media screen and (min-width: 768px) {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-column-gap: 5rem;
+                grid-row-gap: 3rem;
+            }
+            @media screen and (min-width: 1200px) {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+        .location {
+            color: lightgray;
+            font-size: 1.3rem;
+        }
+        .mobile {
+            font-weight: 500;
+        }
+    }
+    .representatives,
+    .collaborators,
+    .members {
+        height: 100vh;
+        @include center-with-flex(column);
+        @media screen and (max-height: 480px) {
+            height: auto;
+            padding: 2rem 0 2rem;
+        }
+        @media screen and (min-width: 768px) {
+            height: auto;
+            padding: 2rem 0 2rem;
+        }
+    }
 }

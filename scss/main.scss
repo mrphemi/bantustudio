@@ -1,5 +1,7 @@
-@import url("https://fonts.googleapis.com/css?family=IM+Fell+Double+Pica:400i|Source+Sans+Pro:400,700,900&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=IM+Fell+Double+Pica:400i&display=swap");
 @import "variables";
+@import "mixins";
 :root {
     font-size: 62.5%;
 }
@@ -9,7 +11,7 @@
     padding: 0;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    font-family: $font-sans;
+    font-family: $font-mont;
 }
 
 html,
@@ -23,8 +25,7 @@ body {
     scroll-snap-type: y mandatory;
 }
 
-section,
-footer {
+section {
     scroll-snap-align: start;
 }
 
@@ -40,12 +41,16 @@ h2 {
     font-weight: bold;
     text-transform: uppercase;
     display: none;
+    @media screen and (max-width: 320px) {
+        font-size: 2rem;
+    }
     @media screen and (min-width: 1024px) {
         font-size: 3.5rem;
         display: block;
     }
 }
 
+@import "animations";
 @import "nav";
 @import "footer";
 @import "home";
