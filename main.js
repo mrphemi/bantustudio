@@ -38,9 +38,11 @@ $(document).ready(function() {
 
     function switchNavColor() {
         if (isOnScreen(jQuery(".darknav"))) {
-            $(".nav_trigger").addClass("dark");
+            $(".line").addClass("dark");
+            $(".txt").addClass("dark");
         } else {
-            $(".nav_trigger").removeClass("dark");
+            $(".line").removeClass("dark");
+            $(".txt").removeClass("dark");
         }
     }
 
@@ -52,4 +54,6 @@ $(document).ready(function() {
     $(window).scroll(function() {
         switchNavColor();
     });
+
+    // TweenLite.to(window, 0.8, {scrollTo: {y:0, autoKill:false}, ease: Power3.easeInOut});
 });

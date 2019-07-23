@@ -24,7 +24,7 @@ section {
 
 p {
   font-size: 1.6rem; }
-  @media screen and (max-width: 320px) {
+  @media screen and (max-width: 360px) {
     p {
       font-size: 1.2rem; } }
 
@@ -66,7 +66,7 @@ h2 {
       .full_nav .close_icon {
         position: absolute;
         top: 50%;
-        left: 4.5rem;
+        left: 4rem;
         transform: translate(-50%, 0); } }
   .full_nav h2 {
     text-transform: uppercase;
@@ -126,39 +126,61 @@ h2 {
   position: fixed;
   top: 2rem;
   left: 50%;
-  z-index: 5;
+  transform: translate(-50%, 0);
   display: flex;
-  transform: rotate(180deg) translate(50%, 0);
-  cursor: pointer; }
-  .nav_trigger.dark span {
-    background-color: #000;
-    transition: background-color 3s ease; }
+  flex-direction: column;
+  z-index: 5;
+  cursor: pointer;
+  width: 4rem; }
   @media screen and (min-width: 1024px) {
     .nav_trigger {
       top: 50%;
-      left: 2rem;
-      transform: rotate(90deg) translate(0, -50%); } }
-  .nav_trigger span {
-    background-color: #fff;
-    display: block;
-    width: 0.2rem;
-    margin-left: 0.5rem;
-    transition: height 0.5s ease; }
-  .nav_trigger .one {
-    height: 1.5rem; }
-    @media screen and (min-width: 768px) {
-      .nav_trigger .one {
-        height: 2rem; } }
-  .nav_trigger .two {
-    height: 2rem; }
-    @media screen and (min-width: 768px) {
-      .nav_trigger .two {
-        height: 2.5rem; } }
-  .nav_trigger .three {
-    height: 1rem; }
-    @media screen and (min-width: 768px) {
-      .nav_trigger .three {
-        height: 1.5rem; } }
+      left: 5rem;
+      flex-direction: row;
+      width: 6rem; } }
+  .nav_trigger .icon {
+    display: flex;
+    transform: rotate(180deg);
+    margin: auto; }
+    @media screen and (min-width: 1024px) {
+      .nav_trigger .icon {
+        transform: rotate(90deg); } }
+    .nav_trigger .icon .line {
+      background-color: #fff;
+      display: block;
+      width: 0.1rem;
+      margin-left: 0.4rem;
+      transition: background-color 2.5s cubic-bezier(0.7, 0, 0.3, 1) 0ms; }
+      .nav_trigger .icon .line.dark {
+        background-color: #000; }
+    .nav_trigger .icon .one {
+      height: 1.5rem; }
+      @media screen and (min-width: 768px) {
+        .nav_trigger .icon .one {
+          height: 2rem; } }
+    .nav_trigger .icon .two {
+      height: 2rem; }
+      @media screen and (min-width: 768px) {
+        .nav_trigger .icon .two {
+          height: 2.5rem; } }
+    .nav_trigger .icon .three {
+      height: 1rem; }
+      @media screen and (min-width: 768px) {
+        .nav_trigger .icon .three {
+          height: 1.5rem; } }
+  .nav_trigger .txt {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin: auto;
+    margin-top: 1rem;
+    transition: color 2.5s cubic-bezier(0.7, 0, 0.3, 1) 0ms; }
+    .nav_trigger .txt.dark {
+      color: #000; }
+    @media screen and (min-width: 1024px) {
+      .nav_trigger .txt {
+        transform: rotate(-90deg); } }
 
 .fixed_social_icons {
   display: none; }
@@ -168,11 +190,15 @@ h2 {
       right: 2rem;
       top: 50%;
       transform: translate(0, -50%); } }
-  .fixed_social_icons ion-icon {
-    font-size: 1.5rem; }
+  .fixed_social_icons a {
+    color: inherit;
+    text-decoration: none; }
+    .fixed_social_icons a ion-icon {
+      font-size: 1.5rem; }
 
 footer {
-  padding: 4rem 0; }
+  padding: 4rem 0;
+  scroll-snap-align: start; }
   footer .newsletter input,
   footer .newsletter button {
     padding: 1rem;
@@ -217,6 +243,7 @@ footer {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  background-attachment: fixed;
   height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -293,19 +320,21 @@ footer {
           grid-column: 3 / 4; }
           .journals .posts-grid .last img {
             height: 90%; } }
-  .journals .post .post_title {
-    font-family: "IM Fell Double Pica", serif;
-    font-size: 2rem; }
+  .journals .post {
+    cursor: pointer; }
+    .journals .post .post_title {
+      font-family: "IM Fell Double Pica", serif;
+      font-size: 2rem; }
 
 .profile {
   height: 100vh; }
   .profile .logo {
-    margin-top: 4rem;
+    margin-top: 6rem;
     width: 6%; }
     @media screen and (min-width: 768px) {
       .profile .logo {
         width: 4%;
-        margin-top: 6rem; } }
+        margin-top: 8rem; } }
   .profile .summary .heading {
     display: none; }
     .profile .summary .heading h3 {
@@ -359,7 +388,7 @@ footer {
   @media screen and (min-width: 768px) {
     .team .members .grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
       grid-gap: 4rem; } }
   @media screen and (min-width: 1200px) {
     .team .members .grid {
@@ -433,6 +462,7 @@ footer {
   .team .collaborators,
   .team .members {
     height: 100vh;
+    scroll-snap-align: start;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -454,7 +484,7 @@ footer {
   height: 120vh;
   overflow-y: hidden;
   position: relative; }
-  @media screen and (max-width: 320px) {
+  @media screen and (max-width: 360px) {
     .contact_page {
       height: 150vh; } }
   @media screen and (min-width: 768px) {
@@ -481,6 +511,10 @@ footer {
         background-position: center;
         height: 75%;
         width: 80%; } }
+    @media screen and (min-width: 1500px) {
+      .contact_page .container {
+        max-width: 1300px;
+        width: 100%; } }
   .contact_page .location .address {
     font-family: "IM Fell Double Pica", serif;
     width: 50%; }
@@ -511,7 +545,8 @@ footer {
       border: 2px solid #000;
       width: 35%;
       color: inherit;
-      font-size: 1.4rem; }
+      font-size: 1.4rem;
+      font-weight: bold; }
       .contact_page .newsletter form input::placeholder {
         text-transform: uppercase;
         color: inherit; }
@@ -525,6 +560,7 @@ footer {
       width: 15%;
       margin-left: -0.3rem;
       font-size: 1.4rem;
+      font-weight: bold;
       text-transform: uppercase; }
       .contact_page .newsletter form button:hover {
         background: #000;

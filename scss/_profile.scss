@@ -1,11 +1,11 @@
 .profile {
     height: 100vh;
     .logo {
-        margin-top: 4rem;
+        margin-top: 6rem;
         width: 6%;
         @media screen and (min-width: 768px) {
             width: 4%;
-            margin-top: 6rem;
+            margin-top: 8rem;
         }
     }
     .summary {
@@ -76,7 +76,7 @@
         .grid {
             @media screen and (min-width: 768px) {
                 display: grid;
-                grid-template-columns: 1fr 1fr;
+                grid-template-columns: 1fr 1fr 1fr;
                 grid-gap: 4rem;
             }
             @media screen and (min-width: 1200px) {
@@ -173,6 +173,7 @@
     .collaborators,
     .members {
         height: 100vh;
+        scroll-snap-align: start;
         @include center-with-flex(column);
         @media screen and (max-height: 480px) {
             height: auto;

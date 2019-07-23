@@ -2,7 +2,7 @@
     height: 120vh;
     overflow-y: hidden;
     position: relative;
-    @media screen and (max-width: 320px) {
+    @media screen and (max-width: 360px) {
         height: 150vh;
     }
     @media screen and (min-width: 768px) {
@@ -30,6 +30,10 @@
             background-position: center;
             height: 75%;
             width: 80%;
+        }
+        @media screen and (min-width: 1500px) {
+            max-width: 1300px;
+            width: 100%;
         }
     }
     .location {
@@ -75,6 +79,7 @@
                 width: 35%;
                 color: inherit;
                 font-size: 1.4rem;
+                font-weight: bold;
                 &::placeholder {
                     text-transform: uppercase;
                     color: inherit;
@@ -90,6 +95,7 @@
                 width: 15%;
                 margin-left: -0.3rem;
                 font-size: 1.4rem;
+                font-weight: bold;
                 text-transform: uppercase;
                 &:hover {
                     background: $black;

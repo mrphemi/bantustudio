@@ -5,6 +5,7 @@
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
+        background-attachment: fixed;
         height: 100vh;
         display: -webkit-box;
         display: -ms-flexbox;
@@ -31,8 +32,9 @@
             align-self: center;
             margin-top: auto;
             width: 1rem;
+            animation: scrolldown 1s infinite ease;
             @media screen and (min-width: 768px) {
-                width: 1.5rem;
+                width: 1.2rem;
             }
             img {
                 width: 100%;
@@ -96,6 +98,7 @@
         }
     }
     .post {
+        cursor: pointer;
         .post_title {
             font-family: $font-fell;
             font-size: 2rem;
