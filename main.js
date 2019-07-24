@@ -55,5 +55,9 @@ $(document).ready(function() {
         switchNavColor();
     });
 
+    $(window).resize(function() {
+        switchNavColor();
+    });
+
     // TweenLite.to(window, 0.8, {scrollTo: {y:0, autoKill:false}, ease: Power3.easeInOut});
 });
