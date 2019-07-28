@@ -26,8 +26,11 @@
             }
         }
         p {
-            font-weight: bold;
+            font-weight: 500;
+            text-align: justify;
+            color: $black;
             @media screen and (min-width: 768px) {
+                text-align: center;
                 width: 80%;
                 margin: auto;
             }

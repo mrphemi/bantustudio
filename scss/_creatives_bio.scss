@@ -1,0 +1,52 @@
+.bio {
+    position: relative;
+    height: 100vh;
+    @media screen and (max-height: 480px) {
+        height: 130vh;
+    }
+    @media screen and (max-width: 375px) {
+        height: 120vh;
+    }
+    h2 {
+        display: block;
+        font-family: serif;
+    }
+    h3 {
+        font-weight: bold;
+    }
+    p {
+        text-align: justify;
+        @media screen and (min-width: 768px) {
+            width: 80%;
+            text-align: center;
+        }
+    }
+    .scroll_down {
+        width: 1rem;
+        position: absolute;
+        bottom: 5rem;
+        left: 2rem;
+        @media screen and (min-width: 768px) {
+            width: 1.2rem;
+            bottom: 10rem;
+        }
+    }
+    .logo {
+        @include small-logo;
+    }
+}
+
+.gallery {
+    .grid {
+        margin-top: 6rem;
+        display: grid;
+        grid-gap: 2rem;
+        @media screen and (min-width: 768px) {
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 4rem;
+        }
+        @media screen and (min-width: 1200px) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+}

@@ -4,3 +4,11 @@
     justify-content: center;
     align-items: center;
 }
+
+// contact, creatives pages
+@mixin small-logo {
+    width: 6%;
+    @media screen and (min-width: 1024px) {
+        width: 2%;
+    }
+}

@@ -1,9 +1,7 @@
 .creatives {
     @media screen and (min-width: 1024px) {
         height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include center-with-flex(row);
     }
     h2 {
         @media screen and (min-width: 1024px) {
@@ -21,7 +19,7 @@
         background-position: center;
         display: flex;
         flex-direction: column;
-        @media screen and (max-height: 667px) {
+        @media screen and (max-height: 667px) and (max-width: 400px) {
             min-height: 125vh;
         }
         @media screen and (max-width: 1023px) {
@@ -65,14 +63,10 @@
             }
         }
         .logo {
-            width: 6%;
+            @include small-logo;
             margin-top: auto;
             align-self: center;
-            @media screen and (min-width: 768px) {
-                width: 4%;
-            }
             @media screen and (min-width: 1024px) {
-                width: 2%;
                 position: fixed;
                 bottom: 2rem;
                 left: 50%;

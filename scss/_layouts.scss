@@ -17,8 +17,10 @@ body {
 
 html,
 body {
-    -ms-scroll-snap-type: y mandatory;
-    scroll-snap-type: y mandatory;
+    @media screen and (min-width: 1024px) {
+        -ms-scroll-snap-type: y mandatory;
+        scroll-snap-type: y mandatory;
+    }
 }
 
 section {
