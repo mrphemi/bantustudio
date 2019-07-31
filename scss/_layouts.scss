@@ -24,7 +24,9 @@ body {
 }
 
 section {
-    scroll-snap-align: start;
+    @media screen and (min-width: 1024px) {
+        scroll-snap-align: start;
+    }
 }
 
 p {

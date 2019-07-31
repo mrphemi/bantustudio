@@ -20,8 +20,9 @@ body {
     -ms-scroll-snap-type: y mandatory;
     scroll-snap-type: y mandatory; } }
 
-section {
-  scroll-snap-align: start; }
+@media screen and (min-width: 1024px) {
+  section {
+    scroll-snap-align: start; } }
 
 p {
   font-size: 1.6rem; }
@@ -69,12 +70,12 @@ h2 {
         top: 50%;
         left: 4rem;
         transform: translate(-50%, 0); } }
-  .full_nav h2 {
-    text-transform: uppercase;
-    display: none; }
-    @media screen and (min-width: 768px) {
-      .full_nav h2 {
-        display: block; } }
+  @media screen and (min-width: 768px) {
+    .full_nav h2 {
+      display: block; } }
+  .full_nav h2 a {
+    color: inherit;
+    text-decoration: none; }
   @media screen and (min-width: 768px) {
     .full_nav .links {
       display: flex;
@@ -334,8 +335,7 @@ footer {
     width: 6%; }
     @media screen and (min-width: 768px) {
       .profile .logo {
-        width: 4%;
-        margin-top: 8rem; } }
+        display: none; } }
   .profile .summary .heading {
     display: none; }
     .profile .summary .heading h3 {
@@ -578,7 +578,10 @@ footer {
     display: block;
     font-family: serif; }
   .bio h3 {
-    font-weight: bold; }
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    margin-top: 8rem; }
   .bio p {
     text-align: justify; }
     @media screen and (min-width: 768px) {
@@ -600,17 +603,71 @@ footer {
       .bio .logo {
         width: 2%; } }
 
-.gallery .grid {
-  margin-top: 6rem;
-  display: grid;
-  grid-gap: 2rem; }
-  @media screen and (min-width: 768px) {
-    .gallery .grid {
-      grid-template-columns: 1fr 1fr;
-      grid-gap: 4rem; } }
-  @media screen and (min-width: 1200px) {
-    .gallery .grid {
-      grid-template-columns: repeat(3, 1fr); } }
+.gallery {
+  min-height: 100vh; }
+  .gallery .grid {
+    margin-top: 6rem;
+    display: grid;
+    grid-gap: 2rem; }
+    @media screen and (min-width: 768px) {
+      .gallery .grid {
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 4rem; } }
+    @media screen and (min-width: 1200px) {
+      .gallery .grid {
+        grid-template-columns: repeat(3, 1fr); } }
+
+.journal-slider {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  opacity: 0;
+  transform: scale(0);
+  width: 100%;
+  height: 100%;
+  background: #fff; }
+  @media screen and (max-height: 480px) {
+    .journal-slider {
+      overflow: scroll;
+      min-height: 100%; } }
+  .journal-slider .close {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    cursor: pointer; }
+    @media screen and (min-width: 768px) {
+      .journal-slider .close {
+        right: 4rem;
+        top: 4rem; } }
+  .journal-slider .prev,
+  .journal-slider .next {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    width: 2.5rem;
+    display: none !important; }
+    @media screen and (min-width: 768px) {
+      .journal-slider .prev,
+      .journal-slider .next {
+        display: block !important; } }
+  .journal-slider .prev {
+    left: 5rem; }
+  .journal-slider .next {
+    right: 5rem; }
+  .journal-slider .contents-container .journal-contents {
+    margin-top: 3rem; }
+    @media screen and (min-width: 768px) {
+      .journal-slider .contents-container .journal-contents {
+        width: 50%;
+        margin: auto;
+        margin-top: auto; } }
+    @media screen and (min-width: 768px) {
+      .journal-slider .contents-container .journal-contents {
+        width: 30%; } }
+    .journal-slider .contents-container .journal-contents img,
+    .journal-slider .contents-container .journal-contents video {
+      width: 100%; }
 
 .contact_page {
   height: 120vh;
