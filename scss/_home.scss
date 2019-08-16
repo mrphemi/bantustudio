@@ -45,7 +45,9 @@
 
 .journals {
     background-color: $white;
+    padding: 8rem 0;
     .filters {
+        margin-bottom: 5rem;
         display: none;
         @media screen and (min-width: 1024px) {
             display: block;
@@ -61,7 +63,7 @@
         }
         span {
             margin-right: 1.2rem;
-            font-size: 1.6rem;
+            font-size: 1.4rem;
             text-transform: uppercase;
             &:last-of-type {
                 margin-right: 0;
@@ -100,7 +102,9 @@
     .post {
         cursor: pointer;
         .post_title {
-            font-family: $font-fell;
+            font-family: $font-play;
+            font-weight: bold;
+            font-style: italic;
             font-size: 2rem;
         }
     }

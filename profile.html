@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Profile</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha256-YLGeXaapI0/5IgZopewRJcFXomhRMlYYjugPLSyNjTY=" crossorigin="anonymous" />
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha256-YLGeXaapI0/5IgZopewRJcFXomhRMlYYjugPLSyNjTY=" crossorigin="anonymous" /> -->
     <link rel="stylesheet" href="./css/main.css" />
 </head>
 
@@ -70,19 +70,26 @@
         <a href="#"><ion-icon name="logo-twitter" class="mt-3"></ion-icon></a>
     </div>
 
+    <!-- Scroll down icon for continous pages -->
+    <!-- TODO: to be extracted as a partial -->
+    <div class="scroll_down">
+        <img src="./assets/down-arrow-black.png" alt="scroll down button" class="w-100" />
+        <!-- <ion-icon name="arrow-round-down"></ion-icon> -->
+    </div>
+
     <div class="darknav">
-        <section class="profile container py-5 text-center d-flex flex-column">
+        <section class="profile container text-center">
             <h2>profile</h2>
-            <div class="logo mx-auto">
+            <div class="logo">
                 <img src="./assets/footer-logo.png" alt="logo" class="w-100" />
             </div>
-            <div class="summary my-auto">
-                <div class="heading mb-5">
-                    <h3>a full-service creative agency</h3>
-                    <p class="sub_heading">
-                        brand strategy, art + design + editorial direction, technology + development
-                    </p>
-                </div>
+            <div class="heading">
+                <h3>a full-service creative agency</h3>
+                <p class="sub_heading">
+                    brand strategy, art + design + editorial direction, technology + development
+                </p>
+            </div>
+            <div class="summary">
                 <p>
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam, consequuntur culpa officia qui voluptatibus corrupti sequi inventore ad magni odit sapiente, adipisci quibusdam minima repellendus sint illum veniam, mollitia rerum.
                 </p>
@@ -91,22 +98,17 @@
                     et qui dolor? Recusandae sint accusamus tempora deserunt quasi eos cum quia at accusantium, voluptate esse modi!
                 </p>
             </div>
-    
-            <div class="type_effect mb-auto">
+            <div class="type_effect">
                 <h3>we are 
                     <span class="typer" id="main" data-words="bantu,shizzle,nizzle,fizzle" data-deleteDelay="1000" data-colors="#b50f0f"></span>
                     <span class="cursor" data-owner="main"></span>
                 </h3>
             </div>
-    
-            <a href="#team" class="scroll_down">
-                <img src="./assets/down-arrow-black.png" alt="scroll down button" class="w-100" />
-            </a>
         </section>
     
-        <section class="team container py-5 text-center" id="team">
+        <section class="team container text-center" id="team">
             <div class="members">
-                <h2 class="mb-md-5">team</h2>
+                <h2>team</h2>
                 <div class="grid">
                     <div class="member">
                       <img class="w-100" src="https://source.unsplash.com/600x1000/?man" alt="team member image">
@@ -117,7 +119,7 @@
                             </a>
                         </div>
                     </div>
-                    <div class="member mt-5 mt-md-0">
+                    <div class="member">
                         <img class="w-100" src="https://source.unsplash.com/600x1000/?man" alt="team member image">
                         <div class="details">
                             <a href="#">
@@ -126,7 +128,7 @@
                             </a>
                         </div>
                     </div>
-                    <div class="member mt-5 mt-md-0">
+                    <div class="member">
                         <img class="w-100" src="https://source.unsplash.com/600x1000/?man" alt="team member image">
                         <div class="details">
                             <a href="#">
@@ -135,7 +137,7 @@
                             </a>
                         </div>
                     </div>
-                    <div class="member mt-5 mt-md-0">
+                    <div class="member">
                         <img class="w-100" src="https://source.unsplash.com/600x1000/?man" alt="team member image">
                         <div class="details">
                             <a href="#">
@@ -144,7 +146,7 @@
                             </a>
                         </div>
                     </div>
-                    <div class="member mt-5 mt-md-0">
+                    <div class="member">
                         <img class="w-100" src="https://source.unsplash.com/600x1000/?man" alt="team member image">
                         <div class="details">
                             <a href="#">
@@ -191,17 +193,17 @@
                     <p class="name">charles mike</p>
                     <p class="mobile">+91804234234</p>
                   </div>
-                  <div class="rep mt-5 mt-md-0">
+                  <div class="rep">
                     <p class="location">london</p>
                     <p class="name">senami zamba</p>
                     <p class="mobile">+44234234234</p>
                   </div>
-                  <div class="rep mt-5 mt-md-0">
+                  <div class="rep">
                     <p class="location">location</p>
                     <p class="name">rep name</p>
                     <p class="mobile">+234090866777</p>
                   </div>
-                  <div class="rep mt-5 mt-md-0">
+                  <div class="rep">
                       <p class="location">location</p>
                       <p class="name">rep name</p>
                       <p class="mobile">+234090866777</p>

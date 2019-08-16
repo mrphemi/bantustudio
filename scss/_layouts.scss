@@ -37,7 +37,7 @@ p {
 }
 
 h2 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: bold;
     text-transform: uppercase;
     display: none;
@@ -45,7 +45,41 @@ h2 {
         font-size: 2rem;
     }
     @media screen and (min-width: 1024px) {
-        font-size: 3.5rem;
+        font-size: 2.8rem;
         display: block;
     }
+}
+
+.container {
+    padding: 0 2rem;
+    @media screen and (min-width: 768px) {
+        padding: 0 5rem;
+    }
+    @media screen and (min-width: 1024px) {
+        max-width: 95rem;
+        padding: 0;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    @media screen and (min-width: 1280px) {
+        max-width: 110rem;
+    }
+    @media screen and (min-width: 1440px) {
+        max-width: 125rem;
+    }
+}
+
+// Align text to center
+.text-center {
+    text-align: center;
+}
+
+// img width 100% its container
+.w-100 {
+    width: 100%;
+}
+
+.mx-auto {
+    margin-left: auto;
+    margin-right: auto;
 }

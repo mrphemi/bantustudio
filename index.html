@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Bantu</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha256-YLGeXaapI0/5IgZopewRJcFXomhRMlYYjugPLSyNjTY=" crossorigin="anonymous" />
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha256-YLGeXaapI0/5IgZopewRJcFXomhRMlYYjugPLSyNjTY=" crossorigin="anonymous" /> -->
 
     <!-- slick carousel -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" integrity="sha256-UK1EiopXIL+KVhfbFa8xrmAWPeBjMVdvYMYkTAEv/HI=" crossorigin="anonymous" />
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" integrity="sha256-UK1EiopXIL+KVhfbFa8xrmAWPeBjMVdvYMYkTAEv/HI=" crossorigin="anonymous" /> -->
 
     <!-- magnificent popup -->
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css" integrity="sha256-RdH19s+RN0bEXdaXsajztxnALYs/Z43H/Cdm1U4ar24=" crossorigin="anonymous" /> -->
@@ -67,6 +67,13 @@
             <span class="u">u</span>
         </p>
     </div>
+
+    <!-- Scroll down icon for continous pages -->
+    <!-- TODO: to be extracted as a partial -->
+    <!-- <div class="scroll_down">
+        <img src="./assets/down-arrow-black.png" alt="scroll down button" class="w-100" />
+    </div> -->
+
     <section class="home lightnav">
         <div class="header">
             <img class="logo" src="./assets/bantu-logo.png" alt="Bantu Logo" />
@@ -77,9 +84,23 @@
     </section>
 
     <section class="journals text-center py-4 darknav" id="journals">
+        <!-- Fixed social iconstrigger -->
+        <!-- TODO: to be extracted as a partial -->
+        <div class="fixed_social_icons">
+            <a href="#">
+                <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+            <a href="#">
+                <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+            <a href="#">
+                <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+        </div>
+
         <h2>journal</h2>
 
-        <div class="filters mt-5 py-3">
+        <div class="filters">
             <span>filters:</span>
             <span class="filter">photography</span>
             <span class="filter">film</span>
@@ -89,7 +110,7 @@
         </div>
 
         <div class="container">
-            <div class="posts-grid mt-5">
+            <div class="posts-grid">
                 <div class="post">
                     <img class="w-100" src="https://source.unsplash.com/random/800x600" alt="post image" />
                     <p class="post_title my-3">
@@ -98,33 +119,33 @@
                 </div>
                 <div class="post two">
                     <img class="w-100" src="./assets/casual-close-up-couple-2647753.jpg" alt="post image" />
-                    <p class="post_title my-3">Lorem Ipsum Dolor Sit Amet.</p>
+                    <p class="post_title">Lorem Ipsum Dolor Sit Amet.</p>
                 </div>
                 <div class="post">
                     <img class="w-100" src="https://source.unsplash.com/random/800x600" alt="post image" />
-                    <p class="post_title my-3">
+                    <p class="post_title">
                         Post Title. Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, aperiam.
                     </p>
                 </div>
                 <div class="post">
                     <img class="w-100" src="https://source.unsplash.com/random/800x600" alt="post image" />
-                    <p class="post_title my-3">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                    <p class="post_title">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
                 </div>
                 <div class="post last">
                     <img class="w-100" src="./assets/boyfriend-casual-cheerful-1586477.jpg" alt="post image" />
-                    <p class="post_title my-3">
+                    <p class="post_title">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae.
                     </p>
                 </div>
                 <div class="post">
                     <img class="w-100" src="https://source.unsplash.com/random/800x600" alt="post image" />
-                    <p class="post_title my-3">
+                    <p class="post_title">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae.
                     </p>
                 </div>
                 <div class="post">
                     <img class="w-100" src="https://source.unsplash.com/random/800x600" alt="post image" />
-                    <p class="post_title my-3">
+                    <p class="post_title">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae.
                     </p>
                 </div>
@@ -132,7 +153,7 @@
         </div>
     </section>
 
-    <div class="journal-slider p-5">
+    <!-- <div class="journal-slider p-5">
         <div class="close">
             <ion-icon name="close" size="large"></ion-icon>
         </div>
@@ -146,7 +167,6 @@
         </div>
 
         <div class="contents-container">
-
             <div class="journal-contents carousel">
                 <div class="content">
                     <img src="./assets/attractive-beautiful-beauty-2306109.jpg" alt="post image" />
@@ -157,9 +177,9 @@
                 </div>
 
                 <div class="content">
-                     <video controls>
-                    <source src="./assets/Pexels Videos 1826872.mp4" type="video/mp4" />
-                    </video>
+                    <video controls>
+              <source src="./assets/Pexels Videos 1826872.mp4" type="video/mp4" />
+            </video>
                 </div>
 
                 <div class="content">
@@ -170,9 +190,8 @@
                     <img src="./assets/g-yellowwall.jpg" alt="post image" />
                 </div>
             </div>
-            
         </div>
-    </div>
+    </div> -->
 
     <footer class="container text-center">
         <form class="newsletter">

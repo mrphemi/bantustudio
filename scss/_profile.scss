@@ -1,5 +1,12 @@
 .profile {
     height: 100vh;
+    padding: 8rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    h2 {
+        margin-bottom: auto;
+    }
     .logo {
         margin-top: 6rem;
         width: 6%;
@@ -7,35 +14,40 @@
             display: none;
         }
     }
-    .summary {
-        .heading {
-            display: none;
-            h3 {
-                font-family: $font-fell;
-                text-transform: capitalize;
-                font-weight: bold;
-                font-size: 3rem;
-            }
-            .sub_heading {
-                text-transform: capitalize;
-                font-weight: normal;
-            }
-            @media screen and (min-width: 768px) {
-                display: block;
-            }
+    .heading {
+        display: none;
+        margin-bottom: auto;
+        h3 {
+            font-family: $font-play;
+            text-transform: capitalize;
+            font-weight: bold;
+            font-style: italic;
+            font-size: 2.8rem;
         }
+        .sub_heading {
+            text-transform: capitalize;
+            font-weight: normal;
+        }
+        @media screen and (min-width: 768px) {
+            display: block;
+        }
+    }
+    .summary {
+        margin-bottom: auto;
+        margin-top: -3rem;
         p {
             font-weight: 500;
             text-align: justify;
             color: $black;
             @media screen and (min-width: 768px) {
                 text-align: center;
-                width: 80%;
+                width: 70%;
                 margin: auto;
             }
         }
     }
     .type_effect {
+        margin-top: auto;
         h3 {
             text-transform: uppercase;
             font-weight: bold;
@@ -48,27 +60,14 @@
             }
         }
     }
-    .scroll_down {
-        width: 1rem;
-        position: absolute;
-        bottom: 2rem;
-        left: 2rem;
-        @media screen and (min-width: 768px) {
-            width: 1.2rem;
-            left: 50%;
-            transform: translate(-50%, 0);
-        }
-    }
 }
 
 .team {
     min-height: 100vh;
+    padding: 8rem 0;
     h2 {
         display: block;
-        margin-bottom: 2rem;
-        @media screen and (min-width: 768px) {
-            margin-top: 6rem;
-        }
+        margin-bottom: 5rem;
     }
     p {
         text-transform: uppercase;

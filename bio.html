@@ -6,13 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Creatives Bio</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha256-YLGeXaapI0/5IgZopewRJcFXomhRMlYYjugPLSyNjTY=" crossorigin="anonymous" />
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha256-YLGeXaapI0/5IgZopewRJcFXomhRMlYYjugPLSyNjTY=" crossorigin="anonymous" /> -->
     <link rel="stylesheet" href="./css/main.css" />
 </head>
 
 <body>
-
-     <!-- Navigation  -->
+    <!-- Navigation  -->
     <!-- TODO: to be extracted as a partial -->
     <nav class="full_nav">
         <div class="container d-flex flex-column h-100">
@@ -76,6 +75,13 @@
         </a>
     </div>
 
+    <!-- Scroll down icon for continous pages -->
+    <!-- TODO: to be extracted as a partial -->
+    <div class="scroll_down">
+        <!-- <img src="./assets/down-arrow-black.png" alt="scroll down button" class="w-100" /> -->
+        <ion-icon name="arrow-round-down"></ion-icon>
+    </div>
+
     <div class="darknav">
         <section class="bio container py-5 d-flex flex-column">
             <h3 class="text-center">creatives</h3>
@@ -87,10 +93,6 @@
                     elit. Molestiae, optio vero tempora rerum accusamus, error quis incidunt quam sint consequatur perspiciatis. Possimus maxime dolor ipsa quod omnis suscipit tempore non!
                 </p>
             </div>
-
-            <a href="#gallery" class="scroll_down">
-                <img src="./assets/down-arrow-black.png" alt="scroll down button" class="w-100" />
-            </a>
 
             <div class="logo mt-auto align-self-center">
                 <img src="./assets/footer-logo.png" alt="logo" class="w-100" />
@@ -140,7 +142,7 @@
     <!-- jquery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 
-    <script type="module" src="./main.js"></script>
+    <script src="./main.js"></script>
 </body>
 
 </html>
