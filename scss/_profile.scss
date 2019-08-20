@@ -20,13 +20,13 @@
         h3 {
             font-family: $font-play;
             text-transform: capitalize;
-            font-weight: bold;
+            font-weight: 700;
             font-style: italic;
             font-size: 2.8rem;
         }
         .sub_heading {
             text-transform: capitalize;
-            font-weight: normal;
+            font-weight: 500;
         }
         @media screen and (min-width: 768px) {
             display: block;
@@ -64,10 +64,10 @@
 
 .team {
     min-height: 100vh;
-    padding: 8rem 0;
+    padding: 8rem 0 0;
     h2 {
         display: block;
-        margin-bottom: 5rem;
+        margin-bottom: 7rem;
     }
     p {
         text-transform: uppercase;
@@ -146,16 +146,19 @@
             @media screen and (min-width: 768px) {
                 display: inline-block;
                 margin-right: 2rem;
-                margin-top: 0;
+                margin-bottom: 1rem;
             }
         }
     }
     .representatives {
+        @media screen and (min-width: 768px) {
+            padding: 0;
+        }
         .grid {
             @media screen and (min-width: 768px) {
                 display: grid;
                 grid-template-columns: 1fr 1fr;
-                grid-column-gap: 5rem;
+                grid-column-gap: 8rem;
                 grid-row-gap: 3rem;
             }
             @media screen and (min-width: 1200px) {
@@ -173,16 +176,21 @@
     .representatives,
     .collaborators,
     .members {
-        height: 100vh;
-        scroll-snap-align: start;
+        height: auto;
         @include center-with-flex(column);
         @media screen and (max-height: 480px) {
             height: auto;
             padding: 2rem 0 2rem;
         }
         @media screen and (min-width: 768px) {
+            scroll-snap-align: start;
             height: auto;
-            padding: 2rem 0 2rem;
+            padding: 0 0 8rem;
         }
+    }
+    .logo-bottom {
+        @include small-logo;
+        @include center-with-margin;
+        padding-bottom: 4rem;
     }
 }

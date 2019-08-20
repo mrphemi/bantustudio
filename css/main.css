@@ -1,5 +1,5 @@
-@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Playfair+Display:400,700,700i&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i&display=swap");
 :root {
   font-size: 62.5%; }
 
@@ -32,16 +32,17 @@ p {
 
 h2 {
   font-size: 2rem;
-  font-weight: bold;
+  font-weight: 700;
   text-transform: uppercase;
+  letter-spacing: 0.6rem;
   display: none; }
-  @media screen and (max-width: 320px) {
-    h2 {
-      font-size: 2rem; } }
   @media screen and (min-width: 1024px) {
     h2 {
-      font-size: 2.8rem;
       display: block; } }
+
+input,
+button {
+  outline: none; }
 
 .container {
   padding: 0 2rem; }
@@ -59,7 +60,11 @@ h2 {
       max-width: 110rem; } }
   @media screen and (min-width: 1440px) {
     .container {
-      max-width: 125rem; } }
+      max-width: 125rem;
+      max-width: 80%; } }
+  @media screen and (min-width: 1900px) {
+    .container {
+      max-width: 85%; } }
 
 .text-center {
   text-align: center; }
@@ -83,33 +88,38 @@ h2 {
   left: -100%;
   opacity: 0;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   z-index: 10;
   background-color: #fff;
-  padding: 2rem 0;
+  padding: 0 0 4rem;
   overflow-y: hidden; }
+  .full_nav .container {
+    display: flex;
+    flex-direction: column;
+    height: 100%; }
   .full_nav .close_icon {
     cursor: pointer; }
     .full_nav .close_icon ion-icon {
-      color: #000; }
+      color: #000;
+      font-size: 4rem; }
     @media screen and (min-width: 1024px) {
       .full_nav .close_icon {
         position: absolute;
-        top: 50%;
-        left: 4rem;
-        transform: translate(-50%, 0); } }
+        top: 46%;
+        left: 4%;
+        transform: translate(-46%, 0); } }
   @media screen and (min-width: 768px) {
     .full_nav h2 {
-      display: block; } }
+      display: block;
+      font-size: 2rem;
+      letter-spacing: 0.5rem; } }
   .full_nav h2 a {
     color: inherit;
     text-decoration: none; }
   @media screen and (min-width: 768px) {
     .full_nav .links {
       display: flex;
-      justify-content: space-around; } }
-  @media screen and (min-width: 768px) {
-    .full_nav .links {
+      justify-content: space-around;
       padding-top: 13rem; } }
   .full_nav .links a {
     text-transform: uppercase;
@@ -117,8 +127,9 @@ h2 {
     color: #000;
     display: block;
     margin-bottom: 2rem;
-    font-size: 2.2rem;
-    font-family: "Playfair Display", serif; }
+    font-size: 2.5rem;
+    font-family: "Playfair Display", serif;
+    letter-spacing: 0.6rem; }
     .full_nav .links a:last-of-type {
       margin-bottom: 0; }
     .full_nav .links a:hover {
@@ -128,29 +139,36 @@ h2 {
         font-size: 1.5rem; } }
   .full_nav .contact .address {
     font-family: "Playfair Display", serif;
-    font-weight: 500;
+    font-style: italic;
     width: 50%;
     margin: auto; }
     @media screen and (min-width: 768px) {
       .full_nav .contact .address {
-        width: auto;
-        font-size: 2.5rem; } }
+        width: auto; } }
   .full_nav .contact .phone,
   .full_nav .contact .mail {
-    font-weight: 700;
-    font-size: 1.3rem;
-    line-height: 1rem; }
-    @media screen and (min-width: 768px) {
-      .full_nav .contact .phone,
-      .full_nav .contact .mail {
-        font-size: 1.6rem; } }
+    margin-top: 1rem;
+    line-height: 1rem;
+    font-size: 1.4rem;
+    font-weight: 700; }
   .full_nav .logo {
-    width: 6%; }
+    margin-top: auto;
+    width: 6%;
+    margin-left: auto;
+    margin-right: auto; }
     @media screen and (min-width: 1024px) {
       .full_nav .logo {
-        width: 3%; } }
+        width: 2%; } }
     .full_nav .logo img {
       width: 100%; }
+    @media screen and (min-width: 768px) {
+      .full_nav .logo .mobile-logo {
+        display: none; } }
+    .full_nav .logo .desktop-logo {
+      display: none; }
+      @media screen and (min-width: 768px) {
+        .full_nav .logo .desktop-logo {
+          display: block; } }
 
 .nav_trigger {
   position: fixed;
@@ -164,9 +182,9 @@ h2 {
   width: 4rem; }
   @media screen and (min-width: 1024px) {
     .nav_trigger {
-      top: calc(50% - 6rem);
-      transform: translate(0, calc(-50% + 6rem));
-      left: 5rem;
+      top: 48%;
+      transform: translate(0, -48%);
+      left: 3%;
       flex-direction: row;
       width: 6rem; } }
   .nav_trigger .icon {
@@ -179,8 +197,8 @@ h2 {
     .nav_trigger .icon .line {
       background-color: #fff;
       display: block;
-      width: 0.1rem;
-      margin-left: 0.4rem;
+      width: 0.2rem;
+      margin-left: 0.3rem;
       transition: background-color 1.5s cubic-bezier(0.7, 0, 0.3, 1) 0ms; }
       .nav_trigger .icon .line.dark {
         background-color: #000; }
@@ -206,72 +224,73 @@ h2 {
         margin-top: 0.5rem; } }
 
 .fixed_social_icons {
-  display: none;
-  z-index: 10; }
+  display: none; }
   @media screen and (min-width: 1024px) {
     .fixed_social_icons {
       position: fixed;
-      right: 2rem;
-      top: calc(50% - 6rem);
-      transform: translate(0, calc(-50% + 6rem));
+      right: 2%;
+      top: 48%;
+      transform: translate(0, -48%);
       display: flex;
       flex-direction: column;
       height: 6rem; } }
   .fixed_social_icons a {
     color: inherit;
     text-decoration: none;
-    margin-top: 0.5rem; }
+    margin-top: 0.7rem; }
     .fixed_social_icons a:first-of-type {
       margin-top: 0; }
     .fixed_social_icons a ion-icon {
-      font-size: 1.2rem; }
+      font-size: 1.4rem; }
 
 .scroll_down {
   width: 1rem;
   position: fixed;
-  bottom: 5rem;
-  left: 13rem; }
+  bottom: 10%;
+  left: 7%; }
 
-footer {
-  padding: 4rem 0;
-  scroll-snap-align: start; }
-  footer .newsletter input,
-  footer .newsletter button {
+.footer {
+  margin-top: 10rem; }
+  .footer .newsletter input,
+  .footer .newsletter button {
     padding: 1rem;
-    border: 2px solid #000;
+    border: 3px solid #000;
     background: transparent;
     color: #000;
     font-weight: bold;
     outline: none; }
-    footer .newsletter input::placeholder,
-    footer .newsletter button::placeholder {
+    .footer .newsletter input::placeholder,
+    .footer .newsletter button::placeholder {
       text-transform: uppercase;
       color: #000; }
-  footer .newsletter button {
+  .footer .newsletter button {
     margin-left: -0.3rem;
-    text-transform: uppercase; }
-    footer .newsletter button:hover {
+    text-transform: uppercase;
+    border-left: 0; }
+    .footer .newsletter button:hover {
       background: #000;
       color: #fff;
       transition: background 0.5s ease-in; }
   @media screen and (min-width: 768px) {
-    footer .newsletter input,
-    footer .newsletter button {
-      font-size: 1.4rem; }
-    footer .newsletter input {
-      width: 40%; }
-    footer .newsletter button {
-      width: 15%; } }
-  footer .footer_logo {
+    .footer .newsletter input,
+    .footer .newsletter button {
+      font-size: 1rem; }
+    .footer .newsletter input {
+      width: 15%; }
+    .footer .newsletter button {
+      width: 8%; } }
+  .footer .footer_logo {
     width: 5%;
-    margin: auto; }
+    margin: 3rem auto; }
     @media screen and (min-width: 768px) {
-      footer .footer_logo {
-        width: 3%; } }
-  footer .copyright p {
-    font-weight: 600; }
-    footer .copyright p span {
+      .footer .footer_logo {
+        width: 2%; } }
+  .footer .copyright p {
+    font-size: 1.2rem; }
+    .footer .copyright p span {
       font-weight: 900; }
+    .footer .copyright p:first-of-type {
+      margin-bottom: 1rem; }
 
 .home .header {
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("../assets/intro-bg.jpg");
@@ -314,8 +333,9 @@ footer {
 
 .journals {
   background-color: #fff;
-  padding: 8rem 0; }
+  padding: 6rem 0 3rem; }
   .journals .filters {
+    margin-top: 1rem;
     margin-bottom: 5rem;
     display: none; }
     @media screen and (min-width: 1024px) {
@@ -324,6 +344,8 @@ footer {
         .journals .filters.fixed {
           position: -webkit-sticky;
           position: sticky;
+          padding: 1rem 0;
+          font-weight: 600;
           top: 0;
           z-index: 5;
           background: #fff;
@@ -331,8 +353,9 @@ footer {
           transition: background 0.5s ease-in; } }
     .journals .filters span {
       margin-right: 1.2rem;
-      font-size: 1.4rem;
-      text-transform: uppercase; }
+      font-size: 1.2rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1rem; }
       .journals .filters span:last-of-type {
         margin-right: 0; }
     .journals .filters .filter {
@@ -359,12 +382,12 @@ footer {
           .journals .posts-grid .last img {
             height: 90%; } }
   .journals .post {
-    cursor: pointer; }
+    cursor: pointer;
+    margin-bottom: 0.5rem; }
     .journals .post .post_title {
       font-family: "Playfair Display", serif;
-      font-weight: bold;
       font-style: italic;
-      font-size: 2rem; }
+      font-size: 3.5rem; }
 
 .profile {
   height: 100vh;
@@ -386,12 +409,12 @@ footer {
     .profile .heading h3 {
       font-family: "Playfair Display", serif;
       text-transform: capitalize;
-      font-weight: bold;
+      font-weight: 700;
       font-style: italic;
       font-size: 2.8rem; }
     .profile .heading .sub_heading {
       text-transform: capitalize;
-      font-weight: normal; }
+      font-weight: 500; }
     @media screen and (min-width: 768px) {
       .profile .heading {
         display: block; } }
@@ -421,10 +444,10 @@ footer {
 
 .team {
   min-height: 100vh;
-  padding: 8rem 0; }
+  padding: 8rem 0 0; }
   .team h2 {
     display: block;
-    margin-bottom: 5rem; }
+    margin-bottom: 7rem; }
   .team p {
     text-transform: uppercase;
     font-weight: bold; }
@@ -486,12 +509,15 @@ footer {
       .team .collaborators p {
         display: inline-block;
         margin-right: 2rem;
-        margin-top: 0; } }
+        margin-bottom: 1rem; } }
+  @media screen and (min-width: 768px) {
+    .team .representatives {
+      padding: 0; } }
   @media screen and (min-width: 768px) {
     .team .representatives .grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      grid-column-gap: 5rem;
+      grid-column-gap: 8rem;
       grid-row-gap: 3rem; } }
   @media screen and (min-width: 1200px) {
     .team .representatives .grid {
@@ -504,8 +530,7 @@ footer {
   .team .representatives,
   .team .collaborators,
   .team .members {
-    height: 100vh;
-    scroll-snap-align: start;
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -520,8 +545,17 @@ footer {
       .team .representatives,
       .team .collaborators,
       .team .members {
+        scroll-snap-align: start;
         height: auto;
-        padding: 2rem 0 2rem; } }
+        padding: 0 0 8rem; } }
+  .team .logo-bottom {
+    width: 6%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 4rem; }
+    @media screen and (min-width: 1024px) {
+      .team .logo-bottom {
+        width: 1.5%; } }
 
 @media screen and (min-width: 1024px) {
   .creatives {
@@ -533,7 +567,7 @@ footer {
 @media screen and (min-width: 1024px) {
   .creatives h2 {
     position: fixed;
-    top: 2rem;
+    top: 11%;
     left: 50%;
     transform: translate(-50%, 0); } }
 .creatives .container {
@@ -542,22 +576,15 @@ footer {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  background-attachment: fixed;
   display: flex;
   flex-direction: column; }
-  @media screen and (max-height: 667px) and (max-width: 400px) {
-    .creatives .container {
-      min-height: 125vh; } }
   @media screen and (max-width: 1023px) {
     .creatives .container {
       max-width: 100vw; } }
   @media screen and (min-width: 1024px) {
     .creatives .container {
-      height: 75vh;
-      width: 80%; } }
-  @media screen and (min-width: 1500px) {
-    .creatives .container {
-      max-width: 1300px;
-      width: 100%; } }
+      height: 60vh; } }
   .creatives .container .list {
     margin-top: auto; }
     @media screen and (min-width: 1024px) {
@@ -566,8 +593,10 @@ footer {
         margin: auto; } }
     .creatives .container .list p {
       text-transform: uppercase;
-      font-weight: bold;
-      margin-bottom: 4rem; }
+      font-size: 1.4rem;
+      font-weight: 600;
+      margin-bottom: 4rem;
+      letter-spacing: 0.4rem; }
       .creatives .container .list p:last-of-type {
         margin-bottom: 0; }
       @media screen and (min-width: 768px) {
@@ -588,11 +617,11 @@ footer {
     align-self: center; }
     @media screen and (min-width: 1024px) {
       .creatives .container .logo {
-        width: 2%; } }
+        width: 1.5%; } }
     @media screen and (min-width: 1024px) {
       .creatives .container .logo {
         position: fixed;
-        bottom: 2rem;
+        bottom: 6%;
         left: 50%;
         transform: translate(-50%, 0); } }
     .creatives .container .logo .black-logo {
@@ -631,7 +660,7 @@ footer {
     width: 6%; }
     @media screen and (min-width: 1024px) {
       .bio .logo {
-        width: 2%; } }
+        width: 1.5%; } }
 
 .gallery {
   min-height: 100vh; }
@@ -723,86 +752,107 @@ footer {
   @media screen and (min-width: 1024px) {
     .contact_page h2 {
       position: fixed;
-      top: 2rem;
+      top: 11%;
       left: 50%;
       transform: translate(-50%, 0); } }
   .contact_page .container {
-    height: 100%; }
+    height: 100%;
+    display: flex;
+    flex-direction: column; }
     @media screen and (min-width: 1024px) {
       .contact_page .container {
         background-image: url("../assets/contact-bg.jpg");
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
-        height: 75%;
-        width: 80%; } }
-    @media screen and (min-width: 1500px) {
-      .contact_page .container {
-        max-width: 1300px;
+        padding: 2rem 0;
+        height: 65%;
         width: 100%; } }
+    .contact_page .container p {
+      font-size: 1.4rem;
+      font-weight: 500; }
   .contact_page .location .address {
     font-family: "Playfair Display", serif;
-    width: 50%; }
+    font-style: italic;
+    font-weight: normal;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto; }
+  .contact_page .marker {
+    margin-top: auto; }
+    .contact_page .marker ion-icon {
+      font-size: 4.5rem; }
   .contact_page .social ion-icon {
     font-size: 2rem;
     margin-right: 1.5rem; }
     .contact_page .social ion-icon:last-of-type {
       margin-right: 0; }
-  .contact_page .mail a {
-    color: inherit; }
-  .contact_page .newsletter .mobile {
-    background: transparent;
-    border: 2px solid #000;
-    padding: 1rem;
-    width: 80%;
-    text-transform: uppercase;
-    font-size: 1.2rem; }
-    @media screen and (min-width: 768px) {
-      .contact_page .newsletter .mobile {
-        display: none; } }
-  .contact_page .newsletter form {
-    display: none; }
-    @media screen and (min-width: 768px) {
-      .contact_page .newsletter form {
-        display: block; } }
-    .contact_page .newsletter form input {
-      padding: 1rem;
-      border: 2px solid #000;
-      width: 35%;
+  .contact_page .mail {
+    margin-top: auto;
+    margin-bottom: 2.5rem; }
+    .contact_page .mail a {
       color: inherit;
-      font-size: 1.4rem;
-      font-weight: bold; }
-      .contact_page .newsletter form input::placeholder {
-        text-transform: uppercase;
-        color: inherit; }
-      @media screen and (min-width: 1200px) {
-        .contact_page .newsletter form input {
-          width: 25%; } }
-    .contact_page .newsletter form button {
+      text-decoration: none; }
+      .contact_page .mail a strong {
+        font-size: 1.6rem; }
+  .contact_page .newsletter {
+    margin-bottom: 1rem; }
+    .contact_page .newsletter .mobile {
       background: transparent;
       border: 2px solid #000;
       padding: 1rem;
-      width: 15%;
-      margin-left: -0.3rem;
-      font-size: 1.4rem;
-      font-weight: bold;
-      text-transform: uppercase; }
-      .contact_page .newsletter form button:hover {
-        background: #000;
-        color: #fff;
-        transition: background 0.5s ease; }
-      @media screen and (min-width: 1200px) {
-        .contact_page .newsletter form button {
-          width: 10%; } }
+      width: 80%;
+      text-transform: uppercase;
+      font-size: 1.2rem;
+      font-weight: bold; }
+      @media screen and (min-width: 768px) {
+        .contact_page .newsletter .mobile {
+          width: 25%; } }
+    .contact_page .newsletter form {
+      display: none; }
+      .contact_page .newsletter form.show {
+        display: block; }
+      .contact_page .newsletter form input {
+        padding: 1rem;
+        border: 3px solid #000;
+        width: 15%;
+        color: inherit;
+        font-size: 1rem;
+        font-weight: bold; }
+        .contact_page .newsletter form input::placeholder {
+          text-transform: uppercase;
+          color: inherit; }
+      .contact_page .newsletter form button {
+        background: transparent;
+        border: 3px solid #000;
+        padding: 1rem;
+        width: 8%;
+        margin-left: -0.3rem;
+        font-size: 1rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        border-left: 0; }
+        .contact_page .newsletter form button:hover {
+          background: #000;
+          color: #fff;
+          transition: background 0.5s ease; }
+  .contact_page .copyright {
+    margin-top: auto; }
+    .contact_page .copyright p {
+      font-size: 1rem; }
+      .contact_page .copyright p strong {
+        font-weight: 700; }
   .contact_page .logo {
     width: 6%; }
     @media screen and (min-width: 1024px) {
       .contact_page .logo {
-        width: 2%; } }
+        width: 1.5%; } }
     @media screen and (min-width: 1024px) {
       .contact_page .logo {
         position: fixed;
-        bottom: 2rem;
+        bottom: 6%;
         left: 50%;
         transform: translate(-50%, 0); } }
 

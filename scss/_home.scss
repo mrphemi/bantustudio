@@ -45,8 +45,9 @@
 
 .journals {
     background-color: $white;
-    padding: 8rem 0;
+    padding: 6rem 0 3rem;
     .filters {
+        margin-top: 1rem;
         margin-bottom: 5rem;
         display: none;
         @media screen and (min-width: 1024px) {
@@ -54,6 +55,8 @@
             &.fixed {
                 position: -webkit-sticky;
                 position: sticky;
+                padding: 1rem 0;
+                font-weight: 600;
                 top: 0;
                 z-index: 5;
                 background: $white;
@@ -63,8 +66,9 @@
         }
         span {
             margin-right: 1.2rem;
-            font-size: 1.4rem;
+            font-size: 1.2rem;
             text-transform: uppercase;
+            letter-spacing: 0.1rem;
             &:last-of-type {
                 margin-right: 0;
             }
@@ -101,11 +105,11 @@
     }
     .post {
         cursor: pointer;
+        margin-bottom: 0.5rem;
         .post_title {
             font-family: $font-play;
-            font-weight: bold;
             font-style: italic;
-            font-size: 2rem;
+            font-size: 3.5rem;
         }
     }
 }

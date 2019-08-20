@@ -1,11 +1,10 @@
-footer {
-    padding: 4rem 0;
-    scroll-snap-align: start;
+.footer {
+    margin-top: 10rem;
     .newsletter {
         input,
         button {
             padding: 1rem;
-            border: 2px solid $black;
+            border: 3px solid $black;
             background: transparent;
             color: $black;
             font-weight: bold;
@@ -18,6 +17,7 @@ footer {
         button {
             margin-left: -0.3rem;
             text-transform: uppercase;
+            border-left: 0;
             &:hover {
                 background: $black;
                 color: $white;
@@ -27,28 +27,31 @@ footer {
         @media screen and (min-width: 768px) {
             input,
             button {
-                font-size: 1.4rem;
+                font-size: 1rem;
             }
             input {
-                width: 40%;
+                width: 15%;
             }
             button {
-                width: 15%;
+                width: 8%;
             }
         }
     }
     .footer_logo {
         width: 5%;
-        margin: auto;
+        margin: 3rem auto;
         @media screen and (min-width: 768px) {
-            width: 3%;
+            width: 2%;
         }
     }
     .copyright {
         p {
-            font-weight: 600;
+            font-size: 1.2rem;
             span {
                 font-weight: 900;
+            }
+            &:first-of-type {
+                margin-bottom: 1rem;
             }
         }
     }

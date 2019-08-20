@@ -38,16 +38,19 @@ p {
 
 h2 {
     font-size: 2rem;
-    font-weight: bold;
+    font-weight: 700;
     text-transform: uppercase;
+    letter-spacing: 0.6rem;
     display: none;
-    @media screen and (max-width: 320px) {
-        font-size: 2rem;
-    }
     @media screen and (min-width: 1024px) {
-        font-size: 2.8rem;
+        // font-size: 2.2rem;
         display: block;
     }
+}
+
+input,
+button {
+    outline: none;
 }
 
 .container {
@@ -66,6 +69,10 @@ h2 {
     }
     @media screen and (min-width: 1440px) {
         max-width: 125rem;
+        max-width: 80%;
+    }
+    @media screen and (min-width: 1900px) {
+        max-width: 85%;
     }
 }
 
