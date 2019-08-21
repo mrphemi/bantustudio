@@ -109,19 +109,26 @@ button {
         top: 46%;
         left: 4%;
         transform: translate(-46%, 0); } }
-  @media screen and (min-width: 768px) {
-    .full_nav h2 {
-      display: block;
-      font-size: 2rem;
-      letter-spacing: 0.5rem; } }
-  .full_nav h2 a {
-    color: inherit;
-    text-decoration: none; }
+  .full_nav h2 {
+    margin-top: auto;
+    margin-bottom: auto; }
+    @media screen and (min-width: 768px) {
+      .full_nav h2 {
+        display: block;
+        font-size: 2rem;
+        letter-spacing: 0.5rem; } }
+    .full_nav h2 a {
+      color: inherit;
+      text-decoration: none; }
   @media screen and (min-width: 768px) {
     .full_nav .links {
       display: flex;
       justify-content: space-around;
-      padding-top: 13rem; } }
+      padding-top: 0.5rem;
+      position: fixed;
+      width: 80%;
+      top: 48.8%;
+      transform: translate(0, -48.8%); } }
   .full_nav .links a {
     text-transform: uppercase;
     text-decoration: none;
@@ -138,20 +145,24 @@ button {
     @media screen and (max-width: 320px) {
       .full_nav .links a {
         font-size: 1.5rem; } }
-  .full_nav .contact .address {
-    font-family: "Playfair Display", serif;
-    font-style: italic;
-    width: 50%;
-    margin: auto; }
-    @media screen and (min-width: 768px) {
-      .full_nav .contact .address {
-        width: auto; } }
-  .full_nav .contact .phone,
-  .full_nav .contact .mail {
-    margin-top: 1rem;
-    line-height: 1rem;
-    font-size: 1.4rem;
-    font-weight: 700; }
+  .full_nav .contact {
+    margin-top: auto;
+    padding-top: 4rem; }
+    .full_nav .contact .address {
+      font-family: "Playfair Display", serif;
+      font-style: italic;
+      font-size: 2rem;
+      width: 50%;
+      margin: auto; }
+      @media screen and (min-width: 768px) {
+        .full_nav .contact .address {
+          width: auto; } }
+    .full_nav .contact .phone,
+    .full_nav .contact .mail {
+      margin-top: 1rem;
+      line-height: 1rem;
+      font-size: 1.4rem;
+      font-weight: 700; }
   .full_nav .logo {
     margin-top: auto;
     width: 6%;

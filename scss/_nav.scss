@@ -27,8 +27,8 @@
         }
     }
     h2 {
-        // margin-top: auto;
-        // margin-bottom: auto;
+        margin-top: auto;
+        margin-bottom: auto;
         @media screen and (min-width: 768px) {
             display: block;
             font-size: 2rem;
@@ -40,11 +40,14 @@
         }
     }
     .links {
-        // margin-top: auto;
         @media screen and (min-width: 768px) {
             display: flex;
             justify-content: space-around;
-            padding-top: 13rem;
+            padding-top: 0.5rem;
+            position: fixed;
+            width: 80%;
+            top: 48.8%;
+            transform: translate(0, -48.8%);
         }
         a {
             text-transform: uppercase;
@@ -67,10 +70,12 @@
         }
     }
     .contact {
-        // margin-top: auto;
+        margin-top: auto;
+        padding-top: 4rem;
         .address {
             font-family: $font-play;
             font-style: italic;
+            font-size: 2rem;
             width: 50%;
             margin: auto;
             @media screen and (min-width: 768px) {
