@@ -39,7 +39,7 @@
 
 .gallery {
     min-height: 100vh;
-    padding: 8rem 0 4rem;
+    padding: 10rem 0 4rem;
     .grid {
         margin-top: 6rem;
         display: grid;
@@ -50,6 +50,13 @@
         }
         @media screen and (min-width: 1200px) {
             grid-template-columns: repeat(3, 1fr);
+            grid-column-gap: 6rem;
+            grid-row-gap: 3rem;
+        }
+        .post_title {
+            font-family: $font-play;
+            font-style: italic;
+            font-size: 3.5rem;
         }
     }
 }
