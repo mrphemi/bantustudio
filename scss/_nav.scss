@@ -119,12 +119,14 @@
     z-index: 5;
     cursor: pointer;
     width: 4rem;
+    padding-bottom: 0.5rem;
     @media screen and (min-width: 1024px) {
         top: 48%;
         transform: translate(0, -48%);
         left: 3%;
         flex-direction: row;
         width: 6rem;
+        padding-bottom: 0;
     }
     .icon {
         display: flex;
@@ -178,7 +180,7 @@
         position: fixed;
         right: 2%;
         top: 48%;
-        transform: translate(0, -48%);
+        transform: translate(0, -50%);
         display: flex;
         flex-direction: column;
         height: 6rem;
@@ -200,5 +202,6 @@
     width: 1rem;
     position: fixed;
     bottom: 10%;
-    left: 7%;
+    left: 8%;
+    animation: scrolldown 1s infinite ease;
 }

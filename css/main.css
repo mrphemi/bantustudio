@@ -34,10 +34,11 @@ h2 {
   font-size: 2rem;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.6rem;
+  letter-spacing: 0.5rem;
   display: none; }
   @media screen and (min-width: 1024px) {
     h2 {
+      font-size: 2.2rem;
       display: block; } }
 
 input,
@@ -179,14 +180,16 @@ button {
   flex-direction: column;
   z-index: 5;
   cursor: pointer;
-  width: 4rem; }
+  width: 4rem;
+  padding-bottom: 0.5rem; }
   @media screen and (min-width: 1024px) {
     .nav_trigger {
       top: 48%;
       transform: translate(0, -48%);
       left: 3%;
       flex-direction: row;
-      width: 6rem; } }
+      width: 6rem;
+      padding-bottom: 0; } }
   .nav_trigger .icon {
     display: flex;
     transform: rotate(180deg);
@@ -230,7 +233,7 @@ button {
       position: fixed;
       right: 2%;
       top: 48%;
-      transform: translate(0, -48%);
+      transform: translate(0, -50%);
       display: flex;
       flex-direction: column;
       height: 6rem; } }
@@ -247,7 +250,8 @@ button {
   width: 1rem;
   position: fixed;
   bottom: 10%;
-  left: 7%; }
+  left: 8%;
+  animation: scrolldown 1s infinite ease; }
 
 .footer {
   margin-top: 10rem; }
@@ -420,7 +424,7 @@ button {
         display: block; } }
   .profile .summary {
     margin-bottom: auto;
-    margin-top: -3rem; }
+    margin-top: -4%; }
     .profile .summary p {
       font-weight: 500;
       text-align: justify;
@@ -435,12 +439,12 @@ button {
     .profile .type_effect h3 {
       text-transform: uppercase;
       font-weight: bold;
-      font-size: 2rem; }
+      font-size: 1.8rem; }
       .profile .type_effect h3 span {
         color: #b50f0f; }
       @media screen and (min-width: 1024px) {
         .profile .type_effect h3 {
-          font-size: 2.5rem; } }
+          font-size: 2rem; } }
 
 .team {
   min-height: 100vh;
@@ -578,7 +582,8 @@ button {
   background-position: center;
   background-attachment: fixed;
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  transition: background-image 0.4s ease; }
   @media screen and (max-width: 1023px) {
     .creatives .container {
       max-width: 100vw; } }
@@ -635,7 +640,10 @@ button {
 
 .bio {
   position: relative;
-  height: 100vh; }
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 8rem 0 4rem; }
   @media screen and (max-height: 480px) {
     .bio {
       height: 130vh; } }
@@ -643,27 +651,34 @@ button {
     .bio {
       height: 120vh; } }
   .bio h2 {
-    display: block;
-    font-family: serif; }
-  .bio h3 {
-    font-weight: bold;
-    text-transform: uppercase;
-    font-size: 2.5rem;
-    margin-top: 8rem; }
+    display: block; }
+    .bio h2.name {
+      font-family: "Playfair Display", serif;
+      font-size: 4rem;
+      margin-bottom: 5rem; }
   .bio p {
     text-align: justify; }
     @media screen and (min-width: 768px) {
       .bio p {
+        text-align: center;
         width: 80%;
-        text-align: center; } }
+        margin-left: auto;
+        margin-right: auto; } }
+  .bio .intro {
+    margin-top: auto;
+    margin-bottom: auto; }
   .bio .logo {
+    margin-top: auto;
+    margin-left: auto;
+    margin-right: auto;
     width: 6%; }
     @media screen and (min-width: 1024px) {
       .bio .logo {
         width: 1.5%; } }
 
 .gallery {
-  min-height: 100vh; }
+  min-height: 100vh;
+  padding: 8rem 0 4rem; }
   .gallery .grid {
     margin-top: 6rem;
     display: grid;
@@ -766,7 +781,7 @@ button {
         background-repeat: no-repeat;
         background-position: center;
         padding: 2rem 0;
-        height: 65%;
+        height: 62%;
         width: 100%; } }
     .contact_page .container p {
       font-size: 1.4rem;

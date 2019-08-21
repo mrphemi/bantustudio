@@ -79,72 +79,135 @@
         <div class="container">
             <div class="list text-center">
                 <p>
-                    <a href="bio.html">etubi onucheyo</a>
-                </p>
-                <p>
-                    <a href="bio.html">tay iwar</a>
-                </p>
-                <p>
-                    <a href="bio.html">niyi okoewo</a>
-                </p>
-                <p>
-                    <a href="bio.html">romeo shagba</a>
-                </p>
-                <p>
-                    <a href="bio.html">rozay</a>
-                </p>
-                <p>
-                    <a href="bio.html">mr color</a>
-                </p>
-                <p>
-                    <a href="bio.html">hanz</a>
-                </p>
-                <p>
-                    <a href="bio.html">lumun</a>
-                </p>
-                <p>
-                    <a href="bio.html">terna iwar</a>
-                </p>
-            </div>
-            <div class="logo">
-                <img src="./assets/bantu-logo.png" alt="logo" class="white-logo w-100" />
-                <img src="./assets/footer-logo.png" alt="logo" class="black-logo w-100" />
-            </div>
+                    <a href="bio.html" class="creative" data-background="https://source.unsplash.com/800x600/?person">
+              etubi onucheyo</a
+            >
+          </p>
+          <p>
+            <a
+              href="bio.html"
+              class="creative"
+              data-background="https://source.unsplash.com/800x600/?person"
+              >tay iwar</a
+            >
+          </p>
+          <p>
+            <a
+              href="bio.html"
+              class="creative"
+              data-background="https://source.unsplash.com/800x600/?person"
+              >niyi okoewo</a
+            >
+          </p>
+          <p>
+            <a
+              href="bio.html"
+              class="creative"
+              data-background="https://source.unsplash.com/800x600/?person"
+              >romeo shagba</a
+            >
+          </p>
+          <p>
+            <a
+              href="bio.html"
+              class="creative"
+              data-background="https://source.unsplash.com/800x600/?person"
+              >rozay</a
+            >
+          </p>
+          <p>
+            <a
+              href="bio.html"
+              class="creative"
+              data-background="https://source.unsplash.com/800x600/?person"
+              >mr color</a
+            >
+          </p>
+          <p>
+            <a
+              href="bio.html"
+              class="creative"
+              data-background="https://source.unsplash.com/800x600/?person"
+              >hanz</a
+            >
+          </p>
+          <p>
+            <a
+              href="bio.html"
+              class="creative"
+              data-background="https://source.unsplash.com/800x600/?person"
+              >lumun</a
+            >
+          </p>
+          <p>
+            <a
+              href="bio.html"
+              class="creative"
+              data-background="https://source.unsplash.com/800x600/?person"
+              >terna iwar</a
+            >
+          </p>
         </div>
+        <div class="logo">
+          <img src="./assets/bantu-logo.png" alt="logo" class="white-logo w-100" />
+          <img src="./assets/footer-logo.png" alt="logo" class="black-logo w-100" />
+        </div>
+      </div>
     </div>
 
     <!-- Ionic Icons -->
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
 
     <!-- Tweenmax -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js" integrity="sha256-lPE3wjN2a7ABWHbGz7+MKBJaykyzqCbU96BJWjio86U=" crossorigin="anonymous"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"
+      integrity="sha256-lPE3wjN2a7ABWHbGz7+MKBJaykyzqCbU96BJWjio86U="
+      crossorigin="anonymous"
+    ></script>
 
     <!-- jquery -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
 
     <script type="module" src="./main.js"></script>
 
     <script>
-        function changeNavcolor() {
-            var width = $(window).width();
-            if (width < 1024) {
-                if ($(".creatives").hasClass("lightnav")) {
-                    return;
-                } else {
-                    $(".creatives").removeClass("darknav");
-                    $(".creatives").addClass("lightnav");
-                }
-            } else {
-                $(".creatives").removeClass("lightnav");
-                $(".creatives").addClass("darknav");
-            }
+      function changeNavcolor() {
+        var width = $(window).width();
+        if (width < 1024) {
+          if ($(".creatives").hasClass("lightnav")) {
+            return;
+          } else {
+            $(".creatives").removeClass("darknav");
+            $(".creatives").addClass("lightnav");
+          }
+        } else {
+          $(".creatives").removeClass("lightnav");
+          $(".creatives").addClass("darknav");
         }
+      }
 
-        $(window).resize(function() {
-            changeNavcolor();
-        });
+      $(window).resize(function() {
         changeNavcolor();
-    </script>
-</body>
+      });
+      changeNavcolor();
 
+      // change background image on hover (Desktop)
+      $(".creative").each(function(element) {
+        // console.log($(this));
+        $($(this)).mouseenter(function() {
+          console.log($(this).data("background"));
+          var newBackground = $(this).data("background");
+          $(".container").css("background-image", `url(../assets/hero-bg.jpg)`);
+        });
+
+        $($(this)).mouseleave(function() {
+          $(".container").css("background-image", "url(../assets/intro-bg.jpg)");
+        });
+      });
+    </script>
+  </body>
 </html>
