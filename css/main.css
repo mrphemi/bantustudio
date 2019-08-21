@@ -347,7 +347,7 @@ button {
 
 .journals {
   background-color: #fff;
-  padding: 8rem 0 3rem; }
+  padding: 10rem 0 3rem; }
   .journals .filters {
     margin-top: 1rem;
     margin-bottom: 5rem;
@@ -377,7 +377,8 @@ button {
   .journals .posts-grid {
     display: grid;
     grid-template-columns: 1fr;
-    grid-gap: 6rem; }
+    grid-column-gap: 6rem;
+    grid-row-gap: 3rem; }
     @media screen and (min-width: 768px) {
       .journals .posts-grid {
         grid-template-columns: repeat(2, 1fr); } }
@@ -396,8 +397,7 @@ button {
           .journals .posts-grid .last img {
             height: 90%; } }
   .journals .post {
-    cursor: pointer;
-    margin-bottom: 0.5rem; }
+    cursor: pointer; }
     .journals .post .post_title {
       font-family: "Playfair Display", serif;
       font-style: italic;

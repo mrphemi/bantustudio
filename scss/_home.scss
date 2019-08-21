@@ -45,7 +45,7 @@
 
 .journals {
     background-color: $white;
-    padding: 8rem 0 3rem;
+    padding: 10rem 0 3rem;
     .filters {
         margin-top: 1rem;
         margin-bottom: 5rem;
@@ -80,7 +80,8 @@
     .posts-grid {
         display: grid;
         grid-template-columns: 1fr;
-        grid-gap: 6rem;
+        grid-column-gap: 6rem;
+        grid-row-gap: 3rem;
         @media screen and (min-width: 768px) {
             grid-template-columns: repeat(2, 1fr);
         }
@@ -105,7 +106,6 @@
     }
     .post {
         cursor: pointer;
-        margin-bottom: 0.5rem;
         .post_title {
             font-family: $font-play;
             font-style: italic;
