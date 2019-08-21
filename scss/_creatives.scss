@@ -30,6 +30,9 @@
         @media screen and (min-width: 1024px) {
             height: 60vh;
         }
+        @media screen and (min-width: 1440px) {
+            height: 70vh;
+        }
         .list {
             margin-top: auto;
             @media screen and (min-width: 1024px) {
@@ -54,6 +57,9 @@
                 }
                 @media screen and (min-width: 1200px) {
                     margin-right: 4rem;
+                }
+                @media screen and (min-width: 1440px) {
+                    font-size: 1.8rem;
                 }
                 a {
                     color: $white;

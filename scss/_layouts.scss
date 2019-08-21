@@ -43,8 +43,11 @@ h2 {
     letter-spacing: 0.5rem;
     display: none;
     @media screen and (min-width: 1024px) {
-        font-size: 2.2rem;
+        font-size: 2rem;
         display: block;
+    }
+    @media screen and (min-width: 1440px) {
+        font-size: 2.2rem;
     }
 }
 
