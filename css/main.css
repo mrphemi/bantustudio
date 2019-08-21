@@ -61,10 +61,10 @@ button {
       max-width: 110rem; } }
   @media screen and (min-width: 1440px) {
     .container {
-      max-width: 85%; } }
+      max-width: 80%; } }
   @media screen and (min-width: 1900px) {
     .container {
-      max-width: 90%; } }
+      max-width: 85%; } }
 
 .text-center {
   text-align: center; }
