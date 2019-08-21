@@ -61,11 +61,10 @@ button {
       max-width: 110rem; } }
   @media screen and (min-width: 1440px) {
     .container {
-      max-width: 125rem;
-      max-width: 80%; } }
+      max-width: 85%; } }
   @media screen and (min-width: 1900px) {
     .container {
-      max-width: 85%; } }
+      max-width: 90%; } }
 
 .text-center {
   text-align: center; }
@@ -378,7 +377,7 @@ button {
   .journals .posts-grid {
     display: grid;
     grid-template-columns: 1fr;
-    grid-gap: 2rem; }
+    grid-gap: 6rem; }
     @media screen and (min-width: 768px) {
       .journals .posts-grid {
         grid-template-columns: repeat(2, 1fr); } }
