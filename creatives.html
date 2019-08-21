@@ -201,11 +201,11 @@
         $($(this)).mouseenter(function() {
           console.log($(this).data("background"));
           var newBackground = $(this).data("background");
-          $(".container").css("background-image", `url(./assets/hero-bg.jpg)`);
+          $(".creatives .container").css("background-image", `url(./assets/hero-bg.jpg)`);
         });
 
         $($(this)).mouseleave(function() {
-          $(".container").css("background-image", "url(./assets/intro-bg.jpg)");
+          $(".creatives .container").css("background-image", "url(./assets/intro-bg.jpg)");
         });
       });
     </script>
