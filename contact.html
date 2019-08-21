@@ -43,6 +43,18 @@
                     <img src="./assets/footer-logo.png" alt="bantu logo" class="desktop-logo" />
                 </a>
             </div>
+
+            <div class="social_icons">
+                <a href="#">
+                    <ion-icon name="logo-facebook"></ion-icon>
+                </a>
+                <a href="#">
+                    <ion-icon name="logo-instagram"></ion-icon>
+                </a>
+                <a href="#">
+                    <ion-icon name="logo-twitter"></ion-icon>
+                </a>
+            </div>
         </div>
     </nav>
 
@@ -110,7 +122,7 @@
 
             <div class="newsletter">
                 <button class="mobile">sign up for our newsletter</button>
-                <form>
+                <form class="form">
                     <input type="email" placeholder="your email address" />
                     <button>sign up</button>
                 </form>
@@ -142,7 +154,13 @@
     <!-- jquery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 
-    <script type="module" src="./main.js"></script>
+    <script src="./main.js"></script>
+    <script>
+        $(".mobile").hover(function() {
+            $(".form").addClass("show");
+            $(this).addClass("hide");
+        });
+    </script>
 </body>
 
 </html>

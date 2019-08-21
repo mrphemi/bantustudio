@@ -1,5 +1,6 @@
 .footer {
-    margin-top: 10rem;
+    scroll-snap-align: start;
+    padding: 6rem 0;
     .newsletter {
         input,
         button {
@@ -9,6 +10,18 @@
             color: $black;
             font-weight: bold;
             outline: none;
+            &::-webkit-input-placeholder {
+                text-transform: uppercase;
+                color: $black;
+            }
+            &:-ms-input-placeholder {
+                text-transform: uppercase;
+                color: $black;
+            }
+            &::-ms-input-placeholder {
+                text-transform: uppercase;
+                color: $black;
+            }
             &::placeholder {
                 text-transform: uppercase;
                 color: $black;
@@ -21,6 +34,7 @@
             &:hover {
                 background: $black;
                 color: $white;
+                -webkit-transition: background 0.5s ease-in;
                 transition: background 0.5s ease-in;
             }
         }
@@ -30,19 +44,21 @@
                 font-size: 1rem;
             }
             input {
-                width: 15%;
+                width: 12%;
             }
             button {
-                width: 8%;
+                width: 5%;
             }
         }
     }
     .footer_logo {
-        width: 5%;
+        // width: 5%;
         margin: 3rem auto;
-        @media screen and (min-width: 768px) {
-            width: 2%;
-        }
+        // @media screen and (min-width: 768px) {
+        //     width: 2%;
+        // }
+        @include small-logo;
+        @include center-with-margin;
     }
     .copyright {
         p {

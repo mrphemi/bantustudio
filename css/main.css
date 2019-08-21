@@ -97,8 +97,6 @@ button {
   padding: 0 0 4rem;
   overflow-y: hidden; }
   .full_nav .container {
-    display: flex;
-    flex-direction: column;
     height: 100%; }
   .full_nav .close_icon {
     cursor: pointer; }
@@ -112,8 +110,10 @@ button {
         left: 4%;
         transform: translate(-46%, 0); } }
   .full_nav h2 {
-    margin-top: auto;
-    margin-bottom: auto; }
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, 0); }
     @media screen and (min-width: 768px) {
       .full_nav h2 {
         display: block;
@@ -125,10 +125,10 @@ button {
   @media screen and (min-width: 768px) {
     .full_nav .links {
       display: flex;
-      justify-content: space-around;
+      justify-content: center;
       padding-top: 0.5rem;
       position: fixed;
-      width: 80%;
+      width: 90%;
       top: 48.8%;
       transform: translate(0, -48.8%); } }
   .full_nav .links a {
@@ -139,17 +139,20 @@ button {
     margin-bottom: 2rem;
     font-size: 2.5rem;
     font-family: "Playfair Display", serif;
-    letter-spacing: 0.6rem; }
+    letter-spacing: 0.6rem;
+    margin-right: 10rem; }
     .full_nav .links a:last-of-type {
       margin-bottom: 0; }
     .full_nav .links a:hover {
-      color: #1a1a1a; }
+      color: grey; }
     @media screen and (max-width: 320px) {
       .full_nav .links a {
         font-size: 1.5rem; } }
   .full_nav .contact {
-    margin-top: auto;
-    padding-top: 4rem; }
+    position: absolute;
+    bottom: 25%;
+    left: 50%;
+    transform: translate(-50%, 0); }
     .full_nav .contact .address {
       font-family: "Playfair Display", serif;
       font-style: italic;
@@ -167,6 +170,10 @@ button {
       font-weight: 700; }
   .full_nav .logo {
     margin-top: auto;
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translate(-50%, 0);
     width: 6%;
     margin-left: auto;
     margin-right: auto; }
@@ -239,10 +246,12 @@ button {
         transform: rotate(-90deg);
         margin-top: 0.5rem; } }
 
-.fixed_social_icons {
+.fixed_social_icons,
+.social_icons {
   display: none; }
   @media screen and (min-width: 1024px) {
-    .fixed_social_icons {
+    .fixed_social_icons,
+    .social_icons {
       position: fixed;
       right: 2%;
       top: 48%;
@@ -250,24 +259,24 @@ button {
       display: flex;
       flex-direction: column;
       height: 6rem; } }
-  .fixed_social_icons a {
+  .fixed_social_icons a,
+  .social_icons a {
     color: inherit;
     text-decoration: none;
     margin-top: 0.7rem; }
-    .fixed_social_icons a:first-of-type {
+    .fixed_social_icons a:first-of-type,
+    .social_icons a:first-of-type {
       margin-top: 0; }
-    .fixed_social_icons a ion-icon {
+    .fixed_social_icons a ion-icon,
+    .social_icons a ion-icon {
       font-size: 1.6rem; }
-
-.scroll_down {
-  width: 1rem;
-  position: fixed;
-  bottom: 10%;
-  left: 8%;
-  animation: scrolldown 1s infinite ease; }
+    .fixed_social_icons a:hover,
+    .social_icons a:hover {
+      color: gray; }
 
 .footer {
-  margin-top: 10rem; }
+  scroll-snap-align: start;
+  padding: 6rem 0; }
   .footer .newsletter input,
   .footer .newsletter button {
     padding: 1rem;
@@ -276,6 +285,18 @@ button {
     color: #000;
     font-weight: bold;
     outline: none; }
+    .footer .newsletter input::-webkit-input-placeholder,
+    .footer .newsletter button::-webkit-input-placeholder {
+      text-transform: uppercase;
+      color: #000; }
+    .footer .newsletter input:-ms-input-placeholder,
+    .footer .newsletter button:-ms-input-placeholder {
+      text-transform: uppercase;
+      color: #000; }
+    .footer .newsletter input::-ms-input-placeholder,
+    .footer .newsletter button::-ms-input-placeholder {
+      text-transform: uppercase;
+      color: #000; }
     .footer .newsletter input::placeholder,
     .footer .newsletter button::placeholder {
       text-transform: uppercase;
@@ -287,21 +308,24 @@ button {
     .footer .newsletter button:hover {
       background: #000;
       color: #fff;
+      -webkit-transition: background 0.5s ease-in;
       transition: background 0.5s ease-in; }
   @media screen and (min-width: 768px) {
     .footer .newsletter input,
     .footer .newsletter button {
       font-size: 1rem; }
     .footer .newsletter input {
-      width: 15%; }
+      width: 12%; }
     .footer .newsletter button {
-      width: 8%; } }
+      width: 5%; } }
   .footer .footer_logo {
-    width: 5%;
-    margin: 3rem auto; }
-    @media screen and (min-width: 768px) {
+    margin: 3rem auto;
+    width: 6%;
+    margin-left: auto;
+    margin-right: auto; }
+    @media screen and (min-width: 1024px) {
       .footer .footer_logo {
-        width: 2%; } }
+        width: 1.5%; } }
   .footer .copyright p {
     font-size: 1.2rem; }
     .footer .copyright p span {
@@ -341,6 +365,7 @@ button {
     align-self: center;
     margin-top: auto;
     width: 1rem;
+    -webkit-animation: scrolldown 1s infinite ease;
     animation: scrolldown 1s infinite ease; }
     @media screen and (min-width: 768px) {
       .home .header .go_down {
@@ -372,7 +397,10 @@ button {
       margin-right: 1.2rem;
       font-size: 1.2rem;
       text-transform: uppercase;
-      letter-spacing: 0.1rem; }
+      letter-spacing: 0.1rem;
+      color: grey; }
+      .journals .filters span:hover {
+        color: #000; }
       .journals .filters span:last-of-type {
         margin-right: 0; }
     .journals .filters .filter {
@@ -436,8 +464,7 @@ button {
       .profile .heading {
         display: block; } }
   .profile .summary {
-    margin-bottom: auto;
-    margin-top: -4%; }
+    margin-bottom: auto; }
     .profile .summary p {
       font-weight: 500;
       text-align: justify;
@@ -458,6 +485,12 @@ button {
       @media screen and (min-width: 1024px) {
         .profile .type_effect h3 {
           font-size: 2rem; } }
+  .profile .scroll_down {
+    margin-top: auto;
+    width: 1.3rem;
+    margin-left: auto;
+    margin-right: auto;
+    animation: scrolldown 1s infinite ease; }
 
 .team {
   min-height: 100vh;
@@ -468,57 +501,63 @@ button {
   .team p {
     text-transform: uppercase;
     font-weight: bold; }
-  @media screen and (min-width: 768px) {
-    .team .members .grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      grid-gap: 4rem; } }
-  @media screen and (min-width: 1200px) {
-    .team .members .grid {
-      grid-template-columns: repeat(5, 1fr); } }
-  .team .members .member {
-    position: relative;
-    overflow: hidden; }
-    .team .members .member:hover .details {
-      left: 0;
-      transition: left 0.5s ease-in; }
-    .team .members .member img {
-      display: none; }
-      @media screen and (min-width: 768px) {
-        .team .members .member img {
-          display: block; } }
-    .team .members .member .details a {
-      color: inherit;
-      text-decoration: none; }
-      @media screen and (min-width: 768px) {
-        .team .members .member .details a {
-          color: #fff; } }
-    .team .members .member .details .role {
-      color: lightgray;
-      font-size: 1.3rem; }
+  .team .members {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 0 12rem !important; }
     @media screen and (min-width: 768px) {
-      .team .members .member .details .name {
-        font-size: 2rem; } }
-    @media screen and (min-width: 768px) {
-      .team .members .member .details {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: left;
-        position: absolute;
-        top: 0;
-        left: -100%;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.8);
-        padding: 0 2rem; } }
+      .team .members .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 4rem; } }
+    @media screen and (min-width: 1200px) {
+      .team .members .grid {
+        grid-template-columns: repeat(5, 1fr); } }
+    .team .members .member {
+      position: relative;
+      overflow: hidden; }
+      .team .members .member:hover .details {
+        left: 0;
+        transition: left 0.5s ease-in; }
+      .team .members .member img {
+        display: none; }
+        @media screen and (min-width: 768px) {
+          .team .members .member img {
+            display: block; } }
+      .team .members .member .details a {
+        color: inherit;
+        text-decoration: none; }
+        @media screen and (min-width: 768px) {
+          .team .members .member .details a {
+            color: #fff; } }
+      .team .members .member .details .role {
+        color: lightgray;
+        font-size: 1.3rem; }
+      @media screen and (min-width: 768px) {
+        .team .members .member .details .name {
+          font-size: 2rem; } }
+      @media screen and (min-width: 768px) {
+        .team .members .member .details {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          text-align: left;
+          position: absolute;
+          top: 0;
+          left: -100%;
+          width: 100%;
+          height: 100%;
+          background: rgba(0, 0, 0, 0.8);
+          padding: 0 2rem; } }
   @media screen and (min-width: 1200px) {
     .team .collaborators .grid {
       width: 80%;
       margin: 0 auto; } }
   .team .collaborators p {
-    margin-top: 2rem; }
+    margin-top: 2rem;
+    font-size: 1.2rem; }
     .team .collaborators p a {
       color: inherit;
       text-decoration: none; }
@@ -526,7 +565,27 @@ button {
       .team .collaborators p {
         display: inline-block;
         margin-right: 2rem;
-        margin-bottom: 1rem; } }
+        margin-bottom: 1rem;
+        letter-spacing: 0.3rem; } }
+  .team .collaborators h3 {
+    font-size: 1.5rem;
+    letter-spacing: 0.3rem;
+    text-transform: uppercase; }
+  .team .representatives h3 {
+    font-size: 1.5rem;
+    letter-spacing: 0.3rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 2rem; }
+  .team .representatives p {
+    letter-spacing: 0.2rem;
+    font-size: 1rem; }
+    .team .representatives p.name {
+      font-size: 1.3rem; }
+    .team .representatives p.location {
+      color: grey; }
+    .team .representatives p.mobile {
+      font-weight: 500; }
   @media screen and (min-width: 768px) {
     .team .representatives {
       padding: 0; } }
@@ -539,11 +598,6 @@ button {
   @media screen and (min-width: 1200px) {
     .team .representatives .grid {
       grid-template-columns: repeat(4, 1fr); } }
-  .team .representatives .location {
-    color: lightgray;
-    font-size: 1.3rem; }
-  .team .representatives .mobile {
-    font-weight: 500; }
   .team .representatives,
   .team .collaborators,
   .team .members {
@@ -564,7 +618,7 @@ button {
       .team .members {
         scroll-snap-align: start;
         height: auto;
-        padding: 0 0 8rem; } }
+        padding: 0 0 6rem; } }
   .team .logo-bottom {
     width: 6%;
     margin-left: auto;
@@ -659,7 +713,8 @@ button {
   height: 100vh;
   display: flex;
   flex-direction: column;
-  padding: 8rem 0 4rem; }
+  padding: 8rem 0 4rem;
+  position: relative; }
   @media screen and (max-height: 480px) {
     .bio {
       height: 130vh; } }
@@ -670,14 +725,16 @@ button {
     display: block; }
     .bio h2.name {
       font-family: "Playfair Display", serif;
-      font-size: 4rem;
+      font-size: 5rem;
       margin-bottom: 5rem; }
   .bio p {
-    text-align: justify; }
+    text-align: justify;
+    font-weight: 500; }
     @media screen and (min-width: 768px) {
       .bio p {
         text-align: center;
-        width: 80%;
+        width: 60%;
+        letter-spacing: 0.1rem;
         margin-left: auto;
         margin-right: auto; } }
   .bio .intro {
@@ -691,6 +748,12 @@ button {
     @media screen and (min-width: 1024px) {
       .bio .logo {
         width: 1.5%; } }
+  .bio .scroll_down {
+    width: 1.3rem;
+    position: absolute;
+    bottom: 14%;
+    left: 1%;
+    animation: scrolldown 1s infinite ease; }
 
 .gallery {
   min-height: 100vh;
@@ -847,10 +910,17 @@ button {
       @media screen and (min-width: 768px) {
         .contact_page .newsletter .mobile {
           width: 25%; } }
+      .contact_page .newsletter .mobile.hide {
+        display: none;
+        opacity: 0;
+        transition: all 0.4s ease; }
     .contact_page .newsletter form {
-      display: none; }
+      display: none;
+      opacity: 0; }
       .contact_page .newsletter form.show {
-        display: block; }
+        display: block;
+        opacity: 1;
+        transition: all 0.4s ease; }
       .contact_page .newsletter form input {
         padding: 1rem;
         border: 3px solid #000;

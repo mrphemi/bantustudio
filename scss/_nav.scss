@@ -9,8 +9,8 @@
     padding: 0 0 4rem;
     overflow-y: hidden;
     .container {
-        display: flex;
-        flex-direction: column;
+        // display: flex;
+        // flex-direction: column;
         height: 100%;
     }
     .close_icon {
@@ -27,8 +27,10 @@
         }
     }
     h2 {
-        margin-top: auto;
-        margin-bottom: auto;
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%, 0);
         @media screen and (min-width: 768px) {
             display: block;
             font-size: 2rem;
@@ -42,10 +44,10 @@
     .links {
         @media screen and (min-width: 768px) {
             display: flex;
-            justify-content: space-around;
+            justify-content: center;
             padding-top: 0.5rem;
             position: fixed;
-            width: 80%;
+            width: 90%;
             top: 48.8%;
             transform: translate(0, -48.8%);
         }
@@ -58,11 +60,12 @@
             font-size: 2.5rem;
             font-family: $font-play;
             letter-spacing: 0.6rem;
+            margin-right: 10rem;
             &:last-of-type {
                 margin-bottom: 0;
             }
             &:hover {
-                color: lighten($color: #000000, $amount: 10);
+                color: grey;
             }
             @media screen and (max-width: 320px) {
                 font-size: 1.5rem;
@@ -70,8 +73,10 @@
         }
     }
     .contact {
-        margin-top: auto;
-        padding-top: 4rem;
+        position: absolute;
+        bottom: 25%;
+        left: 50%;
+        transform: translate(-50%, 0);
         .address {
             font-family: $font-play;
             font-style: italic;
@@ -92,6 +97,10 @@
     }
     .logo {
         margin-top: auto;
+        position: absolute;
+        bottom: 5%;
+        left: 50%;
+        transform: translate(-50%, 0);
         width: 6%;
         @include center-with-margin;
         @media screen and (min-width: 1024px) {
@@ -178,7 +187,8 @@
     }
 }
 
-.fixed_social_icons {
+.fixed_social_icons,
+.social_icons {
     display: none;
     // z-index: 10;
     @media screen and (min-width: 1024px) {
@@ -200,13 +210,16 @@
         ion-icon {
             font-size: 1.6rem;
         }
+        &:hover {
+            color: gray;
+        }
     }
 }
 
-.scroll_down {
-    width: 1rem;
-    position: fixed;
-    bottom: 10%;
-    left: 8%;
-    animation: scrolldown 1s infinite ease;
-}
+// .scroll_down {
+//     width: 1.3rem;
+//     position: fixed;
+//     bottom: 14%;
+//     left: 8%;
+//     animation: scrolldown 1s infinite ease;
+// }
