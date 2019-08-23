@@ -155,6 +155,9 @@
             a {
                 color: inherit;
                 text-decoration: none;
+                &:hover {
+                    color: grey;
+                }
             }
             @media screen and (min-width: 768px) {
                 display: inline-block;
