@@ -31,16 +31,16 @@ section {
 
 p {
     font-size: 1.6rem;
-    @media screen and (max-width: 360px) {
-        font-size: 1.2rem;
+    @media screen and (max-width: 375px) {
+        font-size: 1.3rem;
     }
 }
 
 h2 {
-    font-size: 2rem;
+    font-size: 1.6rem;
     font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 0.5rem;
+    letter-spacing: 0.4rem;
     display: none;
     @media screen and (min-width: 1024px) {
         font-size: 2rem;

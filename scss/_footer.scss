@@ -8,6 +8,7 @@
             border: 3px solid $black;
             background: transparent;
             color: $black;
+            font-size: 1rem;
             font-weight: bold;
             outline: none;
             &::-webkit-input-placeholder {
@@ -44,23 +45,40 @@
                 font-size: 1rem;
             }
             input {
-                width: 12%;
+                width: 20%;
             }
             button {
-                width: 5%;
+                width: 10%;
+            }
+        }
+        @media screen and (min-width: 1024px) {
+            input {
+                width: 16%;
+            }
+            button {
+                width: 8%;
+            }
+        }
+        @media screen and (min-width: 1200px) {
+            input {
+                width: 15%;
+            }
+            button {
+                width: 6%;
             }
         }
     }
     .footer_logo {
-        // width: 5%;
         margin: 3rem auto;
-        // @media screen and (min-width: 768px) {
-        //     width: 2%;
-        // }
         @include small-logo;
         @include center-with-margin;
     }
     .copyright {
+        width: 90%;
+        @include center-with-margin;
+        @media screen and (min-width: 1024px) {
+            width: auto;
+        }
         p {
             font-size: 1.2rem;
             span {

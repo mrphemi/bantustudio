@@ -1,22 +1,31 @@
 .bio {
     position: relative;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    padding: 8rem 0 4rem;
+    min-height: 100vh;
+    padding: 8rem 0;
     position: relative;
-    @media screen and (max-height: 480px) {
-        height: 130vh;
+    @media screen and (min-width: 768px) {
+        height: 100vh;
+        padding: 8rem 0 4rem;
     }
-    @media screen and (max-width: 375px) {
-        height: 120vh;
+    .container {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
     }
     h2 {
         display: block;
+        margin-top: 3rem;
+        @media screen and (min-width: 1024px) {
+            margin-top: 0;
+        }
         &.name {
             font-family: $font-play;
-            font-size: 5rem;
-            margin-bottom: 5rem;
+            font-size: 3rem;
+            margin-bottom: 4rem;
+            @media screen and (min-width: 1024px) {
+                font-size: 5rem;
+                margin-bottom: 5rem;
+            }
         }
     }
     p {
@@ -24,32 +33,55 @@
         font-weight: 500;
         @media screen and (min-width: 768px) {
             text-align: center;
+            width: 80%;
+            @include center-with-margin;
+        }
+        @media screen and (min-width: 1024px) {
             width: 60%;
             letter-spacing: 0.1rem;
-            @include center-with-margin;
         }
     }
     .intro {
-        margin-top: auto;
-        margin-bottom: auto;
+        width: 90%;
+        @include center-with-margin;
+        @media screen and (min-width: 768px) {
+            margin-top: auto;
+            margin-bottom: auto;
+            width: auto;
+        }
     }
     .logo {
-        margin-top: auto;
-        @include center-with-margin;
         @include small-logo;
+        position: absolute;
+        left: 50%;
+        bottom: 2%;
+        transform: translate(-50%, 0);
+        @media screen and (min-width: 768px) {
+            position: static;
+            margin-top: auto;
+            @include center-with-margin;
+        }
     }
     .scroll_down {
-        width: 1.3rem;
-        position: absolute;
-        bottom: 14%;
-        left: 1%;
+        width: 1.2rem;
         animation: scrolldown 1s infinite ease;
+        position: absolute;
+        left: 5%;
+        bottom: 10%;
+        @media screen and (min-width: 1024px) {
+            width: 1.3rem;
+            bottom: 14%;
+            left: 8%;
+        }
     }
 }
 
 .gallery {
     min-height: 100vh;
-    padding: 10rem 0 4rem;
+    padding: 0 0 4rem;
+    @media screen and (min-width: 768px) {
+        padding: 10rem 0 4rem;
+    }
     .grid {
         margin-top: 6rem;
         display: grid;
@@ -66,7 +98,10 @@
         .post_title {
             font-family: $font-play;
             font-style: italic;
-            font-size: 3.5rem;
+            font-size: 2.8rem;
+            @media screen and (min-width: 768px) {
+                font-size: 3.5rem;
+            }
         }
     }
 }

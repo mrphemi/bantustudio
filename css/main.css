@@ -26,15 +26,15 @@ body {
 
 p {
   font-size: 1.6rem; }
-  @media screen and (max-width: 360px) {
+  @media screen and (max-width: 375px) {
     p {
-      font-size: 1.2rem; } }
+      font-size: 1.3rem; } }
 
 h2 {
-  font-size: 2rem;
+  font-size: 1.6rem;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.5rem;
+  letter-spacing: 0.4rem;
   display: none; }
   @media screen and (min-width: 1024px) {
     h2 {
@@ -316,6 +316,7 @@ button {
     border: 3px solid #000;
     background: transparent;
     color: #000;
+    font-size: 1rem;
     font-weight: bold;
     outline: none; }
     .footer .newsletter input::-webkit-input-placeholder,
@@ -348,23 +349,43 @@ button {
     .footer .newsletter button {
       font-size: 1rem; }
     .footer .newsletter input {
-      width: 12%; }
+      width: 20%; }
     .footer .newsletter button {
-      width: 5%; } }
+      width: 10%; } }
+  @media screen and (min-width: 1024px) {
+    .footer .newsletter input {
+      width: 16%; }
+    .footer .newsletter button {
+      width: 8%; } }
+  @media screen and (min-width: 1200px) {
+    .footer .newsletter input {
+      width: 15%; }
+    .footer .newsletter button {
+      width: 6%; } }
   .footer .footer_logo {
     margin: 3rem auto;
     width: 6%;
     margin-left: auto;
     margin-right: auto; }
+    @media screen and (min-width: 768px) {
+      .footer .footer_logo {
+        width: 3%; } }
     @media screen and (min-width: 1024px) {
       .footer .footer_logo {
         width: 1.5%; } }
-  .footer .copyright p {
-    font-size: 1.2rem; }
-    .footer .copyright p span {
-      font-weight: 900; }
-    .footer .copyright p:first-of-type {
-      margin-bottom: 1rem; }
+  .footer .copyright {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto; }
+    @media screen and (min-width: 1024px) {
+      .footer .copyright {
+        width: auto; } }
+    .footer .copyright p {
+      font-size: 1.2rem; }
+      .footer .copyright p span {
+        font-weight: 900; }
+      .footer .copyright p:first-of-type {
+        margin-bottom: 1rem; }
 
 .home .header {
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("../assets/intro-bg.jpg");
@@ -659,6 +680,9 @@ button {
     margin-left: auto;
     margin-right: auto;
     padding-bottom: 4rem; }
+    @media screen and (min-width: 768px) {
+      .team .logo-bottom {
+        width: 3%; } }
     @media screen and (min-width: 1024px) {
       .team .logo-bottom {
         width: 1.5%; } }
@@ -725,6 +749,9 @@ button {
     width: 6%;
     margin-top: auto;
     align-self: center; }
+    @media screen and (min-width: 768px) {
+      .creatives .container .logo {
+        width: 3%; } }
     @media screen and (min-width: 1024px) {
       .creatives .container .logo {
         width: 1.5%; } }
@@ -745,54 +772,89 @@ button {
 
 .bio {
   position: relative;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  padding: 8rem 0 4rem;
+  min-height: 100vh;
+  padding: 8rem 0;
   position: relative; }
-  @media screen and (max-height: 480px) {
+  @media screen and (min-width: 768px) {
     .bio {
-      height: 130vh; } }
-  @media screen and (max-width: 375px) {
-    .bio {
-      height: 120vh; } }
+      height: 100vh;
+      padding: 8rem 0 4rem; } }
+  .bio .container {
+    display: flex;
+    flex-direction: column;
+    height: 100%; }
   .bio h2 {
-    display: block; }
+    display: block;
+    margin-top: 3rem; }
+    @media screen and (min-width: 1024px) {
+      .bio h2 {
+        margin-top: 0; } }
     .bio h2.name {
       font-family: "Playfair Display", serif;
-      font-size: 5rem;
-      margin-bottom: 5rem; }
+      font-size: 3rem;
+      margin-bottom: 4rem; }
+      @media screen and (min-width: 1024px) {
+        .bio h2.name {
+          font-size: 5rem;
+          margin-bottom: 5rem; } }
   .bio p {
     text-align: justify;
     font-weight: 500; }
     @media screen and (min-width: 768px) {
       .bio p {
         text-align: center;
-        width: 60%;
-        letter-spacing: 0.1rem;
+        width: 80%;
         margin-left: auto;
         margin-right: auto; } }
+    @media screen and (min-width: 1024px) {
+      .bio p {
+        width: 60%;
+        letter-spacing: 0.1rem; } }
   .bio .intro {
-    margin-top: auto;
-    margin-bottom: auto; }
-  .bio .logo {
-    margin-top: auto;
+    width: 90%;
     margin-left: auto;
-    margin-right: auto;
-    width: 6%; }
+    margin-right: auto; }
+    @media screen and (min-width: 768px) {
+      .bio .intro {
+        margin-top: auto;
+        margin-bottom: auto;
+        width: auto; } }
+  .bio .logo {
+    width: 6%;
+    position: absolute;
+    left: 50%;
+    bottom: 2%;
+    transform: translate(-50%, 0); }
+    @media screen and (min-width: 768px) {
+      .bio .logo {
+        width: 3%; } }
     @media screen and (min-width: 1024px) {
       .bio .logo {
         width: 1.5%; } }
+    @media screen and (min-width: 768px) {
+      .bio .logo {
+        position: static;
+        margin-top: auto;
+        margin-left: auto;
+        margin-right: auto; } }
   .bio .scroll_down {
-    width: 1.3rem;
+    width: 1.2rem;
+    animation: scrolldown 1s infinite ease;
     position: absolute;
-    bottom: 14%;
-    left: 1%;
-    animation: scrolldown 1s infinite ease; }
+    left: 5%;
+    bottom: 10%; }
+    @media screen and (min-width: 1024px) {
+      .bio .scroll_down {
+        width: 1.3rem;
+        bottom: 14%;
+        left: 8%; } }
 
 .gallery {
   min-height: 100vh;
-  padding: 10rem 0 4rem; }
+  padding: 0 0 4rem; }
+  @media screen and (min-width: 768px) {
+    .gallery {
+      padding: 10rem 0 4rem; } }
   .gallery .grid {
     margin-top: 6rem;
     display: grid;
@@ -809,7 +871,10 @@ button {
     .gallery .grid .post_title {
       font-family: "Playfair Display", serif;
       font-style: italic;
-      font-size: 3.5rem; }
+      font-size: 2.8rem; }
+      @media screen and (min-width: 768px) {
+        .gallery .grid .post_title {
+          font-size: 3.5rem; } }
 
 .journal-slider {
   position: fixed;
@@ -988,6 +1053,9 @@ button {
         font-weight: 700; }
   .contact_page .logo {
     width: 6%; }
+    @media screen and (min-width: 768px) {
+      .contact_page .logo {
+        width: 3%; } }
     @media screen and (min-width: 1024px) {
       .contact_page .logo {
         width: 1.5%; } }
