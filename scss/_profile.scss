@@ -1,15 +1,26 @@
 .profile {
-    height: 100vh;
-    padding: 8rem 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    min-height: 100vh;
+    padding: 8rem 0 10rem;
+    position: relative;
+    @media screen and (min-width: 768px) {
+        padding: 8rem 0;
+        height: 100vh;
+    }
     h2 {
         margin-bottom: auto;
     }
+    .container {
+        height: 100%;
+        @media screen and (min-width: 768px) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+    }
     .logo {
-        margin-top: 6rem;
-        width: 6%;
+        margin-top: 4rem;
+        @include small-logo;
+        @include center-with-margin;
         @media screen and (min-width: 768px) {
             display: none;
         }
@@ -30,11 +41,11 @@
         }
         @media screen and (min-width: 768px) {
             display: block;
+            margin-top: auto;
         }
     }
     .summary {
-        margin-bottom: auto;
-        // margin-top: -4%;
+        margin: 5rem 0;
         p {
             font-weight: 500;
             text-align: justify;
@@ -45,9 +56,16 @@
                 margin: auto;
             }
         }
+        @media screen and (min-width: 768px) {
+            margin-top: 0;
+            margin-bottom: auto;
+        }
     }
     .type_effect {
-        margin-top: auto;
+        @media screen and (min-width: 768px) {
+            margin-top: auto;
+            margin-bottom: auto;
+        }
         h3 {
             text-transform: uppercase;
             font-weight: bold;
@@ -61,22 +79,23 @@
         }
     }
     .scroll_down {
-        margin-top: auto;
+        display: block;
         width: 1.3rem;
-        // position: fixed;
-        // bottom: 14%;
-        // left: 50%;
-        @include center-with-margin;
         animation: scrolldown 1s infinite ease;
+        position: absolute;
+        left: 5%;
+        bottom: 4%;
+        @media screen and (min-width: 1024px) {
+            left: 50%;
+        }
     }
 }
 
 .team {
-    min-height: 100vh;
     padding: 8rem 0 0;
     h2 {
         display: block;
-        margin-bottom: 7rem;
+        margin-bottom: 5rem;
     }
     p {
         text-transform: uppercase;
@@ -85,7 +104,9 @@
     .members {
         width: 90%;
         @include center-with-margin;
-        padding: 0 0 12rem !important;
+        @media screen and (min-width: 1200px) {
+            padding: 0 0 12rem !important;
+        }
         .grid {
             @media screen and (min-width: 768px) {
                 display: grid;
@@ -99,6 +120,13 @@
         .member {
             position: relative;
             overflow: hidden;
+            margin-bottom: 4rem;
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+            @media screen and (min-width: 768px) {
+                margin-bottom: 0;
+            }
             &:hover {
                 .details {
                     left: 0;
@@ -124,6 +152,7 @@
                     font-size: 1.3rem;
                 }
                 .name {
+                    letter-spacing: 0.2rem;
                     @media screen and (min-width: 768px) {
                         font-size: 2rem;
                     }
@@ -166,19 +195,10 @@
                 letter-spacing: 0.3rem;
             }
         }
-        h3 {
-            font-size: 1.5rem;
-            letter-spacing: 0.3rem;
-            text-transform: uppercase;
-        }
     }
     .representatives {
-        h3 {
-            font-size: 1.5rem;
-            letter-spacing: 0.3rem;
-            text-transform: uppercase;
-            font-weight: bold;
-            margin-bottom: 2rem;
+        @media screen and (min-width: 768px) {
+            padding: 0;
         }
         p {
             letter-spacing: 0.2rem;
@@ -193,9 +213,6 @@
                 font-weight: 500;
             }
         }
-        @media screen and (min-width: 768px) {
-            padding: 0;
-        }
         .grid {
             @media screen and (min-width: 768px) {
                 display: grid;
@@ -206,21 +223,37 @@
             @media screen and (min-width: 1200px) {
                 grid-template-columns: repeat(4, 1fr);
             }
+            .rep {
+                margin-bottom: 4rem;
+                &:last-of-type {
+                    margin-bottom: 0;
+                }
+                @media screen and (min-width: 768px) {
+                    margin-bottom: 0;
+                }
+            }
         }
     }
     .representatives,
     .collaborators,
     .members {
         height: auto;
+        padding: 0 0 5rem;
         @include center-with-flex(column);
         @media screen and (max-height: 480px) {
-            height: auto;
             padding: 2rem 0 2rem;
         }
         @media screen and (min-width: 768px) {
-            scroll-snap-align: start;
-            height: auto;
             padding: 0 0 6rem;
+        }
+        h3 {
+            font-size: 1.5rem;
+            letter-spacing: 0.3rem;
+            text-transform: uppercase;
+            margin-bottom: 4rem;
+            @media screen and (min-width: 768px) {
+                margin-bottom: 2rem;
+            }
         }
     }
     .logo-bottom {
