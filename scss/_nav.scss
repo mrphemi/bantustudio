@@ -8,14 +8,14 @@
     background-color: #fff;
     overflow-y: hidden;
     padding: 3rem 0;
-    @media screen and (min-width: 1024px) {
+    @media screen and (min-width: 1200px) {
         padding: 0 0 4rem;
     }
     .container {
         display: flex;
         flex-direction: column;
         height: 100%;
-        @media screen and (min-width: 1024px) {
+        @media screen and (min-width: 1200px) {
             display: block;
         }
     }
@@ -28,7 +28,7 @@
                 font-size: 4rem;
             }
         }
-        @media screen and (min-width: 1024px) {
+        @media screen and (min-width: 1200px) {
             position: absolute;
             top: 46%;
             left: 4%;
@@ -42,7 +42,7 @@
             font-size: 2rem;
             letter-spacing: 0.5rem;
         }
-        @media screen and (min-width: 1024px) {
+        @media screen and (min-width: 1200px) {
             position: absolute;
             top: 30%;
             left: 50%;
@@ -58,11 +58,11 @@
         @media screen and (min-width: 768px) {
             padding-top: 0.5rem;
         }
-        @media screen and (min-width: 1024px) {
+        @media screen and (min-width: 1200px) {
             display: flex;
             justify-content: center;
             position: fixed;
-            width: 90%;
+            width: 80%;
             top: 47.5%;
             transform: translate(0, -47.5%);
         }
@@ -85,14 +85,20 @@
                 font-size: 1.5rem;
             }
             @media screen and (min-width: 1024px) {
-                margin-right: 10rem;
+                margin-bottom: 3rem;
+            }
+            @media screen and (min-width: 1200px) {
+                margin-right: 7rem;
                 margin-bottom: 0;
+                &:last-of-type {
+                    margin-right: 0;
+                }
             }
         }
     }
     .contact {
         margin-top: auto;
-        @media screen and (min-width: 1024px) {
+        @media screen and (min-width: 1200px) {
             position: absolute;
             bottom: 25%;
             left: 50%;
@@ -118,26 +124,25 @@
     }
     .logo {
         margin-top: auto;
-        width: 6%;
+        @include small-logo;
         @include center-with-margin;
-        @media screen and (min-width: 1024px) {
+        @media screen and (min-width: 1200px) {
             position: absolute;
             bottom: 5%;
             left: 50%;
             transform: translate(-50%, 0);
-            width: 2%;
         }
         img {
             width: 100%;
         }
         .mobile-logo {
-            @media screen and (min-width: 1024px) {
+            @media screen and (min-width: 1200px) {
                 display: none;
             }
         }
         .desktop-logo {
             display: none;
-            @media screen and (min-width: 1024px) {
+            @media screen and (min-width: 1200px) {
                 display: block;
             }
         }
@@ -154,14 +159,14 @@
     z-index: 5;
     cursor: pointer;
     width: 4rem;
-    padding-bottom: 0.5rem;
-    @media screen and (min-width: 1024px) {
+    padding: 0.2rem;
+    @media screen and (min-width: 1200px) {
         top: 48%;
         transform: translate(0, -48%);
         left: 2%;
         flex-direction: row;
         width: 6rem;
-        padding-bottom: 0;
+        padding: 0;
     }
     @media screen and (min-width: 1440px) {
         left: 3%;
@@ -170,7 +175,7 @@
         display: flex;
         transform: rotate(180deg);
         margin: auto;
-        @media screen and (min-width: 1024px) {
+        @media screen and (min-width: 1200px) {
             transform: rotate(90deg);
         }
         .line {
@@ -179,7 +184,7 @@
             width: 0.1rem;
             margin-left: 0.3rem;
             transition: background-color 1.5s cubic-bezier(0.7, 0, 0.3, 1) 0ms;
-            @media screen and (min-width: 1024px) {
+            @media screen and (min-width: 1200px) {
                 width: 0.2rem;
             }
             &.dark {
@@ -207,7 +212,7 @@
         &.dark {
             color: $black;
         }
-        @media screen and (min-width: 1024px) {
+        @media screen and (min-width: 1200px) {
             transform: rotate(-90deg);
             margin-top: 0.5rem;
             font-size: 1rem;
@@ -218,7 +223,7 @@
 .fixed_social_icons,
 .social_icons {
     display: none;
-    @media screen and (min-width: 1024px) {
+    @media screen and (min-width: 1200px) {
         position: fixed;
         right: 2%;
         top: 48%;

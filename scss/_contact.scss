@@ -1,10 +1,7 @@
 .contact_page {
-    height: 120vh;
-    overflow-y: hidden;
+    min-height: 100vh;
     position: relative;
-    @media screen and (max-width: 360px) {
-        height: 150vh;
-    }
+    padding: 10rem 0 15rem;
     @media screen and (min-width: 768px) {
         height: 100vh;
     }
@@ -12,6 +9,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        padding: 0;
     }
     h2 {
         @media screen and (min-width: 1024px) {
@@ -23,19 +21,21 @@
     }
     .container {
         height: 100%;
-        display: flex;
-        flex-direction: column;
+        @media screen and (min-width: 768px) {
+            display: flex;
+            flex-direction: column;
+        }
         @media screen and (min-width: 1024px) {
             background-image: url("../assets/contact-bg.jpg");
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
             padding: 2rem 0;
-            height: 62%;
+            height: 60vh;
             width: 100%;
         }
         p {
-            font-size: 1.4rem;
+            font-size: 1.3rem;
             font-weight: 500;
         }
     }
@@ -45,13 +45,21 @@
             font-style: italic;
             font-weight: normal;
             font-size: 2rem;
-            margin-bottom: 1.5rem;
-            width: 50%;
+            width: 70%;
+            margin-bottom: 3rem;
             @include center-with-margin;
+            @media screen and (min-width: 1024px) {
+                margin-bottom: 1.5rem;
+                width: 50%;
+            }
         }
     }
     .marker {
-        margin-top: auto;
+        margin: 5rem 0;
+        @media screen and (min-width: 768px) {
+            margin-top: auto;
+            margin-bottom: 0;
+        }
         ion-icon {
             font-size: 4.5rem;
         }
@@ -67,12 +75,18 @@
     }
     .mail {
         margin-top: auto;
-        margin-bottom: 2.5rem;
+        margin-bottom: 3rem;
+        @media screen and (min-width: 768px) {
+            margin-bottom: 2.5rem;
+        }
         a {
             color: inherit;
             text-decoration: none;
             strong {
-                font-size: 1.6rem;
+                font-size: 1.4rem;
+                @media screen and (min-width: 768px) {
+                    font-size: 1.6rem;
+                }
             }
         }
     }
@@ -84,9 +98,12 @@
             padding: 1rem;
             width: 80%;
             text-transform: uppercase;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             font-weight: bold;
             @media screen and (min-width: 768px) {
+                width: 35%;
+            }
+            @media screen and (min-width: 1024px) {
                 width: 25%;
             }
             &.hide {
@@ -106,7 +123,7 @@
             input {
                 padding: 1rem;
                 border: 3px solid #000;
-                width: 15%;
+                width: 48%;
                 color: inherit;
                 font-size: 1rem;
                 font-weight: bold;
@@ -114,12 +131,18 @@
                     text-transform: uppercase;
                     color: inherit;
                 }
+                @media screen and (min-width: 768px) {
+                    width: 25%;
+                }
+                @media screen and (min-width: 1024px) {
+                    width: 15%;
+                }
             }
             button {
                 background: transparent;
                 border: 3px solid $black;
                 padding: 1rem;
-                width: 8%;
+                width: 20%;
                 margin-left: -0.3rem;
                 font-size: 1rem;
                 font-weight: bold;
@@ -130,11 +153,21 @@
                     color: $white;
                     transition: background 0.5s ease;
                 }
+                @media screen and (min-width: 768px) {
+                    width: 15%;
+                }
+                @media screen and (min-width: 1024px) {
+                    width: 8%;
+                }
             }
         }
     }
     .copyright {
-        margin-top: auto;
+        margin: 5rem 0 0;
+        @media screen and (min-width: 768px) {
+            margin-top: auto;
+            margin-bottom: auto;
+        }
         p {
             font-size: 1rem;
             strong {
@@ -144,11 +177,13 @@
     }
     .logo {
         @include small-logo;
+        position: absolute;
+        bottom: 3%;
+        left: 50%;
+        transform: translate(-50%, 0);
         @media screen and (min-width: 1024px) {
             position: fixed;
             bottom: 6%;
-            left: 50%;
-            transform: translate(-50%, 0);
         }
     }
 }
