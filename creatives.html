@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Creatives</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css" integrity="sha256-etrwgFLGpqD4oNAFW08ZH9Bzif5ByXK2lXNHKy7LQGo=" crossorigin="anonymous" />
     <link rel="stylesheet" href="./css/main.css" />
 </head>
 
@@ -185,7 +186,14 @@
       crossorigin="anonymous"
     ></script>
 
-    <script type="module" src="./main.js"></script>
+    <!-- Slick carousel-->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"
+      integrity="sha256-NXRS8qVcmZ3dOv3LziwznUHPegFhPZ1F/4inU7uC8h0="
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="./main.js"></script>
 
     <script>
       function changeNavcolor() {
@@ -220,6 +228,14 @@
         $($(this)).mouseleave(function() {
           $(".creatives .container").css("background-image", "url(./assets/intro-bg.jpg)");
         });
+      });
+
+      $(".listi").slick({
+        centerMode: true,
+        initialSlide: 5,
+        slidesToShow: 9,
+        vertical: true,
+        verticalSwiping: true
       });
     </script>
   </body>
