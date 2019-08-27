@@ -94,6 +94,9 @@
                     margin-right: 0;
                 }
             }
+            @media screen and (min-width: 1440px) {
+                margin-right: 10rem;
+            }
         }
     }
     .contact {
@@ -247,11 +250,3 @@
         }
     }
 }
-
-// .scroll_down {
-//     width: 1.3rem;
-//     position: fixed;
-//     bottom: 14%;
-//     left: 8%;
-//     animation: scrolldown 1s infinite ease;
-// }
