@@ -762,7 +762,7 @@ button {
       left: 50%;
       transform: translate(-50%, 0); } }
   .creatives .container {
-    height: 100%;
+    height: 100vh;
     background-image: url("../assets/intro-bg.jpg");
     background-size: cover;
     background-repeat: no-repeat;
@@ -783,44 +783,52 @@ button {
     @media screen and (min-width: 1024px) {
       .creatives .container {
         height: 60vh; } }
-    @media screen and (min-width: 1024px) {
-      .creatives .container .list {
-        width: 80%;
-        margin: auto; } }
-    .creatives .container .list p {
-      text-transform: uppercase;
-      font-size: 1.6rem;
-      font-weight: 600;
-      margin-bottom: 6rem;
-      letter-spacing: 0.4rem;
-      color: lightgray;
-      opacity: 0.7; }
-      .creatives .container .list p:hover {
-        color: #fff;
-        opacity: 1;
-        font-size: 2.2rem;
-        font-weight: bold; }
+    .creatives .container .list {
+      height: 100vh;
+      overflow: scroll;
+      margin: auto 0; }
       @media screen and (min-width: 768px) {
-        .creatives .container .list p {
+        .creatives .container .list {
+          height: auto;
+          overflow: auto; } }
+      @media screen and (min-width: 1024px) {
+        .creatives .container .list {
+          width: 80%;
+          margin: auto; } }
+      .creatives .container .list p {
+        text-transform: uppercase;
+        font-size: 1.6rem;
+        font-weight: 600;
+        margin-bottom: 6rem;
+        letter-spacing: 0.4rem;
+        color: lightgray;
+        opacity: 0.7; }
+        .creatives .container .list p:hover {
           color: #fff;
           opacity: 1;
-          font-size: 1.4rem;
-          display: inline-block;
-          margin-right: 2rem; }
-          .creatives .container .list p:last-of-type {
-            margin-right: 0; }
-          .creatives .container .list p:hover {
+          font-size: 2.2rem;
+          font-weight: bold; }
+        @media screen and (min-width: 768px) {
+          .creatives .container .list p {
+            color: #fff;
+            opacity: 1;
             font-size: 1.4rem;
-            font-weight: 600; } }
-      @media screen and (min-width: 1200px) {
-        .creatives .container .list p {
-          margin-right: 4rem; } }
-      @media screen and (min-width: 1440px) {
-        .creatives .container .list p {
-          font-size: 1.8rem; } }
-      .creatives .container .list p a {
-        color: #fff;
-        text-decoration: none; }
+            display: inline-block;
+            margin-right: 2rem; }
+            .creatives .container .list p:last-of-type {
+              margin-right: 0; }
+            .creatives .container .list p:hover {
+              font-size: 1.4rem;
+              font-weight: 600; } }
+        @media screen and (min-width: 1200px) {
+          .creatives .container .list p {
+            margin-right: 4rem; } }
+        @media screen and (min-width: 1440px) {
+          .creatives .container .list p {
+            font-size: 1.8rem; } }
+        .creatives .container .list p a {
+          color: #fff;
+          text-decoration: none; }
     .creatives .container .logo {
       width: 6%;
       position: absolute;

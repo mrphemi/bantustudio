@@ -92,151 +92,91 @@
         <h2>creatives</h2>
         <div class="container">
             <div class="list text-center">
+                <div class="border"></div>
                 <p>
-                    <a href="bio.html" class="creative" data-background="https://source.unsplash.com/800x600/?person">
-              etubi onucheyo</a
-            >
-          </p>
-          <p>
-            <a
-              href="bio.html"
-              class="creative"
-              data-background="https://source.unsplash.com/800x600/?person"
-              >tay iwar</a
-            >
-          </p>
-          <p>
-            <a
-              href="bio.html"
-              class="creative"
-              data-background="https://source.unsplash.com/800x600/?person"
-              >niyi okoewo</a
-            >
-          </p>
-          <p>
-            <a
-              href="bio.html"
-              class="creative"
-              data-background="https://source.unsplash.com/800x600/?person"
-              >romeo shagba</a
-            >
-          </p>
-          <p>
-            <a
-              href="bio.html"
-              class="creative"
-              data-background="https://source.unsplash.com/800x600/?person"
-              >rozay</a
-            >
-          </p>
-          <p>
-            <a
-              href="bio.html"
-              class="creative"
-              data-background="https://source.unsplash.com/800x600/?person"
-              >mr color</a
-            >
-          </p>
-          <p>
-            <a
-              href="bio.html"
-              class="creative"
-              data-background="https://source.unsplash.com/800x600/?person"
-              >hanz</a
-            >
-          </p>
-          <p>
-            <a
-              href="bio.html"
-              class="creative"
-              data-background="https://source.unsplash.com/800x600/?person"
-              >lumun</a
-            >
-          </p>
-          <p>
-            <a
-              href="bio.html"
-              class="creative"
-              data-background="https://source.unsplash.com/800x600/?person"
-              >terna iwar</a
-            >
-          </p>
+                    <a href="bio.html" class="creative" data-background="picture"> etubi onucheyo</a>
+                </p>
+                <p>
+                    <a href="bio.html" class="creative" data-background="picture">tay iwar</a>
+                </p>
+                <p>
+                    <a href="bio.html" class="creative" data-background="picture">niyi okoewo</a>
+                </p>
+                <p>
+                    <a href="bio.html" class="creative" data-background="picture">romeo shagba</a>
+                </p>
+                <p>
+                    <a href="bio.html" class="creative" data-background="picture">rozay</a>
+                </p>
+                <p>
+                    <a href="bio.html" class="creative" data-background="picture">mr color</a>
+                </p>
+                <p>
+                    <a href="bio.html" class="creative" data-background="picture">hanz</a>
+                </p>
+                <p>
+                    <a href="bio.html" class="creative" data-background="picture">lumun</a>
+                </p>
+                <p>
+                    <a href="bio.html" class="creative" data-background="picture">terna iwar</a>
+                </p>
+            </div>
+            <div class="logo">
+                <img src="./assets/bantu-logo.png" alt="logo" class="white-logo w-100" />
+                <img src="./assets/footer-logo.png" alt="logo" class="black-logo w-100" />
+            </div>
         </div>
-        <div class="logo">
-          <img src="./assets/bantu-logo.png" alt="logo" class="white-logo w-100" />
-          <img src="./assets/footer-logo.png" alt="logo" class="black-logo w-100" />
-        </div>
-      </div>
     </div>
 
     <!-- Ionic Icons -->
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
 
     <!-- Tweenmax -->
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"
-      integrity="sha256-lPE3wjN2a7ABWHbGz7+MKBJaykyzqCbU96BJWjio86U="
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js" integrity="sha256-lPE3wjN2a7ABWHbGz7+MKBJaykyzqCbU96BJWjio86U=" crossorigin="anonymous"></script>
 
     <!-- jquery -->
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
-      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 
     <!-- Slick carousel-->
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"
-      integrity="sha256-NXRS8qVcmZ3dOv3LziwznUHPegFhPZ1F/4inU7uC8h0="
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js" integrity="sha256-NXRS8qVcmZ3dOv3LziwznUHPegFhPZ1F/4inU7uC8h0=" crossorigin="anonymous"></script>
 
     <script src="./main.js"></script>
 
     <script>
-      function changeNavcolor() {
-        var width = $(window).width();
-        if (width < 1024) {
-          if ($(".creatives").hasClass("lightnav")) {
-            return;
-          } else {
-            $(".creatives").removeClass("darknav");
-            $(".creatives").addClass("lightnav");
-          }
-        } else {
-          $(".creatives").removeClass("lightnav");
-          $(".creatives").addClass("darknav");
+        function changeNavcolor() {
+            var width = $(window).width();
+            if (width < 1024) {
+                if ($(".creatives").hasClass("lightnav")) {
+                    return;
+                } else {
+                    $(".creatives").removeClass("darknav");
+                    $(".creatives").addClass("lightnav");
+                }
+            } else {
+                $(".creatives").removeClass("lightnav");
+                $(".creatives").addClass("darknav");
+            }
         }
-      }
 
-      $(window).resize(function() {
+        $(window).resize(function() {
+            changeNavcolor();
+        });
         changeNavcolor();
-      });
-      changeNavcolor();
 
-      // change background image on hover (Desktop)
-      $(".creative").each(function(element) {
-        // console.log($(this));
-        $($(this)).mouseenter(function() {
-          console.log($(this).data("background"));
-          var newBackground = $(this).data("background");
-          $(".creatives .container").css("background-image", `url(./assets/hero-bg.jpg)`);
+        // change background image on hover (Desktop)
+        $(".creative").each(function(element) {
+            // console.log($(this));
+            $(this).mouseenter(function() {
+                console.log($(this).data("background"));
+                var newBackground = $(this).data("background");
+                $(".creatives .container").css("background-image", `url(./assets/hero-bg.jpg)`);
+            });
+
+            $(this).mouseleave(function() {
+                $(".creatives .container").css("background-image", "url(./assets/intro-bg.jpg)");
+            });
         });
-
-        $($(this)).mouseleave(function() {
-          $(".creatives .container").css("background-image", "url(./assets/intro-bg.jpg)");
-        });
-      });
-
-      $(".listi").slick({
-        centerMode: true,
-        initialSlide: 5,
-        slidesToShow: 9,
-        vertical: true,
-        verticalSwiping: true
-      });
     </script>
-  </body>
+</body>
+
 </html>
