@@ -787,6 +787,8 @@ button {
       height: 100vh;
       overflow: scroll;
       margin: auto 0; }
+      .creatives .container .list::-webkit-scrollbar {
+        width: 0 !important; }
       @media screen and (min-width: 768px) {
         .creatives .container .list {
           height: auto;
