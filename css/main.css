@@ -14,13 +14,15 @@ html,
 body {
   scroll-behavior: smooth; }
 
-html,
-body {
-  -ms-scroll-snap-type: y mandatory;
-  scroll-snap-type: y mandatory; }
+@media screen and (min-width: 1200px) {
+  html,
+  body {
+    -ms-scroll-snap-type: y mandatory;
+    scroll-snap-type: y mandatory; } }
 
-section {
-  scroll-snap-align: start; }
+@media screen and (min-width: 1200px) {
+  section {
+    scroll-snap-align: start; } }
 
 p {
   font-size: 1.6rem; }
@@ -417,7 +419,7 @@ select {
   background-position: center;
   background-attachment: fixed;
   height: 100vh;
-  min-height: -webkit-fill-available;
+  max-height: -webkit-fill-available;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
