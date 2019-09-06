@@ -43,18 +43,6 @@
                     <img src="./assets/footer-logo.png" alt="bantu logo" class="desktop-logo" />
                 </a>
             </div>
-
-            <div class="social_icons">
-                <a href="#">
-                    <ion-icon name="logo-facebook"></ion-icon>
-                </a>
-                <a href="#">
-                    <ion-icon name="logo-instagram"></ion-icon>
-                </a>
-                <a href="#">
-                    <ion-icon name="logo-twitter"></ion-icon>
-                </a>
-            </div>
         </div>
     </nav>
 
@@ -143,6 +131,7 @@
     <script src="./main.js"></script>
 
     <script>
+        // Change navigation trigger color based on screen size
         function changeNavcolor() {
             var width = $(window).width();
             if (width < 1024) {
@@ -163,9 +152,8 @@
         });
         changeNavcolor();
 
-        // change background image on hover (Desktop)
+        // change background image on hover
         $(".creative").each(function(element) {
-            // console.log($(this));
             $(this).mouseenter(function() {
                 console.log($(this).data("background"));
                 var newBackground = $(this).data("background");

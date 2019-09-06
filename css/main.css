@@ -241,6 +241,9 @@ button {
   cursor: pointer;
   width: 4rem;
   padding: 0.2rem; }
+  .nav_trigger.hide {
+    opacity: 0;
+    transition: opacity 0.2s ease; }
   @media screen and (min-width: 1200px) {
     .nav_trigger {
       top: 48%;
@@ -264,7 +267,7 @@ button {
       display: block;
       width: 0.1rem;
       margin-left: 0.3rem;
-      transition: background-color 1.5s cubic-bezier(0.7, 0, 0.3, 1) 0ms; }
+      transition: background-color 0.5s cubic-bezier(0.7, 0, 0.3, 1) 0ms; }
       @media screen and (min-width: 1200px) {
         .nav_trigger .icon .line {
           width: 0.2rem; } }
@@ -283,7 +286,7 @@ button {
     font-weight: bold;
     margin: 0 auto;
     margin-top: 1rem;
-    transition: color 1.5s cubic-bezier(0.7, 0, 0.3, 1) 0ms; }
+    transition: color 0.5s cubic-bezier(0.7, 0, 0.3, 1) 0ms; }
     .nav_trigger .txt.dark {
       color: #000; }
     @media screen and (min-width: 1200px) {
@@ -292,32 +295,30 @@ button {
         margin-top: 0.5rem;
         font-size: 1rem; } }
 
-.fixed_social_icons,
-.social_icons {
+.fixed_social_icons {
   display: none; }
+  .fixed_social_icons.hide {
+    opacity: 0;
+    transition: opacity 0.2s ease; }
   @media screen and (min-width: 1200px) {
-    .fixed_social_icons,
-    .social_icons {
+    .fixed_social_icons {
       position: fixed;
       right: 2%;
       top: 48%;
       transform: translate(0, -50%);
       display: flex;
       flex-direction: column;
-      height: 6rem; } }
-  .fixed_social_icons a,
-  .social_icons a {
+      height: 6rem;
+      z-index: 10; } }
+  .fixed_social_icons a {
     color: inherit;
     text-decoration: none;
     margin-top: 0.7rem; }
-    .fixed_social_icons a:first-of-type,
-    .social_icons a:first-of-type {
+    .fixed_social_icons a:first-of-type {
       margin-top: 0; }
-    .fixed_social_icons a ion-icon,
-    .social_icons a ion-icon {
+    .fixed_social_icons a ion-icon {
       font-size: 1.6rem; }
-    .fixed_social_icons a:hover,
-    .social_icons a:hover {
+    .fixed_social_icons a:hover {
       color: gray; }
 
 .footer {

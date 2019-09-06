@@ -163,6 +163,10 @@
     cursor: pointer;
     width: 4rem;
     padding: 0.2rem;
+    &.hide {
+        opacity: 0;
+        transition: opacity 0.2s ease;
+    }
     @media screen and (min-width: 1200px) {
         top: 48%;
         transform: translate(0, -48%);
@@ -186,7 +190,7 @@
             display: block;
             width: 0.1rem;
             margin-left: 0.3rem;
-            transition: background-color 1.5s cubic-bezier(0.7, 0, 0.3, 1) 0ms;
+            transition: background-color 0.5s cubic-bezier(0.7, 0, 0.3, 1) 0ms;
             @media screen and (min-width: 1200px) {
                 width: 0.2rem;
             }
@@ -211,7 +215,7 @@
         font-weight: bold;
         margin: 0 auto;
         margin-top: 1rem;
-        transition: color 1.5s cubic-bezier(0.7, 0, 0.3, 1) 0ms;
+        transition: color 0.5s cubic-bezier(0.7, 0, 0.3, 1) 0ms;
         &.dark {
             color: $black;
         }
@@ -223,9 +227,12 @@
     }
 }
 
-.fixed_social_icons,
-.social_icons {
+.fixed_social_icons {
     display: none;
+    &.hide {
+        opacity: 0;
+        transition: opacity 0.2s ease;
+    }
     @media screen and (min-width: 1200px) {
         position: fixed;
         right: 2%;
@@ -234,6 +241,7 @@
         display: flex;
         flex-direction: column;
         height: 6rem;
+        z-index: 10;
     }
     a {
         color: inherit;

@@ -6,10 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Bantu</title>
-
-    <!-- slick carousel -->
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" integrity="sha256-UK1EiopXIL+KVhfbFa8xrmAWPeBjMVdvYMYkTAEv/HI=" crossorigin="anonymous" /> -->
-
     <link rel="stylesheet" href="./css/main.css" />
 </head>
 
@@ -44,18 +40,6 @@
                 <a href="index.html">
                     <img src="./assets/mobile-logo.jpg" alt="bantu logo" class="mobile-logo" />
                     <img src="./assets/footer-logo.png" alt="bantu logo" class="desktop-logo" />
-                </a>
-            </div>
-
-            <div class="social_icons">
-                <a href="#">
-                    <ion-icon name="logo-facebook"></ion-icon>
-                </a>
-                <a href="#">
-                    <ion-icon name="logo-instagram"></ion-icon>
-                </a>
-                <a href="#">
-                    <ion-icon name="logo-twitter"></ion-icon>
                 </a>
             </div>
         </div>
@@ -187,15 +171,6 @@
     <!-- jquery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 
-    <!-- slick js -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js" integrity="sha256-NXRS8qVcmZ3dOv3LziwznUHPegFhPZ1F/4inU7uC8h0=" crossorigin="anonymous"></script>
-
-    <!-- magnificent popup -->
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.js" integrity="sha256-wk7QMTzYE7BJvko9BsywPzRmKzhCtIQKTuN6/B9sRmw=" crossorigin="anonymous"></script> -->
-
-    <!-- tinycolor -->
-    <!-- <script src="tinycolor.js"></script> -->
-
     <script src="main.js"></script>
     <script>
         // Stick journals filter to top
@@ -209,6 +184,47 @@
             } else {
                 $(".filters").removeClass("fixed");
             }
+        });
+
+        function isOnScreen(elem) {
+            var $window = jQuery(window);
+            var viewport_top = $window.scrollTop();
+            var viewport_height = $window.height();
+            var viewport_bottom = viewport_top + viewport_height;
+            var $elem = jQuery(elem);
+            var top = $elem.offset().top;
+            var height = $elem.height();
+            var bottom = top + height;
+            return viewport_bottom === bottom && viewport_top === top;
+        }
+
+        // Hide nav trigger and social icons on landing page header
+        // for desktop screens
+        function displayNavTriggerAndSocial() {
+            if ($(window).width() >= 1200) {
+                if (isOnScreen($(".lightnav"))) {
+                    $(".nav_trigger").addClass("hide");
+                    $(".fixed_social_icons").addClass("hide");
+                } else {
+                    $(".nav_trigger").removeClass("hide");
+                    $(".fixed_social_icons").removeClass("hide");
+                }
+            } else {
+                if ($(".nav_trigger").hasClass("hide") || $(".fixed_social_icons").hasClass("hide")) {
+                    $(".nav_trigger").removeClass("hide");
+                    $(".fixed_social_icons").removeClass("hide");
+                }
+            }
+        }
+
+        displayNavTriggerAndSocial();
+
+        $(window).resize(function() {
+            displayNavTriggerAndSocial();
+        });
+
+        $(window).scroll(function() {
+            displayNavTriggerAndSocial();
         });
     </script>
 </body>
