@@ -14,15 +14,13 @@ html,
 body {
   scroll-behavior: smooth; }
 
-@media screen and (min-width: 1024px) {
-  html,
-  body {
-    -ms-scroll-snap-type: y mandatory;
-    scroll-snap-type: y mandatory; } }
+html,
+body {
+  -ms-scroll-snap-type: y mandatory;
+  scroll-snap-type: y mandatory; }
 
-@media screen and (min-width: 1024px) {
-  section {
-    scroll-snap-align: start; } }
+section {
+  scroll-snap-align: start; }
 
 p {
   font-size: 1.6rem; }
@@ -180,7 +178,8 @@ select {
       @media screen and (min-width: 1200px) {
         .full_nav .links a {
           margin-right: 7rem;
-          margin-bottom: 0; }
+          margin-bottom: 0;
+          font-size: 2.5rem; }
           .full_nav .links a:last-of-type {
             margin-right: 0; } }
       @media screen and (min-width: 1440px) {
@@ -524,6 +523,12 @@ select {
       height: 100vh; } }
   .profile h2 {
     margin-bottom: auto; }
+    .profile h2:first-of-type {
+      margin-bottom: 5rem;
+      position: absolute;
+      top: 11%;
+      left: 50%;
+      transform: translate(-50%, 0); }
   .profile .container {
     height: 100%; }
     @media screen and (min-width: 768px) {
@@ -602,7 +607,7 @@ select {
     width: 1.3rem;
     animation: scrolldown 1s infinite ease;
     position: absolute;
-    left: 5%;
+    left: 9%;
     bottom: 4%; }
     @media screen and (min-width: 1024px) {
       .profile .scroll_down {
@@ -958,13 +963,13 @@ select {
     width: 1.2rem;
     animation: scrolldown 1s infinite ease;
     position: absolute;
-    left: 5%;
+    left: 9%;
     bottom: 10%; }
     @media screen and (min-width: 1024px) {
       .bio .scroll_down {
         width: 1.3rem;
         bottom: 14%;
-        left: 8%; } }
+        left: 14%; } }
 
 .gallery {
   min-height: 100vh;

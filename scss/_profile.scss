@@ -8,6 +8,13 @@
     }
     h2 {
         margin-bottom: auto;
+        &:first-of-type {
+            margin-bottom: 5rem;
+            position: absolute;
+            top: 11%;
+            left: 50%;
+            transform: translate(-50%, 0);
+        }
     }
     .container {
         height: 100%;
@@ -90,7 +97,7 @@
         width: 1.3rem;
         animation: scrolldown 1s infinite ease;
         position: absolute;
-        left: 5%;
+        left: 9%;
         bottom: 4%;
         @media screen and (min-width: 1024px) {
             left: 50%;
