@@ -73,6 +73,9 @@
             color: grey;
             &:hover {
                 color: $black;
+                &:first-of-type {
+                    color: grey;
+                }
             }
             &:last-of-type {
                 margin-right: 0;

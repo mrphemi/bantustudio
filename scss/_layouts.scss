@@ -60,6 +60,12 @@ button {
     cursor: pointer;
 }
 
+input,
+textarea,
+select {
+    -webkit-appearance: none;
+}
+
 .container {
     padding: 0 2rem;
     @media screen and (min-width: 768px) {
