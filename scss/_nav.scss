@@ -72,7 +72,7 @@
             color: #000;
             display: block;
             margin-bottom: 2rem;
-            font-size: 2.5rem;
+            font-size: 3rem;
             font-family: $font-play;
             letter-spacing: 0.6rem;
             &:last-of-type {
@@ -110,11 +110,12 @@
         .address {
             font-family: $font-play;
             font-style: italic;
-            font-size: 2rem;
+            font-size: 1.8rem;
             width: 50%;
             margin: auto;
             @media screen and (min-width: 768px) {
                 width: auto;
+                font-size: 2rem;
             }
         }
         .phone,

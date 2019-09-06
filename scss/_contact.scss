@@ -100,6 +100,7 @@
             text-transform: uppercase;
             font-size: 1.1rem;
             font-weight: bold;
+            display: none;
             @media screen and (max-width: 320px) {
                 font-size: 0.8rem;
             }
@@ -109,6 +110,9 @@
             @media screen and (min-width: 1024px) {
                 width: 25%;
             }
+            @media screen and (min-width: 1200px) {
+                display: inline-block;
+            }
             &.hide {
                 height: 0;
                 opacity: 0;
@@ -117,12 +121,15 @@
             }
         }
         form {
-            height: 0;
-            opacity: 0;
+            display: block;
             &.show {
                 height: auto;
                 opacity: 1;
                 transition: opacity 0.4s linear;
+            }
+            @media screen and (min-width: 1200px) {
+                height: 0;
+                opacity: 0;
             }
             input {
                 padding: 1rem;

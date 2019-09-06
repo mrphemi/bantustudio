@@ -164,7 +164,7 @@ select {
       color: #000;
       display: block;
       margin-bottom: 2rem;
-      font-size: 2.5rem;
+      font-size: 3rem;
       font-family: "Playfair Display", serif;
       letter-spacing: 0.6rem; }
       .full_nav .links a:last-of-type {
@@ -197,12 +197,13 @@ select {
     .full_nav .contact .address {
       font-family: "Playfair Display", serif;
       font-style: italic;
-      font-size: 2rem;
+      font-size: 1.8rem;
       width: 50%;
       margin: auto; }
       @media screen and (min-width: 768px) {
         .full_nav .contact .address {
-          width: auto; } }
+          width: auto;
+          font-size: 2rem; } }
     .full_nav .contact .phone,
     .full_nav .contact .mail {
       margin-top: 1rem;
@@ -403,8 +404,10 @@ select {
         width: auto; } }
     .footer .copyright p {
       font-size: 1.2rem; }
-      .footer .copyright p span {
-        font-weight: 900; }
+      .footer .copyright p a {
+        font-weight: 900;
+        color: inherit;
+        text-decoration: none; }
       .footer .copyright p:first-of-type {
         margin-bottom: 1rem; }
 
@@ -1134,7 +1137,8 @@ select {
       width: 80%;
       text-transform: uppercase;
       font-size: 1.1rem;
-      font-weight: bold; }
+      font-weight: bold;
+      display: none; }
       @media screen and (max-width: 320px) {
         .contact_page .newsletter .mobile {
           font-size: 0.8rem; } }
@@ -1144,18 +1148,24 @@ select {
       @media screen and (min-width: 1024px) {
         .contact_page .newsletter .mobile {
           width: 25%; } }
+      @media screen and (min-width: 1200px) {
+        .contact_page .newsletter .mobile {
+          display: inline-block; } }
       .contact_page .newsletter .mobile.hide {
         height: 0;
         opacity: 0;
         overflow: hidden;
         transition: opacity 0.4s linear; }
     .contact_page .newsletter form {
-      height: 0;
-      opacity: 0; }
+      display: block; }
       .contact_page .newsletter form.show {
         height: auto;
         opacity: 1;
         transition: opacity 0.4s linear; }
+      @media screen and (min-width: 1200px) {
+        .contact_page .newsletter form {
+          height: 0;
+          opacity: 0; } }
       .contact_page .newsletter form input {
         padding: 1rem;
         border: 3px solid #000;
