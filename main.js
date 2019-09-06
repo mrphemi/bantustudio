@@ -47,6 +47,9 @@ $(document).ready(function() {
     // }
 
     function isOffScreen(elem) {
+        if (elem.length == 0) {
+            return;
+        }
         var $window = jQuery(window);
         var viewport_top = $window.scrollTop();
         var viewport_height = $window.height();
