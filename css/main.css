@@ -53,7 +53,6 @@ input,
 textarea,
 select {
   -webkit-appearance: none;
-  -webkit-border-radius: 0;
   border-radius: 0; }
 
 .container {
@@ -239,7 +238,7 @@ select {
 
 .nav_trigger {
   position: fixed;
-  top: 2rem;
+  top: 3rem;
   left: 50%;
   transform: translate(-50%, 0);
   display: flex;
@@ -425,7 +424,7 @@ select {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  padding: 2rem 0; }
+  padding: 4rem 0; }
   .home .header .logo {
     width: 20%;
     -ms-flex-item-align: center;
@@ -943,9 +942,9 @@ select {
         width: auto; } }
   .bio .logo {
     width: 6%;
-    position: absolute;
+    position: fixed;
     left: 50%;
-    bottom: 2%;
+    bottom: 3%;
     transform: translate(-50%, 0); }
     @media screen and (min-width: 768px) {
       .bio .logo {
@@ -953,9 +952,11 @@ select {
     @media screen and (min-width: 1200px) {
       .bio .logo {
         width: 1.5%; } }
+    .bio .logo.hide {
+      opacity: 0; }
     @media screen and (min-width: 768px) {
       .bio .logo {
-        position: static;
+        bottom: 5%;
         margin-top: auto;
         margin-left: auto;
         margin-right: auto; } }
@@ -1135,42 +1136,8 @@ select {
             font-size: 1.6rem; } }
   .contact_page .newsletter {
     margin-bottom: 1rem; }
-    .contact_page .newsletter .mobile {
-      background: transparent;
-      border: 2px solid #000;
-      padding: 1rem;
-      width: 80%;
-      text-transform: uppercase;
-      font-size: 1.1rem;
-      font-weight: bold;
-      display: none; }
-      @media screen and (max-width: 320px) {
-        .contact_page .newsletter .mobile {
-          font-size: 0.8rem; } }
-      @media screen and (min-width: 768px) {
-        .contact_page .newsletter .mobile {
-          width: 35%; } }
-      @media screen and (min-width: 1024px) {
-        .contact_page .newsletter .mobile {
-          width: 25%; } }
-      @media screen and (min-width: 1200px) {
-        .contact_page .newsletter .mobile {
-          display: inline-block; } }
-      .contact_page .newsletter .mobile.hide {
-        height: 0;
-        opacity: 0;
-        overflow: hidden;
-        transition: opacity 0.4s linear; }
     .contact_page .newsletter form {
       display: block; }
-      .contact_page .newsletter form.show {
-        height: auto;
-        opacity: 1;
-        transition: opacity 0.4s linear; }
-      @media screen and (min-width: 1200px) {
-        .contact_page .newsletter form {
-          height: 0;
-          opacity: 0; } }
       .contact_page .newsletter form input {
         padding: 1rem;
         border: 3px solid #000;
