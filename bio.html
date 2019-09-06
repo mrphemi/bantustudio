@@ -14,37 +14,37 @@
     <!-- Navigation  -->
     <!-- TODO: to be extracted as a partial -->
     <nav class="full_nav">
-            <div class="container">
-                <div class="close_icon text-center">
-                    <ion-icon name="close"></ion-icon>
-                </div>
-    
-                <h2 class="text-center"><a href="index.html">bantu collective</a></h2>
-    
-                <div class="links text-center">
-                    <a href="journal.html">journal</a>
-                    <a href="creatives.html">creatives</a>
-                    <a href="#">alt</a>
-                    <a href="profile.html">profile</a>
-                    <a href="contact.html">contact</a>
-                </div>
-    
-                <div class="contact text-center">
-                    <p class="address">
-                        +14 fez street, off kumasi cresent, Abuja.
-                    </p>
-                    <p class="phone">+234 (0) 810 138 4973</p>
-                    <p class="mail">hello@bantustudio.com</p>
-                </div>
-    
-                <div class="logo">
-                    <a href="index.html">
-                        <img src="./assets/mobile-logo.jpg" alt="bantu logo" class="mobile-logo" />
-                        <img src="./assets/footer-logo.png" alt="bantu logo" class="desktop-logo" />
-                    </a>
-                </div>
+        <div class="container">
+            <div class="close_icon text-center">
+                <ion-icon name="close"></ion-icon>
             </div>
-        </nav>
+
+            <h2 class="text-center"><a href="index.html">bantu collective</a></h2>
+
+            <div class="links text-center">
+                <a href="index.html#journals" class="nav-link">journal</a>
+                <a href="creatives.html" class="nav-link">creatives</a>
+                <a href="#" class="nav-link">alt</a>
+                <a href="profile.html" class="nav-link">profile</a>
+                <a href="contact.html" class="nav-link">contact</a>
+            </div>
+
+            <div class="contact text-center">
+                <p class="address">
+                    +14 fez street, off kumasi cresent, Abuja.
+                </p>
+                <p class="phone">+234 (0) 810 138 4973</p>
+                <p class="mail">hello@bantustudio.com</p>
+            </div>
+
+            <div class="logo">
+                <a href="index.html">
+                    <img src="./assets/mobile-logo.jpg" alt="bantu logo" class="mobile-logo" />
+                    <img src="./assets/footer-logo.png" alt="bantu logo" class="desktop-logo" />
+                </a>
+            </div>
+        </div>
+    </nav>
 
     <!-- Nav trigger -->
     <!-- TODO: to be extracted as a partial -->
@@ -84,16 +84,15 @@
                     <h2 class="text-center name">mr color</h2>
                     <p>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic voluptatem dignissimos porro, fugit quas accusantium laborum ratione error ipsum inventore, fuga quam, dolorem doloremque sequi placeat impedit! Unde aperiam doloremque qui velit maiores sit
-                        ut neque dolores facere dolore voluptatibus quisquam repellendus ex, corporis officia eveniet dicta nam dolorem saepe eum porro! Aliquid neque provident facere recusandae iste magni alias. 
-                        Unde aperiam doloremque qui velit maiores sit
-                        ut neque dolores facere dolore voluptatibus quisquam repellendus ex, corporis officia eveniet dicta nam dolorem saepe eum porro! Aliquid neque provident facere recusandae iste magni alias. 
+                        ut neque dolores facere dolore voluptatibus quisquam repellendus ex, corporis officia eveniet dicta nam dolorem saepe eum porro! Aliquid neque provident facere recusandae iste magni alias. Unde aperiam doloremque qui velit maiores
+                        sit ut neque dolores facere dolore voluptatibus quisquam repellendus ex, corporis officia eveniet dicta nam dolorem saepe eum porro! Aliquid neque provident facere recusandae iste magni alias.
                     </p>
                 </div>
-    
+
                 <a href="index.html" class="logo">
                     <img src="./assets/footer-logo.png" alt="logo" class="w-100" />
                 </a>
-    
+
                 <a href="#gallery" class="scroll_down">
                     <img src="./assets/down-arrow-black.png" alt="scroll down button" class="w-100" />
                 </a>
@@ -177,7 +176,6 @@
                 <p>All Rights Reserved. <a href="#">Privacy Policy, Terms and Conditons.</a></p>
             </div>
         </footer>
-        
     </div>
 
     <!-- Ionic Icons -->
@@ -191,34 +189,34 @@
 
     <script src="./main.js"></script>
     <script>
-    function isOnScreen(elem) {
-        // if the element doesn't exist, abort
-        if (elem.length == 0) {
-            return;
-        }
-        var $window = jQuery(window);
-        var viewport_top = $window.scrollTop();
-        var viewport_height = $window.height();
-        var viewport_bottom = viewport_top + viewport_height;
-        var $elem = jQuery(elem);
-        var top = $elem.offset().top;
-        var height = $elem.height();
-        var bottom = top + height;
+        function isOnScreen(elem) {
+            // if the element doesn't exist, abort
+            if (elem.length == 0) {
+                return;
+            }
+            var $window = jQuery(window);
+            var viewport_top = $window.scrollTop();
+            var viewport_height = $window.height();
+            var viewport_bottom = viewport_top + viewport_height;
+            var $elem = jQuery(elem);
+            var top = $elem.offset().top;
+            var height = $elem.height();
+            var bottom = top + height;
 
-        return (
-            (top >= viewport_top && top < viewport_bottom) ||
-            (bottom > viewport_top && bottom <= viewport_bottom) ||
-            (height > viewport_height && top <= viewport_top && bottom >= viewport_bottom)
-        );
-    }
-
-    $(window).scroll(function(){
-        if(isOnScreen($(".footer"))) {
-            $(".logo").addClass("hide");
-        } else {
-            $(".logo").removeClass("hide");
+            return (
+                (top >= viewport_top && top < viewport_bottom) ||
+                (bottom > viewport_top && bottom <= viewport_bottom) ||
+                (height > viewport_height && top <= viewport_top && bottom >= viewport_bottom)
+            );
         }
-    });
+
+        $(window).scroll(function() {
+            if (isOnScreen($(".footer"))) {
+                $(".logo").addClass("hide");
+            } else {
+                $(".logo").removeClass("hide");
+            }
+        });
     </script>
 </body>
 
