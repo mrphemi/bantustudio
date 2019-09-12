@@ -1294,10 +1294,10 @@ select {
     margin: 5rem 0 0; }
     @media screen and (min-width: 768px) {
       .contact_page .copyright {
-        margin-top: auto;
-        margin-bottom: auto; } }
+        margin-top: auto; } }
     .contact_page .copyright p {
-      font-size: 1rem; }
+      font-size: 1rem;
+      font-weight: 400; }
       .contact_page .copyright p strong {
         font-weight: 700; }
   .contact_page .logo {
