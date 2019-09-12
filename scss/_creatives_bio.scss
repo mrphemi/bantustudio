@@ -45,9 +45,10 @@
         width: 90%;
         @include center-with-margin;
         @media screen and (min-width: 768px) {
-            margin-top: auto;
-            margin-bottom: auto;
-            width: auto;
+            position: absolute;
+            top: 44%;
+            left: 50%;
+            transform: translate(-50%, -44%);
         }
     }
     .logo {
@@ -61,7 +62,6 @@
         }
         @media screen and (min-width: 768px) {
             bottom: 5%;
-            margin-top: auto;
             @include center-with-margin;
         }
     }

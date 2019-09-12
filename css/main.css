@@ -31,7 +31,6 @@ p {
       font-size: 1.3rem; } }
 
 h2 {
-  font-size: 1.6rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.4rem;
@@ -95,6 +94,20 @@ select {
     transform: translateY(0.3rem); }
   100% {
     transform: translateY(1rem); } }
+@keyframes strike {
+  0% {
+    width: 0; }
+  100% {
+    width: 100%; } }
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg); }
+  25% {
+    transform: rotate(90deg); }
+  50% {
+    transform: rotate(180deg); }
+  100% {
+    transform: rotate(360deg); } }
 .full_nav {
   position: fixed;
   left: -100%;
@@ -427,13 +440,13 @@ select {
   -ms-flex-direction: column;
   flex-direction: column;
   padding: 4rem 0; }
-  .home .header .logo {
+  .home .header .bantu_logo {
     width: 20%;
     -ms-flex-item-align: center;
     align-self: center;
     margin: auto 0 0; }
     @media screen and (min-width: 768px) {
-      .home .header .logo {
+      .home .header .bantu_logo {
         width: 10%; } }
   .home .header .go_down {
     text-align: center;
@@ -454,6 +467,26 @@ select {
 .journals {
   background-color: #fff;
   padding: 10rem 0 3rem; }
+  .journals .logo {
+    width: 6%;
+    position: fixed;
+    left: 50%;
+    bottom: 3%;
+    transform: translate(-50%, 0); }
+    @media screen and (min-width: 768px) {
+      .journals .logo {
+        width: 2.5%; } }
+    @media screen and (min-width: 1200px) {
+      .journals .logo {
+        width: 1.5%; } }
+    .journals .logo.hide {
+      opacity: 0; }
+    @media screen and (min-width: 768px) {
+      .journals .logo {
+        bottom: 5%;
+        margin-top: auto;
+        margin-left: auto;
+        margin-right: auto; } }
   .journals .filters {
     margin-top: 1rem;
     margin-bottom: 5rem;
@@ -524,14 +557,59 @@ select {
       height: 100vh; } }
   .profile h2 {
     margin-bottom: auto; }
-    .profile h2:first-of-type {
-      margin-bottom: 5rem;
-      position: absolute;
-      top: 11%;
-      left: 50%;
-      transform: translate(-50%, 0); }
+  .profile .cross {
+    display: none;
+    cursor: pointer;
+    position: absolute; }
+    @media screen and (min-width: 1200px) {
+      .profile .cross {
+        display: block; } }
+    .profile .cross .line-container {
+      width: 4rem;
+      height: 4rem;
+      position: relative; }
+      .profile .cross .line-container span {
+        position: absolute;
+        height: 0.1rem;
+        width: 2rem;
+        background-color: #333;
+        display: block; }
+        .profile .cross .line-container span.one {
+          top: 0;
+          left: 1rem;
+          transform: rotate(90deg); }
+        .profile .cross .line-container span.two {
+          left: -1rem;
+          top: 2rem; }
+        .profile .cross .line-container span.three {
+          bottom: 0;
+          left: 1rem;
+          transform: rotate(90deg); }
+        .profile .cross .line-container span.four {
+          right: -1rem;
+          top: 2rem; }
+  .profile .bottom-left {
+    bottom: 0;
+    left: 0; }
+    .profile .bottom-left:hover {
+      animation-name: rotate;
+      animation-duration: 1s;
+      animation-timing-function: linear;
+      animation-iteration-count: 0.3s;
+      animation-fill-mode: forwards; }
+  .profile .bottom-right {
+    bottom: 0;
+    right: 0;
+    transform: rotate(45deg); }
+  .profile .top-left {
+    top: 0;
+    left: 0; }
+  .profile .top-right {
+    top: 0;
+    right: 0; }
   .profile .container {
-    height: 100%; }
+    height: 100%;
+    position: relative; }
     @media screen and (min-width: 768px) {
       .profile .container {
         display: flex;
@@ -539,6 +617,7 @@ select {
         justify-content: center; } }
   .profile .logo {
     margin-top: 4rem;
+    display: block;
     width: 6%;
     margin-left: auto;
     margin-right: auto; }
@@ -798,16 +877,15 @@ select {
       transform: translate(-50%, 0); } }
   .creatives .container {
     height: 100vh;
-    background-image: url("../assets/intro-bg.jpg");
+    display: flex;
+    flex-direction: column;
+    padding-top: 11rem;
+    padding-bottom: 10rem;
+    position: relative;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    background-attachment: fixed;
-    display: flex;
-    flex-direction: column;
-    transition: background-image 0.4s ease;
-    padding-top: 11rem;
-    padding-bottom: 10rem; }
+    background-attachment: fixed; }
     @media screen and (min-width: 768px) {
       .creatives .container {
         justify-content: center;
@@ -818,10 +896,23 @@ select {
     @media screen and (min-width: 1024px) {
       .creatives .container {
         height: 60vh; } }
+    .creatives .container .background-container {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 1;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-attachment: fixed;
+      transition: background-image 5s ease-in-out; }
     .creatives .container .list {
       height: 100vh;
       overflow: scroll;
-      margin: auto 0; }
+      margin: auto 0;
+      z-index: 3; }
       .creatives .container .list::-webkit-scrollbar {
         width: 0 !important; }
       @media screen and (min-width: 768px) {
@@ -832,40 +923,57 @@ select {
         .creatives .container .list {
           width: 80%;
           margin: auto; } }
-      .creatives .container .list p {
+      .creatives .container .list .list-item {
         text-transform: uppercase;
         font-size: 1.6rem;
-        font-weight: 600;
         margin-bottom: 6rem;
         letter-spacing: 0.4rem;
         color: lightgray;
         opacity: 0.7; }
-        .creatives .container .list p:hover {
+        .creatives .container .list .list-item:hover {
           color: #fff;
           opacity: 1;
           font-size: 2.2rem;
           font-weight: bold; }
         @media screen and (min-width: 768px) {
-          .creatives .container .list p {
+          .creatives .container .list .list-item {
             color: #fff;
             opacity: 1;
-            font-size: 1.4rem;
             display: inline-block;
-            margin-right: 2rem; }
-            .creatives .container .list p:last-of-type {
+            font-weight: 600;
+            margin-right: 2rem;
+            margin-bottom: 2rem; }
+            .creatives .container .list .list-item:last-of-type {
               margin-right: 0; }
-            .creatives .container .list p:hover {
-              font-size: 1.4rem;
+            .creatives .container .list .list-item:hover {
+              font-size: 1.6rem;
               font-weight: 600; } }
         @media screen and (min-width: 1200px) {
-          .creatives .container .list p {
+          .creatives .container .list .list-item {
             margin-right: 4rem; } }
         @media screen and (min-width: 1440px) {
-          .creatives .container .list p {
-            font-size: 1.8rem; } }
-        .creatives .container .list p a {
+          .creatives .container .list .list-item {
+            font-size: 1.8rem; }
+            .creatives .container .list .list-item:hover {
+              font-size: 1.8rem; } }
+        .creatives .container .list .list-item a {
           color: #fff;
           text-decoration: none; }
+          .creatives .container .list .list-item a.strike {
+            position: relative; }
+            .creatives .container .list .list-item a.strike::after {
+              content: " ";
+              position: absolute;
+              top: 50%;
+              left: 0;
+              width: 100%;
+              height: 0.2rem;
+              background: #fff;
+              animation-name: strike;
+              animation-duration: 0.2s;
+              animation-timing-function: linear;
+              animation-iteration-count: 1;
+              animation-fill-mode: forwards; }
     .creatives .container .logo {
       width: 6%;
       position: absolute;
@@ -939,9 +1047,10 @@ select {
     margin-right: auto; }
     @media screen and (min-width: 768px) {
       .bio .intro {
-        margin-top: auto;
-        margin-bottom: auto;
-        width: auto; } }
+        position: absolute;
+        top: 44%;
+        left: 50%;
+        transform: translate(-50%, -44%); } }
   .bio .logo {
     width: 6%;
     position: fixed;
@@ -959,7 +1068,6 @@ select {
     @media screen and (min-width: 768px) {
       .bio .logo {
         bottom: 5%;
-        margin-top: auto;
         margin-left: auto;
         margin-right: auto; } }
   .bio .scroll_down {

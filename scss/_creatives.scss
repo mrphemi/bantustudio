@@ -14,18 +14,16 @@
         }
     }
     .container {
-        // height: 100%;
         height: 100vh;
-        background-image: url("../assets/intro-bg.jpg");
+        display: flex;
+        flex-direction: column;
+        padding-top: 11rem;
+        padding-bottom: 10rem;
+        position: relative;
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
         background-attachment: fixed;
-        display: flex;
-        flex-direction: column;
-        transition: background-image 0.4s ease;
-        padding-top: 11rem;
-        padding-bottom: 10rem;
         @media screen and (min-width: 768px) {
             justify-content: center;
             align-items: center;
@@ -36,10 +34,27 @@
         @media screen and (min-width: 1024px) {
             height: 60vh;
         }
+        .background-container {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 1;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed;
+            transition: background-image 5s ease-in-out;
+            // &.show {
+            //     opacity: 1;
+            // }
+        }
         .list {
             height: 100vh;
             overflow: scroll;
             margin: auto 0;
+            z-index: 3;
             &::-webkit-scrollbar {
                 width: 0 !important;
             }
@@ -51,10 +66,9 @@
                 width: 80%;
                 margin: auto;
             }
-            p {
+            .list-item {
                 text-transform: uppercase;
                 font-size: 1.6rem;
-                font-weight: 600;
                 margin-bottom: 6rem;
                 letter-spacing: 0.4rem;
                 color: lightgray;
@@ -68,14 +82,15 @@
                 @media screen and (min-width: 768px) {
                     color: $white;
                     opacity: 1;
-                    font-size: 1.4rem;
                     display: inline-block;
+                    font-weight: 600;
                     margin-right: 2rem;
+                    margin-bottom: 2rem;
                     &:last-of-type {
                         margin-right: 0;
                     }
                     &:hover {
-                        font-size: 1.4rem;
+                        font-size: 1.6rem;
                         font-weight: 600;
                     }
                 }
@@ -84,10 +99,30 @@
                 }
                 @media screen and (min-width: 1440px) {
                     font-size: 1.8rem;
+                    &:hover {
+                        font-size: 1.8rem;
+                    }
                 }
                 a {
                     color: $white;
                     text-decoration: none;
+                    &.strike {
+                        position: relative;
+                        &::after {
+                            content: " ";
+                            position: absolute;
+                            top: 50%;
+                            left: 0;
+                            width: 100%;
+                            height: 0.2rem;
+                            background: #fff;
+                            animation-name: strike;
+                            animation-duration: 0.2s;
+                            animation-timing-function: linear;
+                            animation-iteration-count: 1;
+                            animation-fill-mode: forwards;
+                        }
+                    }
                 }
             }
         }

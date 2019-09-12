@@ -8,16 +8,72 @@
     }
     h2 {
         margin-bottom: auto;
-        &:first-of-type {
-            margin-bottom: 5rem;
-            position: absolute;
-            top: 11%;
-            left: 50%;
-            transform: translate(-50%, 0);
+    }
+    .cross {
+        display: none;
+        cursor: pointer;
+        @media screen and (min-width: 1200px) {
+            display: block;
         }
+        position: absolute;
+        .line-container {
+            width: 4rem;
+            height: 4rem;
+            position: relative;
+            span {
+                position: absolute;
+                height: 0.1rem;
+                width: 2rem;
+                background-color: #333;
+                display: block;
+                &.one {
+                    top: 0;
+                    left: 1rem;
+                    transform: rotate(90deg);
+                }
+                &.two {
+                    left: -1rem;
+                    top: 2rem;
+                }
+                &.three {
+                    bottom: 0;
+                    left: 1rem;
+                    transform: rotate(90deg);
+                }
+                &.four {
+                    right: -1rem;
+                    top: 2rem;
+                }
+            }
+        }
+    }
+    .bottom-left {
+        bottom: 0;
+        left: 0;
+        &:hover {
+            animation-name: rotate;
+            animation-duration: 1s;
+            animation-timing-function: linear;
+            animation-iteration-count: 0.3s;
+            animation-fill-mode: forwards;
+        }
+    }
+    .bottom-right {
+        bottom: 0;
+        right: 0;
+        transform: rotate(45deg);
+    }
+    .top-left {
+        top: 0;
+        left: 0;
+    }
+    .top-right {
+        top: 0;
+        right: 0;
     }
     .container {
         height: 100%;
+        position: relative;
         @media screen and (min-width: 768px) {
             display: flex;
             flex-direction: column;
@@ -26,6 +82,7 @@
     }
     .logo {
         margin-top: 4rem;
+        display: block;
         @include small-logo;
         @include center-with-margin;
         @media screen and (min-width: 768px) {

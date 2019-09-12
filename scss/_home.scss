@@ -20,7 +20,7 @@
         -ms-flex-direction: column;
         flex-direction: column;
         padding: 4rem 0;
-        .logo {
+        .bantu_logo {
             width: 20%;
             -ms-flex-item-align: center;
             align-self: center;
@@ -52,6 +52,21 @@
 .journals {
     background-color: $white;
     padding: 10rem 0 3rem;
+    .logo {
+        @include small-logo;
+        position: fixed;
+        left: 50%;
+        bottom: 3%;
+        transform: translate(-50%, 0);
+        &.hide {
+            opacity: 0;
+        }
+        @media screen and (min-width: 768px) {
+            bottom: 5%;
+            margin-top: auto;
+            @include center-with-margin;
+        }
+    }
     .filters {
         margin-top: 1rem;
         margin-bottom: 5rem;

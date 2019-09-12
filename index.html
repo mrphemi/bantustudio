@@ -84,14 +84,14 @@
 
     <section class="home lightnav">
         <div class="header">
-            <img class="logo" src="./assets/bantu-logo.png" alt="Bantu Logo" />
+            <img class="bantu_logo" src="./assets/bantu-logo.png" alt="Bantu Logo" />
             <a class="go_down scroll" href="#journals">
                 <img src="./assets/down-arrow.png" alt="scroll down" />
             </a>
         </div>
     </section>
 
-    <section class="journals text-center py-4 darknav" id="journals">
+    <section class="journals text-center darknav" id="journals">
         <h2>journal</h2>
 
         <div class="filters">
@@ -102,6 +102,10 @@
             <span class="filter">art direction</span>
             <span class="filter">audio production</span>
         </div>
+
+        <a href="index.html" class="logo hide">
+            <img src="./assets/footer-logo.png" alt="logo" class="w-100" />
+        </a>
 
         <div class="container">
             <div class="posts-grid">
@@ -175,7 +179,7 @@
     <script src="main.js"></script>
     <script>
         // Stick journals filter to top
-        $(window).scroll(function() {
+        function stickFilters() {
             var top = $(window).scrollTop(),
                 elementOffset = $(".filters").offset().top,
                 distance = elementOffset - top;
@@ -185,9 +189,9 @@
             } else {
                 $(".filters").removeClass("fixed");
             }
-        });
+        }
 
-        function isOnScreen(elem) {
+        function isOnScreenFit(elem) {
             var $window = jQuery(window);
             var viewport_top = $window.scrollTop();
             var viewport_height = $window.height();
@@ -199,11 +203,32 @@
             return viewport_bottom === bottom && viewport_top === top;
         }
 
+        function isOnScreenAny(elem) {
+            // if the element doesn't exist, abort
+            if (elem.length == 0) {
+                return;
+            }
+            var $window = jQuery(window);
+            var viewport_top = $window.scrollTop();
+            var viewport_height = $window.height();
+            var viewport_bottom = viewport_top + viewport_height;
+            var $elem = jQuery(elem);
+            var top = $elem.offset().top;
+            var height = $elem.height();
+            var bottom = top + height;
+
+            return (
+                (top >= viewport_top && top < viewport_bottom) ||
+                (bottom > viewport_top && bottom <= viewport_bottom) ||
+                (height > viewport_height && top <= viewport_top && bottom >= viewport_bottom)
+            );
+        }
+
         // Hide nav trigger and social icons on landing page header
         // for desktop screens
         function displayNavTriggerAndSocial() {
             if ($(window).width() >= 1200) {
-                if (isOnScreen($(".lightnav"))) {
+                if (isOnScreenFit($(".lightnav"))) {
                     $(".nav_trigger").addClass("hide");
                     $(".fixed_social_icons").addClass("hide");
                 } else {
@@ -218,6 +243,14 @@
             }
         }
 
+        function displayLogo() {
+            if (isOnScreenAny($(".journals")) && !isOnScreenAny(".footer")) {
+                $(".journals .logo").removeClass("hide");
+            } else {
+                $(".journals .logo").addClass("hide");
+            }
+        }
+
         displayNavTriggerAndSocial();
 
         $(window).resize(function() {
@@ -225,7 +258,9 @@
         });
 
         $(window).scroll(function() {
+            stickFilters();
             displayNavTriggerAndSocial();
+            displayLogo();
         });
     </script>
 </body>
