@@ -59,16 +59,16 @@
             transform: translate(0, -50%);
         }
         .list {
-            height: 50%;
+            height: 100%;
             overflow: scroll;
             margin: auto 0;
-            padding: 12rem 0 5rem;
+            padding: 60% 0 40%;
             z-index: 3;
             &::-webkit-scrollbar {
                 width: 0 !important;
             }
             @media screen and (max-width: 320px) {
-                padding: 8rem 0 0;
+                padding: 50% 0 30%;
             }
             @media screen and (min-width: 768px) {
                 padding: 0;
