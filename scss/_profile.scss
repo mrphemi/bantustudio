@@ -50,18 +50,18 @@
     .bottom-left {
         bottom: 0;
         left: 0;
-        &:hover {
-            animation-name: rotate;
-            animation-duration: 1s;
-            animation-timing-function: linear;
-            animation-iteration-count: 0.3s;
-            animation-fill-mode: forwards;
-        }
     }
     .bottom-right {
         bottom: 0;
         right: 0;
         transform: rotate(45deg);
+        &:hover {
+            animation-name: rotate;
+            animation-duration: 1s;
+            animation-timing-function: linear;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+        }
     }
     .top-left {
         top: 0;

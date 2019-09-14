@@ -101,13 +101,20 @@ select {
     width: 100%; } }
 @keyframes rotate {
   0% {
-    transform: rotate(0deg); }
+    transform: rotate(45deg); }
   25% {
-    transform: rotate(90deg); }
-  50% {
     transform: rotate(180deg); }
+  50% {
+    transform: rotate(360deg); }
   100% {
-    transform: rotate(360deg); } }
+    transform: rotate(45deg); } }
+@keyframes fade {
+  0% {
+    opacity: 0; }
+  50% {
+    opacity: 0.5; }
+  100% {
+    opacity: 1; } }
 .full_nav {
   position: fixed;
   left: -100%;
@@ -591,16 +598,16 @@ select {
   .profile .bottom-left {
     bottom: 0;
     left: 0; }
-    .profile .bottom-left:hover {
-      animation-name: rotate;
-      animation-duration: 1s;
-      animation-timing-function: linear;
-      animation-iteration-count: 0.3s;
-      animation-fill-mode: forwards; }
   .profile .bottom-right {
     bottom: 0;
     right: 0;
     transform: rotate(45deg); }
+    .profile .bottom-right:hover {
+      animation-name: rotate;
+      animation-duration: 1s;
+      animation-timing-function: linear;
+      animation-iteration-count: 1;
+      animation-fill-mode: forwards; }
   .profile .top-left {
     top: 0;
     left: 0; }
@@ -902,21 +909,35 @@ select {
       position: absolute;
       top: 0;
       left: 0;
-      opacity: 1;
+      opacity: 0;
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center;
       background-attachment: fixed;
-      transition: background-image 5s ease-in-out; }
+      transition: opacity 1s ease-in-out; }
+      .creatives .container .background-container.show {
+        opacity: 1; }
+    .creatives .container .boundary {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 100%;
+      height: 5rem;
+      transform: translate(0, -50%); }
     .creatives .container .list {
-      height: 100vh;
+      height: 50%;
       overflow: scroll;
       margin: auto 0;
+      padding: 12rem 0 5rem;
       z-index: 3; }
       .creatives .container .list::-webkit-scrollbar {
         width: 0 !important; }
+      @media screen and (max-width: 320px) {
+        .creatives .container .list {
+          padding: 8rem 0 0; } }
       @media screen and (min-width: 768px) {
         .creatives .container .list {
+          padding: 0;
           height: auto;
           overflow: auto; } }
       @media screen and (min-width: 1024px) {
@@ -930,11 +951,26 @@ select {
         letter-spacing: 0.4rem;
         color: lightgray;
         opacity: 0.7; }
-        .creatives .container .list .list-item:hover {
+        .creatives .container .list .list-item.highlight {
           color: #fff;
           opacity: 1;
           font-size: 2.2rem;
           font-weight: bold; }
+        .creatives .container .list .list-item.strike {
+          position: relative; }
+          .creatives .container .list .list-item.strike::after {
+            content: " ";
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            height: 0.2rem;
+            background: #fff;
+            animation-name: strike;
+            animation-duration: 0.2s;
+            animation-timing-function: linear;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards; }
         @media screen and (min-width: 768px) {
           .creatives .container .list .list-item {
             color: #fff;
@@ -959,21 +995,6 @@ select {
         .creatives .container .list .list-item a {
           color: #fff;
           text-decoration: none; }
-          .creatives .container .list .list-item a.strike {
-            position: relative; }
-            .creatives .container .list .list-item a.strike::after {
-              content: " ";
-              position: absolute;
-              top: 50%;
-              left: 0;
-              width: 100%;
-              height: 0.2rem;
-              background: #fff;
-              animation-name: strike;
-              animation-duration: 0.2s;
-              animation-timing-function: linear;
-              animation-iteration-count: 1;
-              animation-fill-mode: forwards; }
     .creatives .container .logo {
       width: 6%;
       position: absolute;

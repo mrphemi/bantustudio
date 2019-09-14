@@ -21,15 +21,27 @@
 
 @keyframes rotate {
     0% {
-        transform: rotate(0deg);
+        transform: rotate(45deg);
     }
     25% {
-        transform: rotate(90deg);
-    }
-    50% {
         transform: rotate(180deg);
     }
-    100% {
+    50% {
         transform: rotate(360deg);
+    }
+    100% {
+        transform: rotate(45deg);
+    }
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
     }
 }

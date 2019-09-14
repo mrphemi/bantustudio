@@ -80,65 +80,60 @@
         <h2>creatives</h2>
         <div class="container">
             <div class="background-container"></div>
+            <div class="boundary"></div>
             <div class="list text-center">
-                <p class="list-item">
-                    <a href="bio.html" class="creative" data-background="https://images.pexels.com/photos/1907307/pexels-photo-1907307.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940">
+                <p class="list-item creative">
+                    <a href="bio.html" data-background="https://images.pexels.com/photos/1907307/pexels-photo-1907307.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940">
               etubi onucheyo
             </a>
                 </p>
-                <p class="list-item">
-                    <a href="bio.html" class="creative" data-background="https://images.pexels.com/photos/1353361/pexels-photo-1353361.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940">
+                <p class="list-item creative">
+                    <a href="bio.html" data-background="https://images.pexels.com/photos/1353361/pexels-photo-1353361.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940">
               tay iwar
             </a>
                 </p>
-                <p class="list-item">
-                    <a href="bio.html" class="creative" data-background="https://images.pexels.com/photos/239491/pexels-photo-239491.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940">niyi okoewo</a
+                <p class="list-item creative">
+                    <a href="bio.html" data-background="https://images.pexels.com/photos/239491/pexels-photo-239491.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940">niyi okoewo</a
             >
           </p>
-          <p class="list-item">
+          <p class="list-item creative">
             <a
               href="bio.html"
-              class="creative"
               data-background="https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
               >romeo shagba</a
             >
           </p>
-          <p class="list-item">
+          <p class="list-item creative">
             <a
               href="bio.html"
-              class="creative"
               data-background="https://images.pexels.com/photos/1546901/pexels-photo-1546901.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
               >rozay</a
             >
           </p>
-          <p class="list-item">
+          <p class="list-item creative">
             <a
               href="bio.html"
-              class="creative"
               data-background="https://images.pexels.com/photos/1065084/pexels-photo-1065084.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
               >mr color</a
             >
           </p>
-          <p class="list-item">
+          <p class="list-item creative">
             <a
               href="bio.html"
-              class="creative"
               data-background="https://images.pexels.com/photos/310983/pexels-photo-310983.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
               >hanz</a
             >
           </p>
-          <p class="list-item">
+          <p class="list-item creative">
             <a
               href="bio.html"
-              class="creative"
               data-background="https://images.pexels.com/photos/211816/pexels-photo-211816.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
               >lumun</a
             >
           </p>
-          <p class="list-item">
+          <p class="list-item creative">
             <a
               href="bio.html"
-              class="creative"
               data-background="https://images.pexels.com/photos/374044/pexels-photo-374044.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
               >terna iwar</a
             >
@@ -182,38 +177,88 @@
                 }
             }
 
-            function setBackgroundImage() {
-                var background = $(".creative").data("background");
+            // Set background-image to image associated with first name on the list on load
+            // and strike through first name
+            function setBackgroundOnLoad() {
+                var background = $(".creative a").data("background");
                 $(".creatives .background-container").css({
                     "background-image": `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(${background})`
                 });
                 $(".creatives .background-container").addClass("show");
-                $(".creative:first").addClass("strike");
+                if ($(window).width() >= 768) {
+                    $(".creative:first").addClass("strike");
+                }
+            }
+
+            function setBackgroundAndStrike() {
+                // change background image and strike through associated name on hover (desktop)
+                $(".creative").each(function(element) {
+                    $(this).mouseenter(function() {
+                        var newBackground = $(this)
+                            .find("a")
+                            .data("background");
+                        $(".creative").removeClass("strike");
+
+                        $(".creatives .background-container").css({
+                            "background-image": `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(${newBackground})`
+                        });
+                        $(".creatives .background-container").addClass("show");
+                        $(this).addClass("strike");
+                    });
+
+                    $(this).mouseleave(function() {
+                        $(this).removeClass("strike");
+                    });
+                });
+            }
+
+            function isPart(elem) {
+                var boundary = $(".boundary"),
+                    boundaryHeight = boundary.height(),
+                    boundaryTop = boundary.scrollTop(),
+                    boundaryBottom = boundaryHeight + boundaryTop,
+                    elemTop = elem.offset().top - boundary.offset().top,
+                    elemBottom = elemTop + elem.height(),
+                    isPart = (elemTop < 0 && elemBottom > 0) || (elemTop > 0 && elemTop <= boundary.height());
+                return isPart;
+            }
+
+            // On mobile devices, highlight(increase font-size and text opacity) creative name and change 
+            // background image to associated data-background attribute 
+            function HighlightName() {
+                $(".creative").each(function() {
+                    var self = $(this);
+                    var newBackground = $(this)
+                        .find("a")
+                        .data("background");
+                    if (isPart(self) === true) {
+                        self.addClass("highlight");
+                        $(".creatives .background-container").css({
+                            "background-image": `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(${newBackground})`
+                        });
+                    } else {
+                        if (self.hasClass("highlight")) {
+                            self.removeClass("highlight");
+                        }
+                    }
+                });
+            }
+
+            if ($(window).width() >= 768) {
+                setBackgroundAndStrike();
+            }
+
+            if ($(window).width() < 768) {
+                HighlightName();
+                $(".list").scroll(function() {
+                    HighlightName();
+                });
             }
 
             changeNavcolor();
-            setBackgroundImage();
+            setBackgroundOnLoad();
             $(window).resize(function() {
                 changeNavcolor();
-            });
-
-            // change background image on hover
-            $(".creative").each(function(element) {
-                $(this).mouseenter(function() {
-                    var newBackground = $(this).data("background");
-                    $(".creative").removeClass("strike");
-                    $(".creatives .background-container").removeClass("show");
-
-                    $(".creatives .background-container").css({
-                        "background-image": `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(${newBackground})`
-                    });
-                    $(".creatives .background-container").addClass("show");
-                    $(this).addClass("strike");
-                });
-
-                $(this).mouseleave(function() {
-                    $(this).removeClass("strike");
-                });
             });
         </script>
 </body>
