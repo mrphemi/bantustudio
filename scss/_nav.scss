@@ -4,18 +4,18 @@
     opacity: 0;
     width: 100%;
     height: 100vh;
-    /* Mozilla-based browsers will ignore this. */
-    height: -webkit-fill-available;
-    /* WebKit-based browsers will ignore this. */
-    height: -moz-available;
+    // /* Mozilla-based browsers will ignore this. */
+    // height: -webkit-fill-available;
+    // /* WebKit-based browsers will ignore this. */
+    // height: -moz-available;
     z-index: 10;
     background-color: #fff;
     overflow-y: hidden;
     padding: 3rem 0;
-    @include iPhoneLandscape;
-    @include iPhonePotrait;
-    @include iPad;
-    @include iPadPro;
+    // @include iPhoneLandscape;
+    // @include iPhonePotrait;
+    // @include iPad;
+    // @include iPadPro;
     @media screen and (min-width: 1200px) {
         padding: 0 0 4rem;
     }

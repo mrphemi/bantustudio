@@ -7,10 +7,10 @@
         background-position: center;
         // background-attachment: fixed;
         height: 100vh;
-        /* Mozilla-based browsers will ignore this. */
-        height: -webkit-fill-available;
-        /* WebKit-based browsers will ignore this. */
-        height: -moz-available;
+        // /* Mozilla-based browsers will ignore this. */
+        // height: -webkit-fill-available;
+        // /* WebKit-based browsers will ignore this. */
+        // height: -moz-available;
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
@@ -19,15 +19,16 @@
         -ms-flex-direction: column;
         flex-direction: column;
         padding: 4rem 0;
-        @include iPhoneLandscape;
-        @include iPhonePotrait;
-        @include iPad;
-        @include iPadPro;
+        // @include iPhoneLandscape;
+        // @include iPhonePotrait;
+        // @include iPad;
+        // @include iPadPro;
         .bantu_logo {
             width: 20%;
             -ms-flex-item-align: center;
             align-self: center;
             margin: auto 0 0;
+            border: 1px solid red;
             @media screen and (min-width: 320px) and (orientation: landscape) {
                 width: 5%;
             }

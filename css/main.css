@@ -121,50 +121,10 @@ select {
   opacity: 0;
   width: 100%;
   height: 100vh;
-  /* Mozilla-based browsers will ignore this. */
-  height: -webkit-fill-available;
-  /* WebKit-based browsers will ignore this. */
-  height: -moz-available;
   z-index: 10;
   background-color: #fff;
   overflow-y: hidden;
   padding: 3rem 0; }
-  @media screen and (min-width: 320px) and (max-width: 568px) and (orientation: landscape) {
-    .full_nav {
-      height: 32rem; } }
-  @media screen and (min-width: 375px) and (max-width: 667px) and (orientation: landscape) {
-    .full_nav {
-      height: 37.5rem; } }
-  @media screen and (min-width: 375px) and (max-width: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape) {
-    .full_nav {
-      height: 37.5rem; } }
-  @media screen and (min-width: 414px) and (max-width: 736px) and (orientation: landscape) {
-    .full_nav {
-      height: 41.4rem; } }
-  @media screen and (min-width: 320px) and (max-width: 568px) and (orientation: portrait) {
-    .full_nav {
-      height: 56.8rem; } }
-  @media screen and (min-width: 375px) and (max-width: 667px) and (orientation: portrait) {
-    .full_nav {
-      height: 66.7rem; } }
-  @media screen and (min-width: 375px) and (max-width: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait) {
-    .full_nav {
-      height: 81.2rem; } }
-  @media screen and (min-width: 414px) and (max-width: 736px) and (orientation: portrait) {
-    .full_nav {
-      height: 73.6rem; } }
-  @media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
-    .full_nav {
-      min-height: 76rem; } }
-  @media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
-    .full_nav {
-      min-height: 102rem; } }
-  @media screen and (min-width: 1366px) and (max-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
-    .full_nav {
-      min-height: 102rem; } }
-  @media screen and (min-width: 1024px) and (max-width: 1366px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
-    .full_nav {
-      min-height: 136rem; } }
   @media screen and (min-width: 1200px) {
     .full_nav {
       padding: 0 0 4rem; } }
@@ -484,10 +444,6 @@ select {
   background-size: cover;
   background-position: center;
   height: 100vh;
-  /* Mozilla-based browsers will ignore this. */
-  height: -webkit-fill-available;
-  /* WebKit-based browsers will ignore this. */
-  height: -moz-available;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -496,47 +452,12 @@ select {
   -ms-flex-direction: column;
   flex-direction: column;
   padding: 4rem 0; }
-  @media screen and (min-width: 320px) and (max-width: 568px) and (orientation: landscape) {
-    .home .header {
-      height: 32rem; } }
-  @media screen and (min-width: 375px) and (max-width: 667px) and (orientation: landscape) {
-    .home .header {
-      height: 37.5rem; } }
-  @media screen and (min-width: 375px) and (max-width: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape) {
-    .home .header {
-      height: 37.5rem; } }
-  @media screen and (min-width: 414px) and (max-width: 736px) and (orientation: landscape) {
-    .home .header {
-      height: 41.4rem; } }
-  @media screen and (min-width: 320px) and (max-width: 568px) and (orientation: portrait) {
-    .home .header {
-      height: 56.8rem; } }
-  @media screen and (min-width: 375px) and (max-width: 667px) and (orientation: portrait) {
-    .home .header {
-      height: 66.7rem; } }
-  @media screen and (min-width: 375px) and (max-width: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait) {
-    .home .header {
-      height: 81.2rem; } }
-  @media screen and (min-width: 414px) and (max-width: 736px) and (orientation: portrait) {
-    .home .header {
-      height: 73.6rem; } }
-  @media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
-    .home .header {
-      min-height: 76rem; } }
-  @media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
-    .home .header {
-      min-height: 102rem; } }
-  @media screen and (min-width: 1366px) and (max-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
-    .home .header {
-      min-height: 102rem; } }
-  @media screen and (min-width: 1024px) and (max-width: 1366px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
-    .home .header {
-      min-height: 136rem; } }
   .home .header .bantu_logo {
     width: 20%;
     -ms-flex-item-align: center;
     align-self: center;
-    margin: auto 0 0; }
+    margin: auto 0 0;
+    border: 1px solid red; }
     @media screen and (min-width: 320px) and (orientation: landscape) {
       .home .header .bantu_logo {
         width: 5%; } }
