@@ -252,16 +252,9 @@
         }
 
         displayNavTriggerAndSocial();
-        adjuseHeight();
-
-        function adjuseHeight() {
-            document.body.height = window.innerHeight;
-            console.log( document.body.height, window.innerHeight);
-        };
 
         $(window).resize(function() {
             displayNavTriggerAndSocial();
-            adjuseHeight();
         });
 
         $(window).scroll(function() {
