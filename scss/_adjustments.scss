@@ -1,0 +1,60 @@
+// Mixins for device specific media queries
+@mixin iPhoneLandscape {
+    //iphone 5 & 5s landscape
+    @media all and (width: 320px) and (height: 568px) and (orientation: landscape) {
+        height: 32rem;
+    }
+    //  iphone 6, 7 & 8 landscape
+    @media all and (width: 375px) and (height: 667px) and (orientation: landscape) {
+        height: 37.5rem;
+    }
+    //  iphone x landscape
+    @media all and (width: 375px) and (height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape) {
+        height: 37.5rem;
+    }
+    //  iphone 6, 7 & 8 plus landscape
+    @media all and (width: 414px) and (height: 736px) and (orientation: landscape) {
+        height: 41.4rem;
+    }
+}
+
+@mixin iPhonePortrait {
+    //iphone 5 & 5s portrait
+    @media all and (width: 320px) and (height: 568px) and (orientation: portrait) {
+        height: 56.8rem;
+    }
+    //  iphone 6, 7 & 8 portrait
+    @media all and (width: 375px) and (height: 667px) and (orientation: portrait) {
+        height: 66.7rem;
+    }
+    // iphone x portrait
+    @media all and (width: 375px) and (height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait) {
+        height: 81.2rem;
+    }
+    //  iphone 6, 7 & 8 plus portrait
+    @media all and (width: 414px) and (height: 736px) and (orientation: portrait) {
+        height: 73.6rem;
+    }
+}
+
+@mixin iPad {
+    // ipad landscape
+    @media all and (width: 768px) and (height: 1024px) and (orientation: landscape) {
+        height: 76.8rem;
+    }
+    //  ipad portrait
+    @media all and (width: 768px) and (height: 1024px) and (orientation: portrait) {
+        height: 102.4rem;
+    }
+}
+
+@mixin iPadPro {
+    // ipad pro landscape
+    @media all and (width: 1024px) and (height: 1366px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+        height: 102.4rem;
+    }
+    //  ipad pro portrait
+    @media all and (width: 1024px) and (height: 1366px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+        height: 136.6rem;
+    }
+}
