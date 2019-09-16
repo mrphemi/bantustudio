@@ -578,7 +578,7 @@ select {
       .journals .logo {
         width: 1.5%; } }
     .journals .logo.hide {
-      opacity: 0; }
+      display: none; }
     @media screen and (min-width: 768px) {
       .journals .logo {
         bottom: 5%;
