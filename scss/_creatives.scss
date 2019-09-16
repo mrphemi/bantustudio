@@ -20,10 +20,7 @@
         padding-top: 11rem;
         padding-bottom: 10rem;
         position: relative;
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-        background-attachment: fixed;
+        background-color: lightgray;
         @media screen and (min-width: 768px) {
             justify-content: center;
             align-items: center;
@@ -45,7 +42,7 @@
             background-repeat: no-repeat;
             background-position: center;
             background-attachment: fixed;
-            transition: opacity 1s ease-in-out;
+            transition: opacity 0.5s ease;
             &.show {
                 opacity: 1;
             }

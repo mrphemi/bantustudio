@@ -177,13 +177,20 @@
                 }
             }
 
+            // Set element's background image
+            function setBackgroundImage(background) {
+                $(".creatives .background-container").css({
+                    "background-image": `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(${background})`
+                });
+            }
+
             // Set background-image to image associated with first name on the list on load
             // and strike through first name
             function setBackgroundOnLoad() {
                 var background = $(".creative a").data("background");
-                $(".creatives .background-container").css({
-                    "background-image": `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(${background})`
-                });
+
+                setBackgroundImage(background);
+
                 $(".creatives .background-container").addClass("show");
                 if ($(window).width() >= 768) {
                     $(".creative:first").addClass("strike");
@@ -199,9 +206,8 @@
                             .data("background");
                         $(".creative").removeClass("strike");
 
-                        $(".creatives .background-container").css({
-                            "background-image": `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(${newBackground})`
-                        });
+                        setBackgroundImage(newBackground);
+
                         $(".creatives .background-container").addClass("show");
                         $(this).addClass("strike");
                     });
@@ -223,9 +229,9 @@
                 return isPart;
             }
 
-            // On mobile devices, highlight(increase font-size and text opacity) creative name and change 
-            // background image to associated data-background attribute 
-            function HighlightName() {
+            // On mobile devices, highlight(increase font-size and text opacity) creative name and change
+            // background image to associated data-background attribute
+            function setBackgroundAndHighlightName() {
                 $(".creative").each(function() {
                     var self = $(this);
                     var newBackground = $(this)
@@ -233,9 +239,7 @@
                         .data("background");
                     if (isPart(self) === true) {
                         self.addClass("highlight");
-                        $(".creatives .background-container").css({
-                            "background-image": `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(${newBackground})`
-                        });
+                        setBackgroundImage(newBackground);
                     } else {
                         if (self.hasClass("highlight")) {
                             self.removeClass("highlight");
@@ -249,14 +253,15 @@
             }
 
             if ($(window).width() < 768) {
-                HighlightName();
+                setBackgroundAndHighlightName();
                 $(".list").scroll(function() {
-                    HighlightName();
+                    setBackgroundAndHighlightName();
                 });
             }
 
             changeNavcolor();
             setBackgroundOnLoad();
+
             $(window).resize(function() {
                 changeNavcolor();
             });
