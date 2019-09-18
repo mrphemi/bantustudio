@@ -11,6 +11,7 @@
         height: -webkit-fill-available;
         /* WebKit-based browsers will ignore this. */
         height: -moz-available;
+        height: stretch;
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
@@ -19,10 +20,6 @@
         -ms-flex-direction: column;
         flex-direction: column;
         padding: 4rem 0;
-        @include iPhonePortrait;
-        @include iPhoneLandscape;
-        @include iPad;
-        @include iPadPro;
         .bantu_logo {
             width: 20%;
             -ms-flex-item-align: center;

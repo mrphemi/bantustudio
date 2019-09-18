@@ -12,10 +12,6 @@
     background-color: #fff;
     overflow-y: hidden;
     padding: 3rem 0;
-    @include iPhonePortrait;
-    @include iPhoneLandscape;
-    @include iPad;
-    @include iPadPro;
     @media screen and (min-width: 1200px) {
         padding: 0 0 4rem;
     }
