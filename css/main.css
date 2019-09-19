@@ -924,20 +924,6 @@ select {
     @media screen and (min-width: 1024px) {
       .creatives .container {
         height: 60vh; } }
-    .creatives .container .background-container {
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      top: 0;
-      left: 0;
-      opacity: 0;
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: center;
-      background-attachment: fixed;
-      transition: opacity 0.5s ease; }
-      .creatives .container .background-container.show {
-        opacity: 1; }
     .creatives .container .boundary {
       position: absolute;
       top: 50%;
@@ -949,8 +935,8 @@ select {
       height: 100%;
       overflow: scroll;
       margin: auto 0;
-      padding: 60% 0 40%;
-      z-index: 3; }
+      z-index: 1;
+      padding: 60% 0 40%; }
       .creatives .container .list::-webkit-scrollbar {
         width: 0 !important; }
       @media screen and (max-width: 320px) {
@@ -970,28 +956,22 @@ select {
         font-size: 1.6rem;
         margin-bottom: 6rem;
         letter-spacing: 0.4rem;
-        color: lightgray;
-        opacity: 0.7; }
-        .creatives .container .list .list-item.highlight {
-          color: #fff;
-          opacity: 1;
-          font-size: 2.2rem;
-          font-weight: bold; }
-        .creatives .container .list .list-item.strike {
-          position: relative; }
-          .creatives .container .list .list-item.strike::after {
-            content: " ";
-            position: absolute;
-            top: 50%;
-            left: 0;
-            width: 100%;
-            height: 0.2rem;
-            background: #fff;
-            animation-name: strike;
-            animation-duration: 0.2s;
-            animation-timing-function: linear;
-            animation-iteration-count: 1;
-            animation-fill-mode: forwards; }
+        color: lightgray; }
+        .creatives .container .list .list-item .item-background {
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: -1;
+          opacity: 0;
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: center;
+          background-attachment: fixed;
+          transition: opacity 0.5s linear; }
+          .creatives .container .list .list-item .item-background.show {
+            opacity: 1; }
         @media screen and (min-width: 768px) {
           .creatives .container .list .list-item {
             color: #fff;
@@ -1001,10 +981,7 @@ select {
             margin-right: 2rem;
             margin-bottom: 2rem; }
             .creatives .container .list .list-item:last-of-type {
-              margin-right: 0; }
-            .creatives .container .list .list-item:hover {
-              font-size: 1.6rem;
-              font-weight: 600; } }
+              margin-right: 0; } }
         @media screen and (min-width: 1200px) {
           .creatives .container .list .list-item {
             margin-right: 4rem; } }
@@ -1013,9 +990,31 @@ select {
             font-size: 1.8rem; }
             .creatives .container .list .list-item:hover {
               font-size: 1.8rem; } }
-        .creatives .container .list .list-item a {
+        .creatives .container .list .list-item .creative-name {
           color: #fff;
           text-decoration: none; }
+          @media screen and (max-width: 767px) {
+            .creatives .container .list .list-item .creative-name.highlight {
+              color: #fff;
+              opacity: 1;
+              font-size: 2.2rem;
+              font-weight: bold; } }
+          @media screen and (min-width: 768px) {
+            .creatives .container .list .list-item .creative-name.strike {
+              position: relative; }
+              .creatives .container .list .list-item .creative-name.strike::after {
+                content: " ";
+                position: absolute;
+                top: 50%;
+                left: 0;
+                width: 100%;
+                height: 0.2rem;
+                background: #fff;
+                animation-name: strike;
+                animation-duration: 0.2s;
+                animation-timing-function: linear;
+                animation-iteration-count: 1;
+                animation-fill-mode: forwards; } }
     .creatives .container .logo {
       width: 6%;
       position: absolute;
