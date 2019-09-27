@@ -445,11 +445,6 @@ select {
   background-position: center;
   background-attachment: fixed;
   height: 100vh;
-  /* Mozilla-based browsers will ignore this. */
-  height: -webkit-fill-available;
-  /* WebKit-based browsers will ignore this. */
-  height: -moz-available;
-  height: stretch;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -462,7 +457,6 @@ select {
     width: 20%;
     -ms-flex-item-align: center;
     align-self: center;
-    border: 1px solid greenyellow;
     margin: auto 0 0; }
     @media screen and (min-width: 320px) and (orientation: landscape) {
       .home .header .bantu_logo {
